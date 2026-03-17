@@ -31,7 +31,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Navigation Bar */
     nav {
       position: sticky;
       top: 0;
@@ -66,7 +65,6 @@
       padding: 60px 20px;
     }
 
-    /* Header */
     header {
       display: flex;
       align-items: center;
@@ -92,7 +90,6 @@
     .contact-icons a { color: var(--muted); text-decoration: none; font-size: 1.1rem; transition: color 0.2s; }
     .contact-icons a:hover { color: var(--accent); }
 
-    /* Sections */
     section { margin-bottom: 80px; }
     h2 { 
       font-size: 1.8rem; 
@@ -104,7 +101,6 @@
     }
     h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
-    /* Cards */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -112,7 +108,6 @@
       padding: 28px;
       margin-bottom: 20px;
       transition: all 0.3s ease;
-      position: relative;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -131,10 +126,8 @@
     .card-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 15px; }
     .card-desc { font-size: 0.95rem; color: #424245; }
 
-    /* Publications specific */
     .pub-card { border-left: 4px solid var(--accent); }
 
-    /* Course Grid */
     .course-category { margin-bottom: 30px; }
     .category-title { font-size: 0.95rem; font-weight: 700; color: var(--muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.05em; }
     .course-grid {
@@ -149,14 +142,21 @@
       border-radius: 12px;
       font-size: 0.85rem;
       transition: all 0.2s;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
     .course-item:hover { border-color: var(--accent); background: #f0f7ff; }
-    .grade { font-weight: 700; color: var(--accent); opacity: 0.7; }
 
-    /* Bio links */
+    .skill-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin: 0 6px 10px 0;
+      transition: all 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
     .bio-link {
       color: var(--accent);
       text-decoration: none;
@@ -191,6 +191,7 @@
       <a href="#publications">Publications</a>
       <a href="#projects">Projects</a>
       <a href="#courses">Courses</a>
+      <a href="#interests">Interests</a>
     </div>
   </div>
 </nav>
@@ -263,6 +264,16 @@
     </div>
 
     <div class="card">
+      <div class="card-label">AI Agent · Hackathon</div>
+      <div class="card-title">MediMenu — CheeseHack 24H</div>
+      <div class="card-meta">Team Lead · March 2026</div>
+      <p class="card-desc">
+        Designed a digital platform connecting dietary needs with personalized meal recommendations. 
+        Led product workflow and system ideation using Antigravity AI agents for interface layout.
+      </p>
+    </div>
+
+    <div class="card">
       <div class="card-label">Full Stack · Hackathon</div>
       <div class="card-title">CourseOptimizer</div>
       <div class="card-meta">Badger Build Festival · Team Lead · Nov 2025</div>
@@ -278,31 +289,62 @@
     <div class="course-category">
       <div class="category-title">Computer Science</div>
       <div class="course-grid">
-        <div class="course-item"><span>CS 200: Programming I</span> <span class="grade">A</span></div>
-        <div class="course-item"><span>CS 300: Programming II</span> <span class="grade">IP</span></div>
-        <div class="course-item"><span>CS 252: Intro Comp Architecture</span> <span class="grade">IP</span></div>
+        <div class="course-item">CS 200: Programming I</div>
+        <div class="course-item">CS 300: Programming II</div>
+        <div class="course-item">CS 252: Intro Comp Architecture</div>
       </div>
     </div>
 
     <div class="course-category">
       <div class="category-title">Mathematics</div>
       <div class="course-grid">
-        <div class="course-item"><span>MATH 340: Linear Algebra</span> <span class="grade">A</span></div>
-        <div class="course-item"><span>MATH 331: Introductory Probability</span> <span class="grade">IP</span></div>
-        <div class="course-item"><span>MATH 221: Calculus I</span> <span class="grade">T</span></div>
-        <div class="course-item"><span>MATH 222: Calculus II</span> <span class="grade">T</span></div>
+        <div class="course-item">MATH 340: Linear Algebra</div>
+        <div class="course-item">MATH 331: Introductory Probability</div>
+        <div class="course-item">MATH 221: Calculus I</div>
+        <div class="course-item">MATH 222: Calculus II</div>
       </div>
     </div>
 
     <div class="course-category">
       <div class="category-title">Economics & Others</div>
       <div class="course-grid">
-        <div class="course-item"><span>ECON 101: Microeconomics</span> <span class="grade">T</span></div>
-        <div class="course-item"><span>INTER-LS 250: URS Research</span> <span class="grade">A / IP</span></div>
-        <div class="course-item"><span>ENGL 243: American Literary Cultures</span> <span class="grade">T</span></div>
-        <div class="course-item"><span>LIS 202: Divides & Differences</span> <span class="grade">IP</span></div>
-        <div class="course-item"><span>COUN PSY 225: Intersectionalities</span> <span class="grade">IP</span></div>
+        <div class="course-item">ECON 101: Microeconomics</div>
+        <div class="course-item">INTER-LS 250: URS Research</div>
+        <div class="course-item">ENGL 243: American Literary Cultures</div>
+        <div class="course-item">LIS 202: Divides & Differences</div>
+        <div class="course-item">COUN PSY 225: Intersectionalities</div>
       </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>Interests</h2>
+    <div style="font-size: 1.05rem; color: #424245;">
+      <p style="margin-bottom: 15px;">
+        🎬 <strong>Movies:</strong> I am a horror movie enthusiast. My favorite spot on campus is <strong>Morgridge 2517</strong>, 
+        where I've watched many spine-chilling films. My absolute favorite is the Thai horror masterpiece <em>Shutter (鬼影)</em>.
+      </p>
+      <p>
+        📚 <strong>Reading:</strong> I enjoy exploring a wide range of content, from books and academic blogs to the latest news 
+        across various fields.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <div class="skill-tag">Python</div>
+      <div class="skill-tag">Java</div>
+      <div class="skill-tag">JavaScript</div>
+      <div class="skill-tag">HTML/CSS</div>
+      <div class="skill-tag">Scikit-learn</div>
+      <div class="skill-tag">Pandas</div>
+      <div class="skill-tag">NumPy</div>
+      <div class="skill-tag">Matplotlib</div>
+      <div class="skill-tag">ANN</div>
+      <div class="skill-tag">Git</div>
+      <div class="skill-tag">Data Visualization</div>
     </div>
   </section>
 
