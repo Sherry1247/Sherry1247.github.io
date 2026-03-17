@@ -4,354 +4,274 @@
   <meta charset="UTF-8">
   <title>Siqi Dai | Personal Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --nav-bg: rgba(255, 255, 255, 0.85);
-      --accent: #0071e3;
-      --accent-hover: #005bb7;
-      --text: #1d1d1f;
-      --muted: #6e6e73;
-      --border: #d2d2d7;
-      --card-bg: #ffffff;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    html { scroll-behavior: smooth; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      background-image: radial-gradient(#d2d2d7 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+  <!-- SEO & Meta -->
+  <meta name="author" content="Siqi Dai">
+  <meta name="description" content="Personal website of Siqi Dai, CS & Economics student at UW-Madison">
+  <meta property="og:title" content="Siqi Dai | UW-Madison">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="photo.jpg">
+  <link rel="canonical" href="https://Sherry1247.github.io">
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--nav-bg);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 20px;
-    }
-    .nav-container {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo { font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; }
-    .nav-links { display: flex; gap: 24px; }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 80px;
-    }
-    .avatar-wrap {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #fff;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .avatar-wrap:hover { transform: scale(1.08) rotate(2deg); }
-    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    
-    .header-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
-    .header-text p { color: var(--muted); font-size: 1.2rem; }
-    .contact-icons { display: flex; gap: 15px; margin-top: 20px; }
-    .contact-icons a { color: var(--muted); text-decoration: none; font-size: 1.1rem; transition: color 0.2s; }
-    .contact-icons a:hover { color: var(--accent); }
-
-    section { margin-bottom: 80px; }
-    h2 { 
-      font-size: 1.8rem; 
-      font-weight: 700;
-      margin-bottom: 30px; 
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-      border-color: var(--accent);
-    }
-    .card-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-    .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-    .card-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 15px; }
-    .card-desc { font-size: 0.95rem; color: #424245; }
-
-    .pub-card { border-left: 4px solid var(--accent); }
-
-    .course-category { margin-bottom: 30px; }
-    .category-title { font-size: 0.95rem; font-weight: 700; color: var(--muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 12px;
-    }
-    .course-item {
-      padding: 12px 16px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 0.85rem;
-      transition: all 0.2s;
-    }
-    .course-item:hover { border-color: var(--accent); background: #f0f7ff; }
-
-    .skill-tag {
-      display: inline-block;
-      padding: 6px 14px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.85rem;
-      margin: 0 6px 10px 0;
-      transition: all 0.2s;
-    }
-    .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
-
-    .bio-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .bio-link:hover { border-color: var(--accent); }
-
-    footer {
-      text-align: center;
-      padding: 60px 0;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; text-align: center; gap: 20px; }
-      .header-text h1 { font-size: 2.2rem; }
-      .nav-links { display: none; }
-    }
-  </style>
+  <!-- External Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-container">
-    <a href="#" class="nav-logo">SD</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#courses">Courses</a>
-      <a href="#interests">Interests</a>
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Siqi Dai</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#courses">Courses</a>
+        <a href="#interests">Interests</a>
+      </div>
     </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Header / Home -->
+    <header id="home">
+      <div class="avatar-wrap">
+        <img src="photo.jpg" alt="Siqi Dai" onerror="this.src='https://ui-avatars.com/api/?name=Siqi+Dai&size=150'">
+      </div>
+      <div class="header-text">
+        <h1>Siqi Dai</h1>
+        <p class="header-subtitle">Computer Science & Economics · UW-Madison</p>
+        <div style="margin-bottom: 15px;">
+          <span class="badge">GPA 4.0/4.0</span>
+          <span class="badge">Dean's List 2025</span>
+          <span class="badge">Mathematics Certificate</span>
+        </div>
+        <div class="contact-row">
+          <a href="mailto:sdai66@wisc.edu">✉ Email</a>
+          <a href="https://github.com/Sherry1247" target="_blank">🔗 GitHub</a>
+          <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank">🔗 LinkedIn</a>
+          <a href="assets/resume.pdf" target="_blank">📄 Resume (PDF)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a computer science and economics major at UW-Madison with a certificate in mathematics. 
+        My research interests lie in machine learning, data science, and their applications in solving 
+        real-world challenges.
+      </p>
+      <p>
+        I'm currently participating in an Undergraduate Research Scholarship (URS) under the guidance of 
+        <a href="https://erc.wisc.edu/staff/gupta-saurabh/" target="_blank">Dr. Saurabh K. Gupta</a>, 
+        focusing on predictive ML models for thermodynamic properties. During summer 2025, I participated in an 
+        AR/VR accessibility research project led by <a href="https://yuhangzhao1.github.io" target="_blank">Prof. Yuhang Zhao</a>, 
+        where I worked under the supervision of <a href="https://iamwyh.com" target="_blank">Yuheng Wu</a>.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Spring 2025 – Present</div>
+          <h3>Undergraduate Research Assistant</h3>
+          <p><strong>Engine Research Center, UW-Madison</strong><br>
+          Advisor: Dr. Saurabh K. Gupta</p>
+          <ul>
+            <li>Developing multi-output ANN models for real-time virtual sensing in automotive thermodynamics</li>
+            <li>Achieved 98.9% accuracy in predicting MFIA, NOx, and SOC targets</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Summer 2025</div>
+          <h3>AR/VR Research Intern</h3>
+          <p><strong>MadAbility Lab, UW-Madison</strong><br>
+          PI: Prof. Yuhang Zhao | Supervisor: Yuheng Wu</p>
+          <ul>
+            <li>Participated in accessibility research for AR/VR systems</li>
+            <li>Focused on enhancing user experience for diverse ability groups</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card pub-card">
+        <div class="card-label">Journal Manuscript</div>
+        <div class="card-title">Multi-Target Virtual Sensing via Shared-Representation Neural Networks</div>
+        <div class="card-meta">
+          <strong>Siqi Dai</strong>, Saurabh K. Gupta<br>
+          <em>Applied Energy</em> · 2026 (Under Review)
+        </div>
+        <p class="card-desc">
+          Engineered a unified ANN architecture that predicts multiple engine parameters simultaneously, 
+          demonstrating superior latency and accuracy compared to single-output baselines.
+        </p>
+        <div class="card-links">
+          <a href="#">[Abstract]</a>
+          <a href="#">[PDF Coming Soon]</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <div class="card-label">Hackathon · CheeseHacks 2026</div>
+        <div class="card-title">MediMenu</div>
+        <div class="card-meta">React, FastAPI, OpenAI GPT-4o Vision, SQLite</div>
+        <p class="card-desc">
+          A dual-sided platform that helps diners with allergies and dietary restrictions safely navigate restaurant menus. 
+          Restaurants upload menus, AI extracts ingredients, and diners scan QR codes to get personalized safety labels (OK/Caution/Avoid) 
+          based on their profile. Features meal logging and PDF export for health tracking.
+        </p>
+        <div class="card-links">
+          <a href="https://devpost.com/software/medimenu-30vx7s" target="_blank">[Devpost]</a>
+          <a href="https://github.com/Sherry1247/MediMenu" target="_blank">[GitHub]</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Hackathon · November 2025</div>
+        <div class="card-title">CourseOptimizer</div>
+        <div class="card-meta">Java, Algorithms</div>
+        <p class="card-desc">
+          A unified course optimization network connecting 200M+ university students worldwide with 25,000+ accredited 
+          universities and colleges. Built during my first hackathon in 24 hours.
+        </p>
+        <div class="card-links">
+          <a href="https://github.com/Sherry1247/CourseOptimizer" target="_blank">[GitHub]</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Research · URS</div>
+        <div class="card-title">Machine Learning for Thermodynamic Properties Prediction</div>
+        <div class="card-meta">Python, Scikit-learn, Pandas, NumPy</div>
+        <p class="card-desc">
+          Developed and compared multiple ML architectures (ANN, Random Forest, SVR, Linear Regression) to predict 
+          thermodynamic properties from the NIST JANAF dataset. Achieved high accuracy with comprehensive model evaluation.
+        </p>
+        <div class="card-links">
+          <a href="https://github.com/Sherry1247/URS-Applied-ML-Research" target="_blank">[GitHub]</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+      <h2>Relevant Coursework</h2>
+
+      <div class="course-category">
+        <h3>Computer Science</h3>
+        <div class="course-grid">
+          <div class="course-card">
+            <div class="course-code">CS 300</div>
+            <div class="course-name">Programming II</div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS 252</div>
+            <div class="course-name">Introduction to Computer Engineering</div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS 200</div>
+            <div class="course-name">Programming I</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-category">
+        <h3>Mathematics & Statistics</h3>
+        <div class="course-grid">
+          <div class="course-card">
+            <div class="course-code">Math 340</div>
+            <div class="course-name">Elementary Matrix and Linear Algebra</div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">Math 331</div>
+            <div class="course-name">Probability Theory</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-category">
+        <h3>Economics</h3>
+        <div class="course-grid">
+          <div class="course-card">
+            <div class="course-code">Econ 101</div>
+            <div class="course-name">Principles of Microeconomics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests">
+      <h2>Interests</h2>
+      <div class="interest-card">
+        <div class="interest-icon">🎬</div>
+        <div class="interest-text">
+          <strong>Cinema & Horror</strong>
+          <p>Enthusiastic about Thai horror (fav: <em>Shutter</em>). Frequently found at Morgridge 2517 for film screenings.</p>
+        </div>
+      </div>
+      <div class="interest-card">
+        <div class="interest-icon">📚</div>
+        <div class="interest-text">
+          <strong>Reading</strong>
+          <p>Curating a diverse list of books, technical blogs, and global news.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Machine Learning & Data</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">ANN</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Siqi Dai · University of Wisconsin–Madison</p>
+    </footer>
+
   </div>
-</nav>
 
-<div class="container">
-  <header id="home">
-    <div class="avatar-wrap">
-      <img src="photo.jpg" alt="Siqi Dai" onerror="this.src='https://ui-avatars.com/api/?name=Siqi+Dai&background=0071e3&color=fff&size=200'">
-    </div>
-    <div class="header-text">
-      <h1>Siqi Dai</h1>
-      <p>CS & Economics · Mathematics Certificate</p>
-      <p style="font-size: 1rem; margin-top: 5px;">University of Wisconsin–Madison</p>
-      <div class="contact-icons">
-        <a href="mailto:sdai66@wisc.edu">Email</a>
-        <a href="https://github.com/Sherry1247" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <div style="font-size: 1.1rem; color: #424245;">
-      <p style="margin-bottom: 20px;">
-        I am a first-year student at UW-Madison double majoring in <strong>Computer Science</strong> and <strong>Economics</strong>, 
-        with a <strong>Mathematics Certificate</strong>. I am driven by the potential of data science and machine learning to solve complex 
-        physical and socioeconomic challenges.
-      </p>
-      <p style="margin-bottom: 20px;">
-        Currently, I am participating in the <strong>Undergraduate Research Scholar (URS)</strong> program 
-        under the guidance of <a href="https://erc.wisc.edu/staff/gupta-saurabh/" class="bio-link" target="_blank">Dr. Saurabh Gupta</a>. 
-        My research focuses on multi-parameter virtual sensing for internal combustion engines using artificial neural networks.
-      </p>
-      <p>
-        In the upcoming summer, I am excited to join the AR/VR research project led by 
-        <a href="https://yuhangzhao1.github.io" class="bio-link" target="_blank">Prof. Yuhang Zhao</a>, 
-        where I will be working under the mentorship of 
-        <a href="https://iamwyh.com" class="bio-link" target="_blank">Yuheng Wu</a> to explore intelligent interactive systems.
-      </p>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="card pub-card">
-      <div class="card-label">Journal Manuscript</div>
-      <div class="card-title">Multi-Target Virtual Sensing via Shared-Representation Neural Networks</div>
-      <div class="card-meta">
-        <strong>Siqi Dai</strong>, Saurabh K. Gupta<br>
-        <em>Applied Energy</em> · 2026 (Under Review)
-      </div>
-      <p class="card-desc">
-        Proposing a consolidated virtual sensing framework that replaces multiple physical sensors with a single ANN model. 
-        Achieved ~99% accuracy across multiple engine parameters (MFIA, NOx, SOC) by exploiting shared physical dependencies.
-      </p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="card">
-      <div class="card-label">Python · Machine Learning</div>
-      <div class="card-title">Human Survival Probability Analysis</div>
-      <div class="card-meta">Independent Project · Fall 2025</div>
-      <p class="card-desc">
-        Investigated the influence of technology and socioeconomic factors on survival probability. 
-        Processed 3,000+ entries from 10 datasets using Pandas/Seaborn and implemented an ANN model for probability estimation.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="card-label">AI Agent · Hackathon</div>
-      <div class="card-title">MediMenu — CheeseHack 24H</div>
-      <div class="card-meta">Team Lead · March 2026</div>
-      <p class="card-desc">
-        Designed a digital platform connecting dietary needs with personalized meal recommendations. 
-        Led product workflow and system ideation using Antigravity AI agents for interface layout.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="card-label">Full Stack · Hackathon</div>
-      <div class="card-title">CourseOptimizer</div>
-      <div class="card-meta">Badger Build Festival · Team Lead · Nov 2025</div>
-      <p class="card-desc">
-        A tool for real-world course planning and schedule optimization. Built with HTML/CSS/JavaScript and AI-assisted coding tools.
-      </p>
-    </div>
-  </section>
-
-  <section id="courses">
-    <h2>Coursework</h2>
-    
-    <div class="course-category">
-      <div class="category-title">Computer Science</div>
-      <div class="course-grid">
-        <div class="course-item">CS 200: Programming I</div>
-        <div class="course-item">CS 300: Programming II</div>
-        <div class="course-item">CS 252: Intro Comp Architecture</div>
-      </div>
-    </div>
-
-    <div class="course-category">
-      <div class="category-title">Mathematics</div>
-      <div class="course-grid">
-        <div class="course-item">MATH 340: Linear Algebra</div>
-        <div class="course-item">MATH 331: Introductory Probability</div>
-        <div class="course-item">MATH 221: Calculus I</div>
-        <div class="course-item">MATH 222: Calculus II</div>
-      </div>
-    </div>
-
-    <div class="course-category">
-      <div class="category-title">Economics & Others</div>
-      <div class="course-grid">
-        <div class="course-item">ECON 101: Microeconomics</div>
-        <div class="course-item">INTER-LS 250: URS Research</div>
-        <div class="course-item">ENGL 243: American Literary Cultures</div>
-        <div class="course-item">LIS 202: Divides & Differences</div>
-        <div class="course-item">COUN PSY 225: Intersectionalities</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="interests">
-    <h2>Interests</h2>
-    <div style="font-size: 1.05rem; color: #424245;">
-      <p style="margin-bottom: 15px;">
-        🎬 <strong>Movies:</strong> I am a horror movie enthusiast. My favorite spot on campus is <strong>Morgridge 2517</strong>, 
-        where I've watched many spine-chilling films. My absolute favorite is the Thai horror masterpiece <em>Shutter (鬼影)</em>.
-      </p>
-      <p>
-        📚 <strong>Reading:</strong> I enjoy exploring a wide range of content, from books and academic blogs to the latest news 
-        across various fields.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div>
-      <div class="skill-tag">Python</div>
-      <div class="skill-tag">Java</div>
-      <div class="skill-tag">JavaScript</div>
-      <div class="skill-tag">HTML/CSS</div>
-      <div class="skill-tag">Scikit-learn</div>
-      <div class="skill-tag">Pandas</div>
-      <div class="skill-tag">NumPy</div>
-      <div class="skill-tag">Matplotlib</div>
-      <div class="skill-tag">ANN</div>
-      <div class="skill-tag">Git</div>
-      <div class="skill-tag">Data Visualization</div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Siqi Dai · Built with Passion at UW-Madison</p>
-  </footer>
-</div>
+  <!-- Scripts -->
+  <button id="back-to-top" title="Go to top">↑</button>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
