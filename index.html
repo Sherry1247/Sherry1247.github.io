@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Siqi Dai | Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Siqi Dai - CS & Economics Student at UW-Madison" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: rgba(148,163,184,0.25);
+      --card: rgba(15,23,42,0.97);
+      --link: #38bdf8;
+      --link-hover: #7dd3fc;
+      --tag-bg: #111827;
+      --tag-text: #cbd5f5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+    .page {
+      width: 100%;
+      max-width: 980px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.98));
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 40px 80px rgba(15,23,42,0.9);
+      padding: 32px 28px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56,189,248,0.18), transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(129,140,248,0.20), transparent 55%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .page-inner { position: relative; z-index: 1; }
+
+    /* HEADER */
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 768px) {
+      header { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    }
+    .identity { display: flex; align-items: center; gap: 18px; }
+    .avatar-wrap {
+      width: 80px; height: 80px; border-radius: 999px;
+      border: 2.5px solid rgba(148,163,184,0.6);
+      overflow: hidden; flex-shrink: 0;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.7), 0 18px 40px rgba(8,47,73,0.9);
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0f172a);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 26px; color: #e5e7eb;
+    }
+    .avatar-wrap img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .title-block h1 { font-size: 1.55rem; letter-spacing: 0.02em; margin-bottom: 4px; }
+    .title-block .subtitle { font-size: 0.93rem; color: var(--muted); margin-bottom: 6px; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 3px 10px; border-radius: 999px;
+      background: rgba(15,23,42,0.95); border: 1px solid rgba(148,163,184,0.5);
+      font-size: 0.74rem; color: var(--muted); margin-bottom: 6px;
+    }
+    .pill-dot {
+      width: 7px; height: 7px; border-radius: 999px;
+      background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 9px; }
+    .link-chip {
+      font-size: 0.8rem; padding: 5px 11px; border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6); color: var(--muted);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(15,23,42,0.9);
+    }
+    .link-chip:hover { border-color: var(--link); color: var(--link-hover); }
+
+    /* MAIN GRID */
+    main { display: grid; grid-template-columns: minmax(0,1fr); gap: 22px; }
+    @media (min-width: 960px) {
+      main { grid-template-columns: minmax(0,2.3fr) minmax(0,1.4fr); }
+    }
+    section { margin-bottom: 20px; }
+    .section-title {
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.16em;
+      color: var(--muted); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title::before {
+      content: ""; width: 20px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(148,163,184,0.8));
+    }
+    .card {
+      background: var(--card); border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.22);
+      padding: 16px; box-shadow: 0 10px 30px rgba(15,23,42,0.7);
+    }
+    .about-text { font-size: 0.9rem; color: #d1d5db; line-height: 1.65; }
+    .about-text p + p { margin-top: 9px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag {
+      font-size: 0.77rem; padding: 3px 9px; border-radius: 999px;
+      background: var(--tag-bg); color: var(--tag-text);
+      border: 1px solid rgba(148,163,184,0.3);
+    }
+
+    /* PROJECTS */
+    .project-list { display: flex; flex-direction: column; gap: 11px; }
+    .project {
+      padding: 10px 12px; border-radius: 12px;
+      border: 1px solid rgba(31,41,55,1);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.08), rgba(15,23,42,0.96));
+    }
+    .project-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: 12px; margin-bottom: 5px;
+    }
+    .project-title { font-size: 0.9rem; font-weight: 600; }
+    .project-meta { font-size: 0.76rem; color: var(--muted); white-space: nowrap; }
+    .project-desc { font-size: 0.86rem; color: #d1d5db; margin-bottom: 5px; line-height: 1.5; }
+    .project-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .project-links a { font-size: 0.78rem; color: var(--link); text-decoration: none; }
+    .project-links a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    /* EXPERIENCE */
+    .exp-item { margin-bottom: 12px; }
+    .exp-item:last-child { margin-bottom: 0; }
+    .exp-title { font-size: 0.9rem; font-weight: 600; }
+    .exp-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; }
+    .exp-desc { font-size: 0.86rem; color: #d1d5db; line-height: 1.5; }
+
+    /* RIGHT COLUMN */
+    .meta-row { font-size: 0.87rem; color: var(--muted); margin-top: 7px; }
+    .meta-row:first-child { margin-top: 0; }
+    .meta-label { color: #94a3b8; font-weight: 500; }
+
+    /* COURSES */
+    .course-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .course-chip {
+      font-size: 0.77rem; padding: 3px 9px; border-radius: 8px;
+      background: rgba(56,189,248,0.09); color: #bae6fd;
+      border: 1px solid rgba(56,189,248,0.25);
+    }
+
+    footer {
+      margin-top: 18px; padding-top: 10px;
+      border-top: 1px solid rgba(30,64,175,0.6);
+      font-size: 0.77rem; color: var(--muted);
+      display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-inner">
+
+    <header>
+      <div class="identity">
+        <!--
+          PHOTO: Replace the initials div below with:
+          <div class="avatar-wrap"><img src="photo.jpg" alt="Siqi Dai" /></div>
+          and upload photo.jpg to your repo root.
+        -->
+        <div class="avatar-wrap">SD</div>
+        <div class="title-block">
+          <div class="pill"><span class="pill-dot"></span>Open to research &amp; internships</div>
+          <h1>Siqi Dai</h1>
+          <div class="subtitle">Computer Science &amp; Economics · University of Wisconsin–Madison</div>
+        </div>
+      </div>
+      <div class="links">
+        <a class="link-chip" href="mailto:sdai66@wisc.edu">
+          <span>✉️</span><span>sdai66@wisc.edu</span>
+        </a>
+        <a class="link-chip" href="https://github.com/Sherry1247" target="_blank">
+          <span>🐙</span><span>GitHub</span>
+        </a>
+        <a class="link-chip" href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank">
+          <span>🔗</span><span>LinkedIn</span>
+        </a>
+        <a class="link-chip" href="tel:6084403669">
+          <span>📞</span><span>608-440-3669</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+
+        <section>
+          <div class="section-title">About</div>
+          <div class="card">
+            <div class="about-text">
+              <p>
+                I'm a first-year Computer Science and Economics student at the University of Wisconsin–Madison
+                (GPA 4.0/4.0, Expected May 2029), passionate about applying machine learning to real-world
+                engineering and data problems.
+              </p>
+              <p>
+                My current research focuses on multi-parameter virtual sensing for automotive engines using
+                neural networks — I developed a novel multi-output ANN that simultaneously predicts three
+                correlated engine parameters with 98.9% average accuracy, currently being prepared for
+                journal submission as first author.
+              </p>
+              <p>
+                I'm actively seeking summer 2026 research opportunities and internships in ML, data science,
+                and software engineering.
+              </p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Neural Networks</span>
+              <span class="tag">Data Science</span>
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Research &amp; Projects</div>
+          <div class="card project-list">
+
+            <div class="project">
+              <div class="project-header">
+                <div class="project-title">Multi-Parameter Virtual Sensing via Single ANN (Engine)</div>
+                <div class="project-meta">Fall 2025 – Present · First Author</div>
+              </div>
+              <div class="project-desc">
+                Developed a novel multi-output ANN (66→43→21→6→3 architecture) to simultaneously predict
+                MFIA, NOxEO, and SOC with 98.9% average R² accuracy. Outperformed Random Forest, OLS, and
+                SVR; validated via permutation-based sensitivity analysis. Manuscript in preparation for
+                submission.
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sherry1247" target="_blank">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-header">
+                <div class="project-title">Human Survival Probability Analysis</div>
+                <div class="project-meta">Fall 2025 – Present</div>
+              </div>
+              <div class="project-desc">
+                Collected and processed 10 datasets (3,000+ entries) to study how technology and
+                socioeconomic factors influence survival probability. Built open-source Python pipeline
+                with Pandas, NumPy, Seaborn, Matplotlib and an ANN evaluated using AUC and accuracy.
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sherry1247" target="_blank">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-header">
+                <div class="project-title">MediMenu — CheeseHack 24H Hackathon</div>
+                
