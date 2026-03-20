@@ -84,4 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- 5. Dark Mode Toggle ---- */
+  const themeBtn = document.createElement('button');
+  themeBtn.id = 'theme-toggle';
+  themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+  themeBtn.setAttribute('aria-label', 'Toggle dark mode');
+  document.body.appendChild(themeBtn);
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+
+  themeBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+  });
+
 });
