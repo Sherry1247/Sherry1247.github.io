@@ -295,6 +295,7 @@ footer i { color: #ef4444; margin: 0 4px; }
 }
 
 #back-to-top:hover { background: var(--accent-hover); transform: scale(1.1); }
+#back-to-top.show { display: flex; align-items: center; justify-content: center; }
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
