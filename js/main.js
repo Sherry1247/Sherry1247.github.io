@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (progressBar) progressBar.style.width = pct + '%';
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
+ 
+   /* ---- Navigation Scroll Effect ---- */
+   const nav = document.querySelector('nav');
+   window.addEventListener('scroll', () => {
+     if (window.scrollY > 50) {
+       nav.classList.add('scrolled');
+     } else {
+       nav.classList.remove('scrolled');
+     }
+   }, { passive: true });
 
 
   /* ---- 2. Active Nav Highlight ---- */
