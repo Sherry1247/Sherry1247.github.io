@@ -821,3 +821,55 @@ main.container {
     right: 70px;
   }
 }
+
+
+/* Symposium Media Section */
+.symposium-media {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.symposium-photo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.symposium-photo:hover {
+  transform: scale(1.02);
+}
+
+.document-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--surface);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.doc-link:hover {
+  background: var(--accent);
+  color: var(--surface);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(159, 103, 57, 0.3);
+}
+
+.doc-link i {
+  font-size: 18px;
+}
