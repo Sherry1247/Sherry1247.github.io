@@ -285,10 +285,9 @@ main {
 }
 
 .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(0);}
+  opacity: 1;
   transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
 .animate-on-scroll.visible {
   opacity: 1;
