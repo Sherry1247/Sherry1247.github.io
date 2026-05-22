@@ -12,8 +12,8 @@
   --light-slate: #cbd5e1;
   --lightest-slate: #f1f5f9;
   --white: #ffffff;
-  --accent: #a78bfa;
-  --accent-tint: rgba(167, 139, 250, 0.1);
+--accent: #60a5fa;
+  --accent-tint: rgba(96, 165, 250, 0.1);
   --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
   --font-serif: 'Playfair Display', 'Georgia', serif;
   --fz-xs: 13px;
@@ -32,8 +32,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--navy);
-  color: var(--slate);
+  background-color: var(--bg-primary);
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -740,8 +739,21 @@ main {
 
 /* ===== PHASE 1: DARK MODE & THEME TOGGLE ===== */
 
-/* Dark mode colors */
-body.dark-mode {
+/* Light mode (default) colors */
+body {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+}
+
+/* Dark mode colors - override when dark-mode class is active */body.dark-mode {
+    --bg-primary: #0a1628;
+  --bg-secondary: #1e3a5f;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: #2d4e7c;
   --navy: #0a1628;
   --light-navy: #1e3a5f;
   --lightest-navy: #2d4e7c;
