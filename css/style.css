@@ -311,20 +311,15 @@ main {
 }
 
 .whats-new {
-  background: linear-gradient(135deg, rgba(18, 24, 46, 0.6) 0%, rgba(10, 14, 26, 0.8) 100%);
   padding: 80px 0;
-  border-radius: 8px;
-}
-
-.news-grid {
+}.news-grid {
+  background: transparent;
   display: grid;
   gap: 24px;
 }
 
 .news-item {
-  padding: 20px 24px;
   background: var(--lightest-navy);
-  border-left: 3px solid var(--accent);
   border-radius: 4px;
   transition: var(--transition);
 }
@@ -693,9 +688,7 @@ main {
 /* Theme Toggle Button */
 #theme-toggle {
   background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  padding: 8px 16px;
+  border: 2px solid var(--lightest-slate);  color: var(--lightest-slate);  padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-size: var(--fz-sm);
