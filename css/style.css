@@ -713,7 +713,85 @@ main.container {
     align-items: flex-start;
   }
 
-  #theme-toggle {
+  #theme
+  
+    /* Increase section title size */
+.section-title {
+  font-size: 64px !important;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Horizontal Interests Layout */
+.interests-horizontal {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.interest-card {
+  flex: 0 0 auto;
+  width: 280px;
+  padding: 40px 30px;
+  background: var(--surface);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.interest-card[data-reveal="revealed"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.interest-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(159, 103, 57, 0.3);
+}
+
+.interest-card i {
+  font-size: 48px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.interest-card:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.interest-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.interest-card p {
+  font-size: 16px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 48px !important;
+  }
+  
+  .interest-card {
+    width: 240px;
+  }
+}
+-toggle {
     right: 70px;
   }
 }
