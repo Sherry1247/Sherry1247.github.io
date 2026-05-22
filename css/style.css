@@ -5,8 +5,8 @@
 }
 
 :root {
-  --navy: #0a0e1a;
-  --light-navy: #12182e;
+  --navy: #0a1628
+  --light-navy: 
   --lightest-navy: #1a2438;
   --slate: #94a3b8;
   --light-slate: #cbd5e1;
@@ -736,4 +736,188 @@ main {
   .section-title::after {
     width: 100px;
   }
+}
+
+/* ===== PHASE 1: DARK MODE & THEME TOGGLE ===== */
+
+/* Dark mode colors */
+body.dark-mode {
+  --navy: #0a1628;
+  --light-navy: #1e3a5f;
+  --lightest-navy: #2d4e7c;
+  --accent: #60a5fa;
+  --accent-tint: rgba(96, 165, 250, 0.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+}
+
+/* ===== TIMELINE ANIMATIONS ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.timeline-item {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+/* ===== INTERACTIVE PROJECT HOVER EFFECTS ===== */
+
+.project-card.interactive-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.interactive-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent-tint), transparent);
+  transition: left 0.6s;
+}
+
+.project-card.interactive-hover:hover::before {
+  left: 100%;
+}
+
+.project-card.interactive-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.3);
+}
+
+.project-card.interactive-hover:hover .project-top {
+  border-color: var(--accent);
+}
+
+/* ===== IMPROVED SKILLS SECTION ===== */
+
+.skills-grid {
+  font-size: 18px;
+}
+
+.skill-category h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-tint);
+}
+
+.skill-category {
+  background: rgba(96, 165, 250, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-tint);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.skill-category ul li {
+  font-size: 17px;
+  padding: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.skill-category ul li:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* ===== TIMELINE STYLES FOR WHAT'S NEW ===== */
+
+.news-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.news-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+}
+
+.news-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.news-item::before {
+  content: '';
+  position: absolute;
+  left: -46px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--navy);
+}
+
+.news-date {
+  display: inline-block;
+  background: var(--accent-tint);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
