@@ -13,11 +13,14 @@
 </head>
 <body>
 
+<div id="cursor-glow"></div>
+
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a class="nav-brand" href="#hero">Siqi Dai</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -27,15 +30,16 @@
 </nav>
 
 <section class="hero" id="hero">
+  <div class="hero-bg-image"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-greeting">Hi, my name is</p>
-    <h1 class="hero-name">Siqi Dai.</h1>
-    <p class="hero-sub">CS Student at UW-Madison</p>
-    <p class="hero-desc">I build with machine learning, accessibility research, AR/VR systems, and cybersecurity. GPA 4.0/4.0.</p>
-    <div class="hero-btns">
-      <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" class="btn-outline">Resume</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
+    <p class="hero-greeting fade-in-up">Hi, my name is</p>
+    <h1 class="hero-name fade-in-up">Siqi Dai.</h1>
+    <p class="hero-sub fade-in-up">CS Student at UW-Madison</p>
+    <p class="hero-desc fade-in-up">I build with machine learning, accessibility research, AR/VR systems, and cybersecurity. GPA 4.0/4.0.</p>
+    <div class="hero-btns fade-in-up">
+      <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" class="btn-outline"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+      <a href="#contact" class="btn-outline"><i class="fa-solid fa-envelope"></i> Contact Me</a>
     </div>
   </div>
 </section>
@@ -48,22 +52,42 @@
 
 <main>
 
+  <section class="section whats-new" id="news">
+    <div class="section-inner">
+      <h2 class="section-title animate-on-scroll"><span class="num">00.</span> What's New</h2>
+      <div class="news-grid">
+        <div class="news-item animate-on-scroll">
+          <span class="news-date">May 2026</span>
+          <p>Starting summer research on AR/VR accessibility at MadAbility Lab 🎉</p>
+        </div>
+        <div class="news-item animate-on-scroll">
+          <span class="news-date">Apr 2026</span>
+          <p>Led team to build MediMenu at CheeseHacks 2026 using React + GPT-4o</p>
+        </div>
+        <div class="news-item animate-on-scroll">
+          <span class="news-date">Jan 2026</span>
+          <p>Joined UW-Madison Cybersecurity Operations Center as Student Analyst</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="about">
     <div class="section-inner">
-      <h2 class="section-title"><span class="num">01.</span> About Me</h2>
+      <h2 class="section-title animate-on-scroll"><span class="num">01.</span> About Me</h2>
       <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a second-year computer science student at the University of Wisconsin-Madison. I care about building technically rigorous work that feels clean, useful, and human-centered.</p>
+        <div class="about-text animate-on-scroll">
+          <p>I'm a second-year computer science student at the University of Wisconsin–Madison. I care about building technically rigorous work that feels clean, useful, and human-centered.</p>
           <p>My interests span machine learning systems, HCI and accessibility research, AR/VR interaction using Meta Quest 3, and cybersecurity operations. I value technical depth and real-world impact equally.</p>
           <p>Outside research and coursework, I participate in hackathons, contribute to open-source projects, and explore ideas at the intersection of systems and AI.</p>
           <ul class="about-facts">
             <li><i class="fa-solid fa-graduation-cap"></i> UW-Madison, CS + Math Certificate</li>
             <li><i class="fa-solid fa-star"></i> GPA 4.0 / 4.0</li>
             <li><i class="fa-solid fa-location-dot"></i> Madison, Wisconsin</li>
-            <li><i class="fa-solid fa-flask"></i> ML &amp; AR/VR Research</li>
+            <li><i class="fa-solid fa-flask"></i> ML & AR/VR Research</li>
           </ul>
         </div>
-        <div class="about-photo-wrap">
+        <div class="about-photo-wrap animate-on-scroll">
           <div class="about-photo-ring">
             <img src="assets/images/photo.jpg" alt="Siqi Dai" class="about-photo" />
           </div>
@@ -72,12 +96,87 @@
     </div>
   </section>
 
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <h2 class="section-title animate-on-scroll"><span class="num">02.</span> Experience</h2>
+      <div class="experience-list">
+        
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-timeline">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3>Cybersecurity Operations Center Student Analyst</h3>
+                <p class="exp-company">UW-Madison</p>
+              </div>
+              <span class="exp-date">Summer 2026</span>
+            </div>
+            <p class="exp-desc">Support incident triage, campus vulnerability scanning, security platform maintenance, and documentation for operational security workflows.</p>
+            <ul class="exp-tags">
+              <li>Security Operations</li>
+              <li>Incident Response</li>
+              <li>Vulnerability Management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-timeline">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3>L&S IT Service Desk Technician</h3>
+                <p class="exp-company">College of Letters & Science IT</p>
+              </div>
+              <span class="exp-date">Jan 2026 - Present</span>
+            </div>
+            <p class="exp-desc">Provide front-line support across macOS, Windows, hardware, software, and network issues for a high-volume academic environment.</p>
+            <ul class="exp-tags">
+              <li>Technical Support</li>
+              <li>macOS/Windows</li>
+              <li>Troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-timeline">
+            <div class="exp-dot"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3>Undergraduate Research Scholar</h3>
+                <p class="exp-company">UW-Madison Engine Research Center</p>
+              </div>
+              <span class="exp-date">2025 - Present</span>
+            </div>
+            <p class="exp-desc">Developing multi-output ANN for automotive engine parameter prediction using shared representations to model correlated sensing tasks.</p>
+            <ul class="exp-tags">
+              <li>Machine Learning</li>
+              <li>Neural Networks</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="projects">
     <div class="section-inner">
-      <h2 class="section-title"><span class="num">02.</span> Projects</h2>
+      <h2 class="section-title animate-on-scroll"><span class="num">03.</span> Featured Projects</h2>
       <div class="projects-grid">
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -89,7 +188,8 @@
           <ul class="project-tags"><li>PyTorch</li><li>Diffusion</li><li>Python</li><li>Gen AI</li></ul>
         </article>
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -101,7 +201,8 @@
           <ul class="project-tags"><li>React</li><li>FastAPI</li><li>GPT-4o</li><li>Python</li></ul>
         </article>
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -113,7 +214,8 @@
           <ul class="project-tags"><li>JavaScript</li><li>HTML/CSS</li><li>UI Design</li></ul>
         </article>
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -125,7 +227,8 @@
           <ul class="project-tags"><li>Pandas</li><li>Seaborn</li><li>ANN</li><li>Matplotlib</li></ul>
         </article>
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -137,7 +240,8 @@
           <ul class="project-tags"><li>Meta Quest 3</li><li>HCI</li><li>AR/VR</li><li>Accessibility</li></ul>
         </article>
 
-        <article class="project-card">
+        <article class="project-card interactive-hover animate-on-scroll">
+          <div class="project-glow"></div>
           <div class="project-top">
             <i class="fa-solid fa-folder-open card-folder"></i>
             <div class="project-links">
@@ -155,9 +259,9 @@
 
   <section class="section" id="skills">
     <div class="section-inner">
-      <h2 class="section-title"><span class="num">03.</span> Skills</h2>
+      <h2 class="section-title animate-on-scroll"><span class="num">04.</span> Skills</h2>
       <div class="skills-grid">
-        <div class="skill-group">
+        <div class="skill-group animate-on-scroll">
           <h3>Languages</h3>
           <ul>
             <li><i class="fa-brands fa-python"></i> Python</li>
@@ -167,8 +271,8 @@
             <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <h3>Frameworks &amp; Tools</h3>
+        <div class="skill-group animate-on-scroll">
+          <h3>Frameworks & Tools</h3>
           <ul>
             <li><i class="fa-brands fa-react"></i> React</li>
             <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
@@ -177,8 +281,8 @@
             <li><i class="fa-solid fa-code"></i> VS Code</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <h3>Data &amp; ML</h3>
+        <div class="skill-group animate-on-scroll">
+          <h3>Data & ML</h3>
           <ul>
             <li><i class="fa-solid fa-database"></i> Pandas / NumPy</li>
             <li><i class="fa-solid fa-chart-line"></i> Matplotlib / Seaborn</li>
@@ -187,7 +291,7 @@
             <li><i class="fa-solid fa-eye"></i> Computer Vision</li>
           </ul>
         </div>
-        <div class="skill-group">
+        <div class="skill-group animate-on-scroll">
           <h3>Focus Areas</h3>
           <ul>
             <li><i class="fa-solid fa-shield-halved"></i> Cybersecurity</li>
@@ -202,10 +306,10 @@
   </section>
 
   <section class="section" id="contact">
-    <div class="section-inner contact-inner">
-      <h2 class="section-title"><span class="num">04.</span> Get In Touch</h2>
+    <div class="section-inner contact-inner animate-on-scroll">
+      <h2 class="section-title"><span class="num">05.</span> Get In Touch</h2>
       <p class="contact-desc">I'm currently open to research collaborations, internships, and interesting conversations. My inbox is always open!</p>
-      <a href="mailto:sdai66@wisc.edu" class="contact-btn">Say Hello</a>
+      <a href="mailto:sdai66@wisc.edu" class="contact-btn"><i class="fa-solid fa-paper-plane"></i> Say Hello</a>
       <div class="contact-links">
         <a href="mailto:sdai66@wisc.edu"><i class="fa-solid fa-envelope"></i> sdai66@wisc.edu</a>
         <a href="https://github.com/Sherry1247" target="_blank"><i class="fa-brands fa-github"></i> github.com/Sherry1247</a>
@@ -217,7 +321,7 @@
 </main>
 
 <footer class="footer">
-  <p>Designed &amp; Built by Siqi Dai &middot; 2026</p>
+  <p>Designed & Built by Siqi Dai · 2026</p>
 </footer>
 
 <script src="js/main.js"></script>
