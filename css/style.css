@@ -16,18 +16,15 @@
   --accent-tint: rgba(96, 165, 250, 0.1);
   --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
   --font-serif: 'Playfair Display', 'Georgia', serif;
-  --fz-xs: 13px;
   
-  /* Dark mode (default) theme variables */
+  /* Default theme colors */
   --bg-primary: var(--navy);
-  --bg-secondary: var(--lightest-navy);
   --text-primary: var(--lightest-slate);
-  --text-secondary: var(--slate);
   --text-heading: var(--white);
+  --bg-primary: var(--navy);
+  --text-secondary: var(--slate);
   --fz-sm: 14px;
-  --fz-md: 16px;
   --fz-lg: 18px;
-  --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
