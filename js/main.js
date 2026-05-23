@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
   }
 
-  applyTheme(localStorage.getItem("theme") || "light");
+  const savedTheme = localStorage.getItem("theme");
+  applyTheme(savedTheme || "dark");
 
   themeBtn.addEventListener("click", () => {
     const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -58,6 +59,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", updateScrollUi, { passive: true });
   updateScrollUi();
+
+  function createBinaryParticle(x, y) {
+    const particle = document.createElement("span");
+    particle.className = "binary-particle";
+    particle.textContent = Math.random() > 0.5 ? "01" : "10";
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.setProperty("--dx", `${Math.random() > 0.5 ? 12 : -12}px`);
+    particle.style.setProperty("--dy", `${-36 - Math.random() * 18}px`);
+    document.body.appendChild(particle);
+    setTimeout(() => particle.remove(), 920);
+  }
+
+  let lastBinaryTime = 0;
+  document.addEventListener("mousemove", (event) => {
+    const now = Date.now();
+    if (now - lastBinaryTime < 80) return;
+    lastBinaryTime = now;
+
+    if (event.target.closest("button") || event.target.closest("a")) {
+      return;
+    }
+    createBinaryParticle(event.clientX, event.clientY);
+  });
 
   if (topBtn) {
     topBtn.addEventListener("click", () => {
