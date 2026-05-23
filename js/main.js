@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.14,
-      rootMargin: "0px 0px -8% 0px"
+      threshold: 0.08,
+      rootMargin: "0px 0px -12% 0px"
     }
   );
 
@@ -111,14 +111,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const rect = card.getBoundingClientRect();
       const mouseX = ((event.clientX - rect.left) / rect.width) * 100;
       const mouseY = ((event.clientY - rect.top) / rect.height) * 100;
+      const rotateY = ((mouseX - 50) / 50) * -5;
+      const rotateX = ((mouseY - 50) / 50) * 4;
 
       card.style.setProperty("--mouse-x", `${mouseX}%`);
       card.style.setProperty("--mouse-y", `${mouseY}%`);
+      card.style.setProperty("--project-rotate-x", `${rotateX}deg`);
+      card.style.setProperty("--project-rotate-y", `${rotateY}deg`);
     });
 
     card.addEventListener("mouseleave", () => {
       card.style.removeProperty("--mouse-x");
       card.style.removeProperty("--mouse-y");
+      card.style.setProperty("--project-rotate-x", "0deg");
+      card.style.setProperty("--project-rotate-y", "0deg");
     });
   });
 
@@ -152,4 +158,16 @@ document.addEventListener("DOMContentLoaded", () => {
     typedRole.textContent = "";
     tick();
   }
+
+  // Enhanced button interactions
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((btn) => {
+    btn.addEventListener("mousemove", (event) => {
+      const rect = btn.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      btn.style.setProperty("--btn-x", `${x}px`);
+      btn.style.setProperty("--btn-y", `${y}px`);
+    });
+  });
 });
