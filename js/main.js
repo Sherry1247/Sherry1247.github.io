@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const init = () => {
   const root = document.documentElement;
   const progressBar = document.getElementById("progress-bar");
   const nav = document.querySelector(".site-nav");
@@ -195,4 +195,70 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.setProperty("--btn-y", `${y}px`);
     });
   });
-});
+
+  // Interests Expansion Panel Logic
+  const interestCards = document.querySelectorAll(".interest-card");
+  const expansionPanel = document.getElementById("interests-expansion-panel");
+  const panelContents = document.querySelectorAll(".interest-panel-content");
+
+  // Set up bookshelf inspection details on load (since elements are static in DOM)
+  const readingPanel = document.getElementById("panel-reading");
+  if (readingPanel) {
+    const books = readingPanel.querySelectorAll(".book-item");
+    const detailsBox = readingPanel.querySelector("#book-details");
+    
+    if (books.length && detailsBox) {
+      books.forEach((book) => {
+        const updateBox = () => {
+          const title = book.getAttribute("data-title");
+          const author = book.getAttribute("data-author");
+          const desc = book.getAttribute("data-desc");
+          detailsBox.classList.add("active");
+          detailsBox.innerHTML = `
+            <h5>${title}</h5>
+            <p class="book-author">By ${author}</p>
+            <p class="book-desc">${desc}</p>
+          `;
+        };
+        book.addEventListener("mouseenter", updateBox);
+        book.addEventListener("click", updateBox);
+      });
+    }
+  }
+
+  interestCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const type = card.getAttribute("data-interest-type");
+      if (!type) return;
+
+      const targetPanel = document.getElementById(`panel-${type}`);
+
+      // Handle card toggle active
+      if (card.classList.contains("active")) {
+        card.classList.remove("active");
+        expansionPanel.classList.remove("expanded");
+        if (targetPanel) {
+          targetPanel.classList.remove("active");
+        }
+        return;
+      }
+
+      // Close other cards and panels
+      interestCards.forEach((c) => c.classList.remove("active"));
+      panelContents.forEach((p) => p.classList.remove("active"));
+
+      // Activate current
+      card.classList.add("active");
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+      expansionPanel.classList.add("expanded");
+    });
+  });
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}

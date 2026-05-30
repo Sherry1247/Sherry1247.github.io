@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Guide | Siqi Dai</title>
+    <meta name="author" content="Siqi Dai">
+    <meta name="description" content="Academic Course Guide and reviews for Computer Science and Mathematics courses taken at UW-Madison.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .courses-header {
+            padding: 140px 0 60px;
+            text-align: center;
+        }
+
+        .courses-header h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .courses-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-soft);
+            max-width: 60ch;
+            margin: 0 auto;
+        }
+
+        .courses-container {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .search-wrapper {
+            position: relative;
+            margin-bottom: 34px;
+            max-width: 400px;
+        }
+
+        .search-wrapper input {
+            width: 100%;
+            padding: 14px 16px 14px 44px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--text);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+
+        .search-wrapper input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .courses-table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .courses-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            background: var(--surface);
+        }
+
+        .courses-table th {
+            background: var(--surface-soft);
+            color: var(--text);
+            font-weight: 700;
+            padding: 18px 20px;
+            border-bottom: 2px solid var(--line);
+        }
+
+        .courses-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--line);
+            color: var(--text-soft);
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .courses-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .courses-table tr:hover td {
+            background: rgba(159, 103, 57, 0.03);
+            color: var(--text);
+        }
+
+        .course-dept-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.82rem;
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar" aria-hidden="true"></div>
+
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">SD</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#whats-new">What's New</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#research">Research</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#interests">Interests</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="courses-header">
+            <h1>Academic Course Guide</h1>
+            <p class="courses-subtitle">A collection of completed coursework at the University of Wisconsin-Madison.</p>
+        </header>
+
+        <div class="courses-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="course-search" placeholder="Search by course code, title, or department...">
+            </div>
+
+            <div class="courses-table-wrapper">
+                <table class="courses-table" id="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Title</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="cs 200 programming i computer sciences">
+                            <td><strong>CS 200</strong></td>
+                            <td>Programming I</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="cs 300 programming ii computer sciences">
+                            <td><strong>CS 300</strong></td>
+                            <td>Programming II</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="cs 400 programming iii computer sciences">
+                            <td><strong>CS 400</strong></td>
+                            <td>Programming III</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="cs 240 introduction to discrete mathematics computer sciences">
+                            <td><strong>CS 240</strong></td>
+                            <td>Introduction to Discrete Mathematics</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="cs 532 matrix methods in machine learning computer sciences">
+                            <td><strong>CS 532</strong></td>
+                            <td>Matrix Methods in Machine Learning</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="cs 639 special topics in computer science computer sciences">
+                            <td><strong>CS 639</strong></td>
+                            <td>Special Topics in Computer Science</td>
+                            <td><span class="course-dept-badge">Computer Sciences</span></td>
+                        </tr>
+                        <tr data-search="math 340 elementary matrix and linear algebra mathematics">
+                            <td><strong>MATH 340</strong></td>
+                            <td>Elementary Matrix and Linear Algebra</td>
+                            <td><span class="course-dept-badge">Mathematics</span></td>
+                        </tr>
+                        <tr data-search="math 331 introductory probability mathematics">
+                            <td><strong>MATH 331</strong></td>
+                            <td>Introductory Probability</td>
+                            <td><span class="course-dept-badge">Mathematics</span></td>
+                        </tr>
+                        <tr data-search="math 221 &amp; 222 calculus and analytic geometry i &amp; ii mathematics">
+                            <td><strong>MATH 221 &amp; 222</strong></td>
+                            <td>Calculus and Analytic Geometry I &amp; II</td>
+                            <td><span class="course-dept-badge">Mathematics</span></td>
+                        </tr>
+                        <tr data-search="theatre 100 introduction to theater theatre and drama">
+                            <td><strong>THEATRE 100</strong></td>
+                            <td>Introduction to Theater</td>
+                            <td><span class="course-dept-badge">Theatre and Drama</span></td>
+                        </tr>
+                        <tr data-search="lis 202 informational divides and social justice library and information studies">
+                            <td><strong>LIS 202</strong></td>
+                            <td>Informational Divides and Social Justice</td>
+                            <td><span class="course-dept-badge">Library and Info Studies</span></td>
+                        </tr>
+                        <tr data-search="anthro 104 cultural anthropology and human diversity anthropology">
+                            <td><strong>ANTHRO 104</strong></td>
+                            <td>Cultural Anthropology and Human Diversity</td>
+                            <td><span class="course-dept-badge">Anthropology</span></td>
+                        </tr>
+                        <tr data-search="esl 118 academic writing ii english as a second language">
+                            <td><strong>ESL 118</strong></td>
+                            <td>Academic Writing II</td>
+                            <td><span class="course-dept-badge">English as Second Language</span></td>
+                        </tr>
+                        <tr data-search="urs 250 undergraduate research scholar seminar undergraduate research scholars">
+                            <td><strong>URS 250</strong></td>
+                            <td>Undergraduate Research Scholar Seminar</td>
+                            <td><span class="course-dept-badge">Undergraduate Research</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">Siqi Dai</p>
+                <p class="footer-meta">Owned by Siqi Dai · Last updated: May 30, 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("course-search");
+            const tableRows = document.querySelectorAll("#courses-table tbody tr");
+
+            searchInput.addEventListener("input", (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                tableRows.forEach(row => {
+                    const searchText = row.getAttribute("data-search");
+                    if (searchText.includes(query)) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
