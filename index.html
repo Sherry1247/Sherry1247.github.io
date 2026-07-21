@@ -29,11 +29,14 @@
     <nav class="site-nav">
         <div class="nav-container">
             <a href="#home" class="nav-logo" aria-label="Go to homepage">SD</a>
-            <div class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Open navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="nav-links" id="primary-navigation">
                 <a href="#about">About</a>
                 <a href="#whats-new">What's New</a>
                 <a href="#experience">Experience</a>
-                <a href="#research">Research</a>
                 <a href="courses.html">Course Guide</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
@@ -72,7 +75,8 @@
 
                 <aside class="profile-card profile-float">
                     <div class="profile-photo-wrap">
-                        <img src="assets/images/photo.jpg" alt="Portrait of Siqi Dai" class="profile-photo">
+                        <img src="assets/images/photo.jpg" alt="Portrait of Siqi Dai" class="profile-photo" width="940"
+                            height="300" fetchpriority="high">
                     </div>
                     <div class="profile-card-body">
                         <h2>Siqi Dai</h2>
@@ -198,105 +202,310 @@
         <section id="experience" class="section" data-reveal>
             <div class="section-heading">
                 <span class="section-kicker">Experience</span>
-                <h3>Work that ranges from security operations to technical support.</h3>
+                <h3>Work ranging from engineering and research to operations and support.</h3>
             </div>
 
             <div class="timeline">
-                <article class="timeline-item">
-                    <div class="timeline-date">Summer 2026 - Current</div>
-                    <div class="timeline-panel plain-block">
-                        <h3>Software Development Engineer</h3>
-                        <p class="timeline-meta">REC</p>
-                        <p>
-                            <li>Owned front-end and back-end development tasks for the REC app, significantly improving
-                                user experience across profile creation, onboarding, search, and recommendation systems.
-                            </li>
-                            <li>Conducted comprehensive technical audits of user workflows and GitHub repositories to
-                                identify and resolve bugs, implement UI/UX enhancements, and maintain high code quality
-                                through rigorous QA testing.</li>
-                            <li>Drove the end-to-end lifecycle of new functionality from planning to App Store
-                                deployment, while documenting system workflows and mentoring incoming student
-                                developers.</li>
-                        </p>
+                <!-- REC Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-rec">
+                    <div class="timeline-date">Summer 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Engineering</span>
+                                    <h3>Software Development Engineer</h3>
+                                    <p class="timeline-meta">REC</p>
+                                </div>
+                                <i class="fas fa-code experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Lead the design and development of end-to-end features for the REC application, a mobile platform connecting users through shared interests, optimizing core user journeys from onboarding to recommendation delivery.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>React Native</span>
+                                <span>TypeScript</span>
+                                <span>FastAPI</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                                <span>Git/GitHub</span>
+                                <span>Mobile QA Testing</span>
+                                <span>CI/CD Pipelines</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-rec-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-rec-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Conducted comprehensive code quality audits and systematic repository refactoring, which resolved critical UI/UX bottlenecks and improved app load times. Managed the complete software lifecycle, including regression testing, continuous integration, and App Store deployment pipelines, while mentoring junior engineers and creating onboarding documentation.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Developed responsive frontend screens and backend API services to enhance onboarding flows and search functionality.</li>
+                                            <li>Formulated and executed testing strategies, reducing user-reported bugs by refactoring legacy modules.</li>
+                                            <li>Directed App Store release cycles, ensuring compliance with Apple's developer guidelines and seamless user transitions.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/Rec_image.png" alt="REC Application interface overview" loading="lazy">
+                                        <figcaption>REC Mobile Application Feature Work</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/Rec_image2.png" alt="REC Profile and search system" loading="lazy">
+                                        <figcaption>User Journey &amp; Recommendation Flow</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <article class="timeline-item">
-                    <div class="timeline-date"> May 2026 - Current </div>
-                    <div class="timeline-panel plain-block">
-                        <h3>Cybersecurity Operations Center Student Analyst</h3>
-                        <p class="timeline-meta">UW-Madison</p>
-                        <p>
-                            <li>Investigate and triage phishing incidents using Cherwell ticketing workflows, including
-                                analyzing reported emails, creating incident cases, and coordinating response
-                                communication with affected departments.</li>
-                            <li>Monitor and analyze Palo Alto Cortex XSOAR playbooks involving outbound critical
-                                traffic, URL filtering, and cloud security alerts to support threat detection and
-                                incident escalation workflows.</li>
-                            <li>Perform endpoint and network investigation tasks by identifying device hostnames, MAC
-                                addresses, and associated user activity across campus-managed systems.</li>
-                        </p>
+                <!-- MadAbility Lab Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-madability">
+                    <div class="timeline-date">Summer 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Undergraduate Research Assistant</h3>
+                                    <p class="timeline-meta"><a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">MadAbility Lab <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-vr-cardboard experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Design and evaluate intelligent interaction systems for low-vision users in augmented and virtual reality (AR/VR) environments.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>AR/VR Development</span>
+                                <span>Meta Quest SDK</span>
+                                <span>Intel RealSense API</span>
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>HCI Prototyping</span>
+                                <span>User Study Design</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-madability-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-madability-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Supported accessibility-focused Human-Computer Interaction (HCI) research by conducting literature reviews, structuring user studies, and building prototypes. Developed accessibility interfaces on Meta Quest 3 and Intel RealSense hardware, investigating how spatial audio and computer vision cues can assist visually impaired users in spatial navigation.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Built spatial mapping and feedback prototypes using Meta Quest 3 and Intel RealSense D455 depth cameras.</li>
+                                            <li>Co-authored user study protocols and assisted in executing user evaluation sessions with low-vision participants.</li>
+                                            <li>Analyzed qualitative and quantitative interaction data to iterate on spatial computing interface designs.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/AR_VR_point_cloud.png" alt="AR/VR spatial point cloud visualization" loading="lazy">
+                                        <figcaption>Spatial Point Cloud Hazard Mapping</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/AR_VR_stair_detection.png" alt="AR/VR stair detection system" loading="lazy">
+                                        <figcaption>Real-time Staircase &amp; Barrier Detection</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <article class="timeline-item">
+                <!-- Cybersecurity SOC Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-cyber">
+                    <div class="timeline-date">May 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Security</span>
+                                    <h3>Cybersecurity Operations Center Student Analyst</h3>
+                                    <p class="timeline-meta">UW-Madison</p>
+                                </div>
+                                <i class="fas fa-shield-halved experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Analyze and mitigate security incidents across the university’s network infrastructure, triaging potential threats and coordinating department-wide incident response.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Palo Alto Cortex XSOAR</span>
+                                <span>Cherwell Ticketing</span>
+                                <span>Threat Intelligence</span>
+                                <span>Email Header Analysis</span>
+                                <span>Network Forensics</span>
+                                <span>Incident Response</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-cyber-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-cyber-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Leveraged automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs. Conducted forensic analysis of endpoints by cross-referencing MAC addresses, hostnames, and DHCP logs to identify compromised campus assets and isolate threats.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Investigated and triaged over 100+ phishing campaigns and user-reported security alerts weekly using Cherwell workflows.</li>
+                                            <li>Monitored Palo Alto Cortex XSOAR playbooks to track outbound command-and-control (C2) traffic and cloud infrastructure anomalies.</li>
+                                            <li>Coordinated with campus IT leads to initiate endpoint isolation and password reset procedures for compromised accounts.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/Cyber-Badger-Logo.png" alt="UW-Madison Cybersecurity Operations Logo" loading="lazy" style="object-fit: contain; padding: 16px; background: var(--surface);">
+                                        <figcaption>UW-Madison Cybersecurity Operations Center</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- URS Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-urs">
+                    <div class="timeline-date">Fall 2025 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Undergraduate Research Scholar</h3>
+                                    <p class="timeline-meta"><a href="https://urs.ls.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">Undergraduate Research Scholars (URS) <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-microchip experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Conducted machine learning research on virtual sensing architectures for automotive power systems, resulting in an award-winning technical paper.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>NumPy</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
+                                <span>Regression Analysis</span>
+                                <span>Scholarly Communication</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-urs-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-urs-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Formulated a unified deep learning model to estimate engine combustion states and NOx emissions. Collaborated with mechanical engineering faculty to preprocess real-world engine sensor datasets, design neural architectures, and validate predictions against classical regression baselines, culminating in winning the Central State Section of The Combustion Institute Undergrad Research Competition.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Preprocessed and normalized high-dimensional diesel engine sensor data spanning 217 operating points.</li>
+                                            <li>Designed, trained, and optimized artificial neural network (ANN) architectures in Python and PyTorch.</li>
+                                            <li>Authored and presented a technical paper at the Combustion Institute CSSI competition.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/symposium_present_photo.png" alt="Undergraduate Research Symposium poster presentation" loading="lazy">
+                                        <figcaption>UW-Madison Undergraduate Research Symposium Poster Presentation</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/Digital_Twin_engineering_image.png" alt="Digital Twin Virtual Sensing Model" loading="lazy">
+                                        <figcaption>Virtual Sensing Deep Learning Architecture</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/URS_image.jpg" alt="URS Research Certificate" loading="lazy">
+                                        <figcaption>Research Project Recognition</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- L&S IT Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-lsit">
                     <div class="timeline-date">Jan 2026 - May 2026</div>
-                    <div class="timeline-panel plain-block">
-                        <h3>L&amp;S IT Service Desk Technician</h3>
-                        <p class="timeline-meta">College of Letters &amp; Science IT · Madison, WI</p>
-                        <p>
-                            <li>Delivered Tier-1 technical support for faculty, staff, and students across multiple L&S
-                                departments through phone, chat, email, and in-person troubleshooting.</li>
-                            <li>Resolved software, hardware, authentication, and network connectivity issues across
-                                Windows and macOS environments while documenting 30+ service cases in Halo.</li>
-                            <li>Maintained operational readiness of 3+ instructional computing labs through routine
-                                diagnostics, maintenance coordination, and technical room inspections.</li>
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Operations</span>
+                                    <h3>L&amp;S IT Service Desk Technician</h3>
+                                    <p class="timeline-meta">College of Letters &amp; Science IT · Madison, WI</p>
+                                </div>
+                                <i class="fas fa-laptop-code experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Managed IT support and systems maintenance for the College of Letters &amp; Science, resolving multi-tier technical issues for faculty, staff, and students.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Halo ITSM</span>
+                                <span>Active Directory</span>
+                                <span>Windows/macOS Admin</span>
+                                <span>Network Diagnostics</span>
+                                <span>Enterprise Hardware</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-lsit-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
 
-        <section id="research" class="section" data-reveal>
-            <div class="section-heading">
-                <span class="section-kicker">Research</span>
-                <h3>Applied work with concrete technical questions.</h3>
-            </div>
-
-            <div class="research-grid">
-                <article class="feature-card plain-block">
-                    <div class="card-topline">
-                        <span class="chip">2025 - Present</span>
-                        <span class="card-label"><a href="https://urs.ls.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">Undergraduate Research Scholar <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a></span>
-                    </div>
-                    <h3>Multi-Parameter Virtual Sensing Using a Single ANN Model in an Automotive Engine</h3>
-                    <p>
-                        Developing a multi-output neural model for automotive engine parameter prediction.
-                        The project explores how shared representations can jointly model correlated sensing tasks with
-                        strong accuracy.
-                    </p>
-                    <div class="tag-row">
-                        <span>Neural Networks</span>
-                        <span>Automotive Systems</span>
-                        <span>Virtual Sensing</span>
-                    </div>
-                </article>
-
-                <article class="feature-card plain-block">
-                    <div class="card-topline">
-                        <span class="chip">Summer 2026 - Present </span>
-                        <span class="card-label"><a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">MadAbility Lab <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a></span>
-                    </div>
-                    <h3>AR/VR Accessibility and HCI Research</h3>
-                    <p>
-                        Supported accessibility-focused HCI work through literature review, study design, and
-                        user-testing
-                        around intelligent interaction in immersive environments.
-                    </p>
-                    <div class="tag-row">
-                        <span>Accessibility</span>
-                        <span>HCI</span>
-                        <span>AR/VR</span>
+                        <div class="card-details-wrapper" id="exp-lsit-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Troubleshoot critical network, hardware, and OS issues across Windows and macOS environments. Maintained the infrastructure and software configurations of academic labs, implementing regular diagnostics to minimize downtime and ensure seamless instructional operations.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Resolved 30+ hardware and authentication service requests daily with high first-contact resolution rates, documented in Halo.</li>
+                                            <li>Diagnosed and repaired instructional equipment, printers, and network connections in 3+ college computing labs.</li>
+                                            <li>Provisioned and configured enterprise workstations, ensuring compliance with campus-wide security protocols.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/LS_IT_Infolab.png" alt="L&S IT Computing Infolab" loading="lazy">
+                                        <figcaption>L&amp;S Computer Lab Infrastructure</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/LS_IT_service_desk.jpeg" alt="L&S IT Service Desk" loading="lazy">
+                                        <figcaption>Service Desk Operations &amp; Support</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -335,106 +544,469 @@
             </div>
 
             <div class="project-list">
-                <article class="project-row interactive-card">
-                    <div class="project-header">
-                        <div>
-                            <span class="project-period">Spring 2026 · Ongoing</span>
-                            <h3>Self-Refining Image Generation &amp; Editing</h3>
+                <!-- SAIL Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Summer 2026 · Team Lead</span>
+                                <h3>SAIL <span class="project-title-detail">(Sign Language AI Learning Platform)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View SAIL source on GitHub"
+                                    aria-label="View SAIL source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-hands-asl-interpreting"></i></span>
+                            </div>
                         </div>
-                        <div class="project-badge-group">
-                            <span class="project-github-link disabled" title="Repository Private / Ongoing">
-                                <i class="fab fa-github"></i>
-                            </span>
-                            <span class="project-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
+                        <p class="project-summary">
+                            Led development of an AI-powered sign language learning and recognition platform combining computer vision, machine learning, and wearable AR technology to make sign language learning interactive and accessible.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>MediaPipe</span>
+                            <span>OpenCV</span>
+                            <span>Machine Learning</span>
+                            <span>Computer Vision</span>
                         </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-sail-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
                     </div>
-                    <p>
-                        Building an iterative image refinement workflow that combines diffusion-style generation with
-                        repeated feedback loops for stronger control and editing quality.
-                    </p>
-                    <div class="project-reveal">
-                        <div class="tag-row">
-                            <span>PyTorch</span>
-                            <span>Diffusion</span>
-                            <span>Image Processing</span>
-                            <span>Generative AI</span>
+
+                    <div class="card-details-wrapper" id="proj-sail-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                The platform uses hand landmark detection and gesture recognition to identify American Sign Language (ASL) gestures in real time. Learners receive immediate visual feedback while practicing signs, creating a more engaging and accessible learning experience.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Real-time hand tracking and keypoint isolation using MediaPipe.</li>
+                                        <li>AI-powered ASL gesture classification models with optimized inference latency.</li>
+                                        <li>Interactive educational interface offering real-time feedback on signing accuracy.</li>
+                                        <li>Modular architecture designed to easily support future wearable AR integration.</li>
+                                        <li>Formulated and implemented data processing, normalization, and model evaluation pipelines.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img src="assets/images/SAIL.png" alt="SAIL Sign Language AI Platform" loading="lazy">
+                                    <figcaption>SAIL Sign Language AI Learning Interface &amp; Tracking</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-row interactive-card">
-                    <div class="project-header">
-                        <div>
-                            <span class="project-period">CheeseHacks 2026</span>
-                            <h3>MediMenu</h3>
+                <!-- Digital Twin Engine Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-digital-twin">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Spring 2026 · Researcher</span>
+                                <h3>Digital Twin Engine <span class="project-title-detail">(Virtual Sensor Robustness &amp; Diagnostics)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/digital-twin-engine-virtual-sensor-research" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View Digital Twin Engine source on GitHub"
+                                    aria-label="View Digital Twin Engine source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-microchip"></i></span>
+                            </div>
                         </div>
-                        <div class="project-badge-group">
-                            <a href="https://github.com/samkwak188/MediMenu" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <span class="project-badge"><i class="fas fa-utensils"></i></span>
+                        <p class="project-summary">
+                            Designed and developed a multi-target virtual sensing framework using a single artificial neural network (ANN) to replace multiple expensive physical sensors in a 12L 6-cylinder diesel engine.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>NumPy</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                            <span>Virtual Sensing</span>
+                            <span>Deep Learning</span>
+                            <span>Thermodynamics</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-digital-twin-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-digital-twin-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Built using a shared-representation deep learning architecture, the model learns latent representations to simultaneously predict heterogeneous, non-linear thermodynamic parameters (MF_IA, NOx_EO, SOC) in real time. The framework achieved high test accuracy (R² &gt; 0.98 for all targets) across 217 engine operating points.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Engineered multi-output ANN architectures (ANN-6 and ANN-13) in PyTorch for non-linear thermodynamic engine states.</li>
+                                        <li>Preprocessed and analyzed real-world high-fidelity experimental data across full engine load and speed ranges.</li>
+                                        <li>Achieved predictive R² scores of 0.9945 for intake air mass flow, 0.9891 for NOx emissions, and 0.9841 for start of combustion.</li>
+                                        <li>Validated model generalization using stratified splits against Linear Regression, Random Forest, and SVR baselines.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item">
+                                    <img src="assets/images/Digital_Twin_engineering_image.png" alt="Digital Twin Neural Architecture" loading="lazy">
+                                    <figcaption>Multi-target Virtual Sensor ANN Architecture</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img src="assets/images/Future_Work_Digital_Twin_project.png" alt="Digital Twin Future Work Framework" loading="lazy">
+                                    <figcaption>System Diagnostics &amp; Robustness Roadmap</figcaption>
+                                </figure>
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img src="assets/images/symposium_present_photo.png" alt="Undergraduate Research Symposium Presentation" loading="lazy">
+                                    <figcaption>Poster Presentation at UW-Madison Undergraduate Research Symposium</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <p>
-                        Led a four-person team designing a platform for personalized meal recommendations tied to
-                        dietary needs,
-                        health goals, and an AI-assisted planning experience.
-                    </p>
-                    <div class="project-reveal">
-                        <div class="tag-row">
+                </article>
+
+                <!-- Industrial Asset Intelligence Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-ideathon">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">July 18, 2026 · Participant</span>
+                                <h3>Industrial Asset Intelligence <span class="project-title-detail">(Spatial Intelligence Ideathon)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Ideathon Design Proposal / Non-code">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-cubes-stacked"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed a spatial computing solution for industrial manufacturing environments during a one-day interdisciplinary startup ideathon, preserving equipment maintenance knowledge and reducing downtime.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Spatial Computing</span>
+                            <span>Shared AR</span>
+                            <span>Digital Twins</span>
+                            <span>Indoor Positioning</span>
+                            <span>AI Knowledge Management</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-ideathon-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-ideathon-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Collaborated with a multidisciplinary team to commercialize Spatial Grounding and Awareness for Augmented Reality (SGA-AR) in industrial spaces, enabling spatial anchoring of machinery documentation directly onto physical assets.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Formulated product strategy and technical architecture for shared AR spaces in manufacturing environments.</li>
+                                        <li>Conducted rapid customer discovery and developed sustainable B2B SaaS business models.</li>
+                                        <li>Led pitch deck creation and high-fidelity product dashboard demonstrations.</li>
+                                        <li>Designed spatial anchoring logic to ground equipment documentation to physical machinery.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img src="assets/images/slide_overview.jpg" alt="Industrial Asset Intelligence concept overview slide" loading="lazy">
+                                    <figcaption>Industrial Asset Intelligence System Architecture</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img src="assets/images/Ideathon_image.jpg" alt="Ideathon team collaboration" loading="lazy">
+                                    <figcaption>UW Tech Exploration Lab Team Collaboration</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AR/VR Accessibility Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-arvr">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Summer 2026 - Present · Researcher</span>
+                                <h3>AR/VR Accessibility &amp; Spatial HCI</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Repository Private / Institutional Research">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-universal-access"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Research project focusing on accessibility in immersive environments, utilizing depth-sensing cameras and spatial computing to assist low-vision users with real-world navigation.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Unity</span>
+                            <span>Meta Quest SDK</span>
+                            <span>C#</span>
+                            <span>Intel RealSense API</span>
+                            <span>Spatial Computing</span>
+                            <span>HCI</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-arvr-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-arvr-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Developed spatial intelligence prototypes that capture 3D environments and translate them into multi-modal cues (audio, haptics) for users. Investigated spatial layout grounding algorithms and user-testing protocols to ensure interfaces degrade gracefully under vision impairments.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Leveraged Intel RealSense D455 depth data to map physical obstacles and estimate distances in real time.</li>
+                                        <li>Formulated 3D spatial audio feedback models to communicate navigation markers and hazard warnings.</li>
+                                        <li>Integrated gesture-based control paths to simplify VR interface navigation for accessibility.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item">
+                                    <img src="assets/images/AR_VR_stair_detection.png" alt="AR/VR Staircase and hazard detection" loading="lazy">
+                                    <figcaption>Real-time Obstacle &amp; Stair Detection</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img src="assets/images/AR_VR_point_cloud.png" alt="AR/VR Point cloud navigation feedback" loading="lazy">
+                                    <figcaption>Spatial Point Cloud Environmental Mapping</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Self-Refining Image Generation Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-diff">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Spring 2026 · Ongoing</span>
+                                <h3>Self-Refining Image Generation &amp; Editing</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Repository Private / Ongoing">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Developed an iterative diffusion-based image generation framework featuring a closed-loop feedback mechanism for precise, localized image editing.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>Hugging Face Diffusers</span>
+                            <span>Generative AI</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-diff-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-diff-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Built in PyTorch, the system utilizes latent representations and cross-attention maps to identify target editing regions. By integrating a multi-stage feedback loop, users can progressively refine generated images through natural language prompts, resolving typical drift issues in single-step generation.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Implemented local cross-attention control to isolate edits without affecting background pixels.</li>
+                                        <li>Formulated a closed-loop feedback pipeline that scores and refines image details iteratively.</li>
+                                        <li>Optimized diffusion step sequencing, reducing inference times for image-to-image tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MediMenu Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-medimenu">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">CheeseHacks 2026 · Lead Developer</span>
+                                <h3>MediMenu <span class="project-title-detail">(AI Meal Planner)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/samkwak188/MediMenu" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-utensils"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed and built an AI-assisted meal planner and personalization engine during the CheeseHacks 2026 hackathon, leading a 4-person development team.
+                        </p>
+                        <div class="tag-row compact-tags">
                             <span>React</span>
                             <span>FastAPI</span>
                             <span>GPT-4o</span>
                             <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-medimenu-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-medimenu-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Integrated large language models (LLMs) with dietary databases to deliver customized nutritional recommendations based on user health parameters. Built backend using FastAPI and structured responsive frontend in React, creating an interactive portal that auto-generates grocery lists and meal plans.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Integrated GPT-4o API for personalized, context-aware recipe recommendations.</li>
+                                        <li>Developed a FastAPI backend with asynchronous query handling for rapid response times.</li>
+                                        <li>Constructed a React-based frontend dashboard with visual recipe cards and nutritional breakdowns.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img src="assets/images/Medimenu.png" alt="MediMenu AI Meal Planner interface" loading="lazy">
+                                    <figcaption>MediMenu AI Meal Personalization &amp; Recipe Portal</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-row interactive-card">
-                    <div class="project-header">
-                        <div>
-                            <span class="project-period">Badger Build Festival</span>
-                            <h3>CourseOptimizer</h3>
+                <!-- CourseOptimizer Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-courseopt">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Badger Build Festival</span>
+                                <h3>CourseOptimizer <span class="project-title-detail">(Schedule Optimization Tool)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/CourseOptimizer" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-calendar-check"></i></span>
+                            </div>
                         </div>
-                        <div class="project-badge-group">
-                            <a href="https://github.com/Sherry1247/CourseOptimizer" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <span class="project-badge"><i class="fas fa-calendar-check"></i></span>
-                        </div>
-                    </div>
-                    <p>
-                        Built a schedule planning tool that helps students work through real-world course constraints
-                        with a more usable and organized front-end flow.
-                    </p>
-                    <div class="project-reveal">
-                        <div class="tag-row">
+                        <p class="project-summary">
+                            Built an interactive schedule optimization application at the Badger Build Festival to help university students build conflict-free course schedules.
+                        </p>
+                        <div class="tag-row compact-tags">
                             <span>JavaScript</span>
-                            <span>HTML/CSS</span>
-                            <span>GitHub</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Constraint Satisfaction</span>
                             <span>UI Design</span>
                         </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-courseopt-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-courseopt-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Developed a search and filter system that runs constraint-satisfaction logic client-side in JavaScript. The tool parses course timings, prerequisites, and workload metrics, presenting students with a visual calendar dashboard and alternative schedule configurations.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Built a client-side constraint solver to filter schedules based on user availability and load limits.</li>
+                                        <li>Designed an interactive grid calendar showing overlapping slots and walking times between classes.</li>
+                                        <li>Created a clean, responsive HTML/CSS dashboard with smooth drag-and-drop course selections.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img src="assets/images/CourseOptimizer_image.png" alt="CourseOptimizer schedule tool dashboard" loading="lazy">
+                                    <figcaption>CourseOptimizer Visual Calendar &amp; Constraint Solver Interface</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-row interactive-card">
-                    <div class="project-header">
-                        <div>
-                            <span class="project-period">Fall 2025</span>
-                            <h3>Human Survival Probability Analysis</h3>
+                <!-- Human Survival Probability Analysis Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-survival">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Fall 2025</span>
+                                <h3>Human Survival Probability Analysis</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Academic Course Project">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-chart-line"></i></span>
+                            </div>
                         </div>
-                        <span class="project-badge"><i class="fas fa-chart-line"></i></span>
-                    </div>
-                    <p>
-                        Analyzed ten datasets to study socioeconomic effects on survival outcomes,
-                        combining data cleaning, exploration, and neural-model evaluation through AUC-based analysis.
-                    </p>
-                    <div class="project-reveal">
-                        <div class="tag-row">
+                        <p class="project-summary">
+                            Conducted a statistical and machine learning study analyzing socioeconomic factors and their correlations with human survival outcomes across ten large-scale datasets.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
                             <span>Pandas</span>
+                            <span>NumPy</span>
                             <span>Seaborn</span>
                             <span>Matplotlib</span>
-                            <span>ANN</span>
+                            <span>Artificial Neural Networks (ANNs)</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-survival-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-survival-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Performed rigorous data cleaning, missing value imputation, and exploratory data analysis using Pandas and Seaborn. Trained and evaluated multiple classification models, including Artificial Neural Networks (ANNs) and logistic baselines, comparing performance using area-under-the-curve (AUC) and receiver-operating-characteristic (ROC) metrics.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Processed and merged ten heterogeneous datasets, handling class imbalances and multi-collinearity.</li>
+                                        <li>Trained and optimized multi-layer ANN classifiers in Python.</li>
+                                        <li>Produced publication-ready statistical visualizations of feature importances and correlation matrices.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -704,7 +1276,7 @@
         <div class="container footer-inner">
             <div class="footer-info">
                 <p class="footer-title">Siqi Dai</p>
-                <p class="footer-meta">Owned by Siqi Dai · Last updated: May 30, 2026</p>
+                <p class="footer-meta">Owned by Siqi Dai · Last updated: July 20, 2026</p>
             </div>
             <div class="footer-links">
                 <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>

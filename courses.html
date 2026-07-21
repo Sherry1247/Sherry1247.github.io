@@ -127,11 +127,14 @@
     <nav class="site-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo" aria-label="Go to homepage">SD</a>
-            <div class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Open navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="nav-links" id="primary-navigation">
                 <a href="index.html#about">About</a>
                 <a href="index.html#whats-new">What's New</a>
                 <a href="index.html#experience">Experience</a>
-                <a href="index.html#research">Research</a>
                 <a href="index.html#projects">Projects</a>
                 <a href="index.html#interests">Interests</a>
                 <a href="index.html#contact">Contact</a>
@@ -186,12 +189,12 @@
                             <td>Introduction to Computer Engineering</td>
                             <td><span class="course-dept-badge">Computer Sciences</span></td>
                         </tr>
-                        <tr data-search="cs 354 Machine Machine Organization and Programming">
+                        <tr data-search="cs 354 machine organization and programming computer sciences">
                             <td><strong>CS 354</strong></td>
                             <td>Machine Organization and Programming</td>
                             <td><span class="course-dept-badge">Computer Sciences</span></td>
                         </tr>
-                        <tr data-search="cs 524 Introduction to Optimization">
+                        <tr data-search="cs 524 introduction to optimization computer sciences">
                             <td><strong>CS 524</strong></td>
                             <td>Introduction to Optimization</td>
                             <td><span class="course-dept-badge">Computer Sciences</span></td>
@@ -256,7 +259,7 @@
         <div class="container footer-inner">
             <div class="footer-info">
                 <p class="footer-title">Siqi Dai</p>
-                <p class="footer-meta">Owned by Siqi Dai · Last updated: May 30, 2026</p>
+                <p class="footer-meta">Owned by Siqi Dai · Last updated: July 19, 2026</p>
             </div>
             <div class="footer-links">
                 <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>

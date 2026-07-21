@@ -8,6 +8,8 @@ const init = () => {
   const topBtn = document.getElementById("back-to-top");
   const interactiveCards = document.querySelectorAll(".interactive-card");
   const typedRole = document.getElementById("typed-role");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-links");
   const phrases = [
     "I build with machine learning, research, cybersecurity, and practical software systems.",
     "I care about elegant technical work that still feels useful and clear.",
@@ -60,29 +62,33 @@ const init = () => {
   window.addEventListener("scroll", updateScrollUi, { passive: true });
   updateScrollUi();
 
-  function createBinaryParticle(x, y) {
-    const particle = document.createElement("span");
-    particle.className = "binary-particle";
-    particle.textContent = Math.random() > 0.5 ? "01" : "10";
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
-    particle.style.setProperty("--dx", `${Math.random() > 0.5 ? 12 : -12}px`);
-    particle.style.setProperty("--dy", `${-36 - Math.random() * 18}px`);
-    document.body.appendChild(particle);
-    setTimeout(() => particle.remove(), 920);
+  if (navToggle && navMenu) {
+    const closeNavigation = () => {
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation");
+      navToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      navToggle.innerHTML = isOpen
+        ? '<i class="fas fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fas fa-bars" aria-hidden="true"></i>';
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeNavigation);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) {
+        closeNavigation();
+      }
+    });
   }
-
-  let lastBinaryTime = 0;
-  document.addEventListener("mousemove", (event) => {
-    const now = Date.now();
-    if (now - lastBinaryTime < 80) return;
-    lastBinaryTime = now;
-
-    if (event.target.closest("button") || event.target.closest("a")) {
-      return;
-    }
-    createBinaryParticle(event.clientX, event.clientY);
-  });
 
   if (topBtn) {
     topBtn.addEventListener("click", () => {
@@ -136,20 +142,14 @@ const init = () => {
       const rect = card.getBoundingClientRect();
       const mouseX = ((event.clientX - rect.left) / rect.width) * 100;
       const mouseY = ((event.clientY - rect.top) / rect.height) * 100;
-      const rotateY = ((mouseX - 50) / 50) * -5;
-      const rotateX = ((mouseY - 50) / 50) * 4;
 
       card.style.setProperty("--mouse-x", `${mouseX}%`);
       card.style.setProperty("--mouse-y", `${mouseY}%`);
-      card.style.setProperty("--project-rotate-x", `${rotateX}deg`);
-      card.style.setProperty("--project-rotate-y", `${rotateY}deg`);
     });
 
     card.addEventListener("mouseleave", () => {
       card.style.removeProperty("--mouse-x");
       card.style.removeProperty("--mouse-y");
-      card.style.setProperty("--project-rotate-x", "0deg");
-      card.style.setProperty("--project-rotate-y", "0deg");
     });
   });
 
@@ -253,6 +253,41 @@ const init = () => {
         targetPanel.classList.add("active");
       }
       expansionPanel.classList.add("expanded");
+    });
+  });
+
+  // Progressive Disclosure Accordions for Experience & Projects
+  const collapsibleCards = document.querySelectorAll(".collapsible-card");
+  collapsibleCards.forEach((card) => {
+    const toggleBtn = card.querySelector(".card-toggle-btn");
+    const detailsWrapper = card.querySelector(".card-details-wrapper");
+    if (!toggleBtn || !detailsWrapper) return;
+
+    const toggleCard = (shouldExpand) => {
+      const isCurrentlyExpanded = card.classList.contains("is-expanded");
+      const expand = shouldExpand !== undefined ? shouldExpand : !isCurrentlyExpanded;
+
+      card.classList.toggle("is-expanded", expand);
+      toggleBtn.setAttribute("aria-expanded", String(expand));
+
+      const label = toggleBtn.querySelector(".toggle-label");
+      if (label) {
+        label.textContent = expand ? "Hide Details" : "View Details";
+      }
+
+      if (expand && detailsWrapper.hasAttribute("hidden")) {
+        detailsWrapper.removeAttribute("hidden");
+      }
+    };
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleCard();
+    });
+
+    // Native browser search (Ctrl+F) support via beforematch
+    detailsWrapper.addEventListener("beforematch", () => {
+      toggleCard(true);
     });
   });
 };
