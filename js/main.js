@@ -290,6 +290,52 @@ const init = () => {
       toggleCard(true);
     });
   });
+
+  // PDF Presentation Modal
+  const pdfModal = document.getElementById("pdf-modal");
+  if (pdfModal) {
+    const pdfFrame = document.getElementById("pdf-modal-frame");
+    const pdfTitle = document.getElementById("pdf-modal-title");
+    const pdfOpenLink = document.getElementById("pdf-modal-open");
+    let lastFocusedEl = null;
+
+    const openPdfModal = (src, title) => {
+      lastFocusedEl = document.activeElement;
+      pdfFrame.src = src;
+      pdfOpenLink.href = src;
+      pdfTitle.textContent = title || "Presentation";
+      pdfModal.hidden = false;
+      pdfModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("pdf-modal-open");
+      pdfModal.querySelector(".pdf-modal-close").focus();
+    };
+
+    const closePdfModal = () => {
+      pdfModal.hidden = true;
+      pdfModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("pdf-modal-open");
+      pdfFrame.src = "";
+      if (lastFocusedEl) {
+        lastFocusedEl.focus();
+      }
+    };
+
+    document.querySelectorAll("[data-pdf-modal]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        openPdfModal(trigger.getAttribute("data-pdf-src"), trigger.getAttribute("data-pdf-title"));
+      });
+    });
+
+    pdfModal.querySelectorAll("[data-pdf-modal-close]").forEach((el) => {
+      el.addEventListener("click", closePdfModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !pdfModal.hidden) {
+        closePdfModal();
+      }
+    });
+  }
 };
 
 if (document.readyState === "loading") {

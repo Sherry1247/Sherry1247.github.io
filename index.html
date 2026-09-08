@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="hero-inline-meta">
-                        <span><i class="fas fa-award"></i> GPA 4.0/4.0</span>
+                        <span><i class="fas fa-award"></i> GPA 3.9/4.0</span>
                         <span><i class="fas fa-microchip"></i> ML + HCI + Security</span>
                         <span><i class="fas fa-location-dot"></i> Madison, Wisconsin</span>
                     </div>
@@ -118,6 +118,14 @@
                         needs.
                     </p>
                 </article>
+                <article class="content-card plain-block">
+                    <h3>Education</h3>
+                    <p>
+                        <strong>University of Wisconsin&ndash;Madison</strong><br>
+                        B.S. in Computer Science, Minor in Mathematics &middot; GPA 3.9/4.0<br>
+                        Expected May 2028
+                    </p>
+                </article>
             </div>
         </section>
 
@@ -130,6 +138,30 @@
                 </div>
 
                 <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-panel plain-block">
+                            <h3>ASME Undergraduate Engineering Student Competition Winner</h3>
+                            <p>Won the American Society of Mechanical Engineers (ASME) Undergraduate Engineering
+                                Student Competition for "Virtual Sensor-Guided Noise Diagnosis and Self-Correction
+                                Framework for Sensor Health Monitoring," presented with faculty advisor Saurabh K.
+                                Gupta.</p>
+                            <div class="achievement-tags">
+                                <span class="tag">Competition Winner</span>
+                                <span class="tag">ASME</span>
+                            </div>
+                            <div class="document-links">
+                                <a href="assets/docs/Siqi_Dai_ASME_slide.pdf" target="_blank" rel="noreferrer"
+                                    class="doc-link">
+                                    <i class="fas fa-file-powerpoint"></i> View Presentation
+                                </a>
+                                <a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf" target="_blank" rel="noreferrer"
+                                    class="doc-link">
+                                    <i class="fas fa-file-alt"></i> View Paper
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                     <article class="timeline-item">
                         <div class="timeline-date">Summer 2026</div>
                         <div class="timeline-panel plain-block">
@@ -206,31 +238,97 @@
             </div>
 
             <div class="timeline">
+                <!-- SAIL Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-sail">
+                    <div class="timeline-date">Jun 2026 - Aug 2026</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research &amp; Engineering</span>
+                                    <h3>Summer Intern &amp; Team Leader</h3>
+                                    <p class="timeline-meta">Summer of AI Laboratory (SAIL) &middot; Madison, WI</p>
+                                </div>
+                                <i class="fas fa-hands-asl-interpreting experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Led a four-member team building SignBridge, a web-based ASL-to-speech system, from
+                                real-time landmark tracking through Transformer-based recognition to spoken output.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Python</span>
+                                <span>Transformers</span>
+                                <span>MediaPipe</span>
+                                <span>Gemini 2.5</span>
+                                <span>Text-to-Speech</span>
+                                <span>Team Leadership</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-sail-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-sail-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Directed a 2,044-sign-class ASL recognition pipeline processing 543 hand, face, and
+                                    pose landmarks per frame, integrating temporal tracking, Transformer-based
+                                    recognition, Gemini 2.5 language refinement, and text-to-speech into a single
+                                    low-latency web application.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Led a four-member team through system design, task delegation, and
+                                                integration across the full recognition-to-speech pipeline.</li>
+                                            <li>Integrated temporal landmark tracking, Transformer-based sign
+                                                recognition, Gemini 2.5 language refinement, and text-to-speech.</li>
+                                            <li>Achieved 11.59 ms average local processing latency toward a 30 FPS
+                                                real-time target.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="document-links">
+                                    <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank"
+                                        rel="noreferrer" class="doc-link">
+                                        <i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge
+                                    </a>
+                                    <a href="#proj-sail" class="doc-link">
+                                        <i class="fas fa-diagram-project"></i> View Project Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- REC Experience -->
                 <article class="timeline-item collapsible-card" data-card-id="exp-rec">
-                    <div class="timeline-date">Summer 2026 - Present</div>
+                    <div class="timeline-date">May 2026 - Present</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
                             <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Engineering</span>
-                                    <h3>Software Development Engineer</h3>
-                                    <p class="timeline-meta">REC</p>
+                                    <h3>Full Stack Software Engineer Intern</h3>
+                                    <p class="timeline-meta">Rec App &middot; Remote</p>
                                 </div>
                                 <i class="fas fa-code experience-icon" aria-hidden="true"></i>
                             </div>
                             <p class="card-summary-text">
-                                Lead the design and development of end-to-end features for the REC application, a mobile platform connecting users through shared interests, optimizing core user journeys from onboarding to recommendation delivery.
+                                Develop mobile and backend features for a service-professional recommendation
+                                platform within an eight-developer Agile team, and lead disaster-recovery hardening
+                                across the stack.
                             </p>
                             <div class="tag-row compact-tags">
-                                <span>React Native</span>
-                                <span>TypeScript</span>
-                                <span>FastAPI</span>
                                 <span>Python</span>
-                                <span>PostgreSQL</span>
+                                <span>Firebase</span>
+                                <span>Firestore</span>
                                 <span>Git/GitHub</span>
-                                <span>Mobile QA Testing</span>
-                                <span>CI/CD Pipelines</span>
+                                <span>Agile</span>
+                                <span>Disaster Recovery</span>
                             </div>
                             <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-rec-details">
                                 <span class="toggle-label">View Details</span>
@@ -241,15 +339,19 @@
                         <div class="card-details-wrapper" id="exp-rec-details" hidden="until-found">
                             <div class="card-details-inner">
                                 <p>
-                                    Conducted comprehensive code quality audits and systematic repository refactoring, which resolved critical UI/UX bottlenecks and improved app load times. Managed the complete software lifecycle, including regression testing, continuous integration, and App Store deployment pipelines, while mentoring junior engineers and creating onboarding documentation.
+                                    Work within an eight-developer Agile team building mobile and backend features
+                                    end to end, while owning the platform's disaster-recovery posture across its
+                                    core data and auth infrastructure.
                                 </p>
                                 <div class="experience-detail-grid">
                                     <div>
                                         <h4>Responsibilities &amp; Impact</h4>
                                         <ul class="timeline-points">
-                                            <li>Developed responsive frontend screens and backend API services to enhance onboarding flows and search functionality.</li>
-                                            <li>Formulated and executed testing strategies, reducing user-reported bugs by refactoring legacy modules.</li>
-                                            <li>Directed App Store release cycles, ensuring compliance with Apple's developer guidelines and seamless user transitions.</li>
+                                            <li>Developed mobile and backend features for a service-professional
+                                                recommendation platform within an eight-developer Agile team.</li>
+                                            <li>Implemented disaster-recovery procedures covering GitHub repository
+                                                backups, Firestore backup verification, Firebase Authentication
+                                                exports, and Firebase Storage inventory.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -270,28 +372,27 @@
 
                 <!-- MadAbility Lab Experience -->
                 <article class="timeline-item collapsible-card" data-card-id="exp-madability">
-                    <div class="timeline-date">Summer 2026 - Present</div>
+                    <div class="timeline-date">Apr 2026 - Sep 2026</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
                             <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Research</span>
-                                    <h3>Undergraduate Research Assistant</h3>
+                                    <h3>Student Research Assistant, AR/VR Accessibility Systems</h3>
                                     <p class="timeline-meta"><a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">MadAbility Lab <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
                                 </div>
                                 <i class="fas fa-vr-cardboard experience-icon" aria-hidden="true"></i>
                             </div>
                             <p class="card-summary-text">
-                                Design and evaluate intelligent interaction systems for low-vision users in augmented and virtual reality (AR/VR) environments.
+                                Design experimental study protocols and apply segmentation models to evaluate AR
+                                stair-navigation assistance for low-vision users.
                             </p>
                             <div class="tag-row compact-tags">
-                                <span>AR/VR Development</span>
-                                <span>Meta Quest SDK</span>
-                                <span>Intel RealSense API</span>
-                                <span>Unity</span>
-                                <span>C#</span>
-                                <span>HCI Prototyping</span>
-                                <span>User Study Design</span>
+                                <span>SAM 3</span>
+                                <span>Computer Vision</span>
+                                <span>AR/VR</span>
+                                <span>Study Design</span>
+                                <span>HCI Research</span>
                             </div>
                             <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-madability-details">
                                 <span class="toggle-label">View Details</span>
@@ -302,15 +403,21 @@
                         <div class="card-details-wrapper" id="exp-madability-details" hidden="until-found">
                             <div class="card-details-inner">
                                 <p>
-                                    Supported accessibility-focused Human-Computer Interaction (HCI) research by conducting literature reviews, structuring user studies, and building prototypes. Developed accessibility interfaces on Meta Quest 3 and Intel RealSense hardware, investigating how spatial audio and computer vision cues can assist visually impaired users in spatial navigation.
+                                    Supporting accessibility-focused HCI research on AR stair-navigation assistance,
+                                    from experimental design through applying modern segmentation models to
+                                    underexplored navigation scenarios.
                                 </p>
                                 <div class="experience-detail-grid">
                                     <div>
                                         <h4>Responsibilities &amp; Impact</h4>
                                         <ul class="timeline-points">
-                                            <li>Built spatial mapping and feedback prototypes using Meta Quest 3 and Intel RealSense D455 depth cameras.</li>
-                                            <li>Co-authored user study protocols and assisted in executing user evaluation sessions with low-vision participants.</li>
-                                            <li>Analyzed qualitative and quantitative interaction data to iterate on spatial computing interface designs.</li>
+                                            <li>Designed an experimental study protocol for evaluating AR
+                                                stair-navigation assistance, specifying participant tasks, trial
+                                                procedures, study conditions, and data-collection steps for future
+                                                human-subject testing.</li>
+                                            <li>Applied SAM 3 to segment ascending and descending stair environments,
+                                                focusing on descending-stair navigation as an underexplored
+                                                accessibility challenge.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -321,7 +428,7 @@
                                     </figure>
                                     <figure class="gallery-item">
                                         <img src="assets/images/AR_VR_stair_detection.png" alt="AR/VR stair detection system" loading="lazy">
-                                        <figcaption>Real-time Staircase &amp; Barrier Detection</figcaption>
+                                        <figcaption>Descending-Stair Segmentation with SAM 3</figcaption>
                                     </figure>
                                 </div>
                             </div>
@@ -347,7 +454,7 @@
                             </p>
                             <div class="tag-row compact-tags">
                                 <span>Palo Alto Cortex XSOAR</span>
-                                <span>Cherwell Ticketing</span>
+                                <span>WiscIT</span>
                                 <span>Threat Intelligence</span>
                                 <span>Email Header Analysis</span>
                                 <span>Network Forensics</span>
@@ -362,15 +469,16 @@
                         <div class="card-details-wrapper" id="exp-cyber-details" hidden="until-found">
                             <div class="card-details-inner">
                                 <p>
-                                    Leveraged automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs. Conducted forensic analysis of endpoints by cross-referencing MAC addresses, hostnames, and DHCP logs to identify compromised campus assets and isolate threats.
+                                    Leverage automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs across university network infrastructure.
                                 </p>
                                 <div class="experience-detail-grid">
                                     <div>
                                         <h4>Responsibilities &amp; Impact</h4>
                                         <ul class="timeline-points">
-                                            <li>Investigated and triaged over 100+ phishing campaigns and user-reported security alerts weekly using Cherwell workflows.</li>
-                                            <li>Monitored Palo Alto Cortex XSOAR playbooks to track outbound command-and-control (C2) traffic and cloud infrastructure anomalies.</li>
-                                            <li>Coordinated with campus IT leads to initiate endpoint isolation and password reset procedures for compromised accounts.</li>
+                                            <li>Investigate and triage 30+ phishing incidents weekly using WiscIT
+                                                workflows across multiple university departments.</li>
+                                            <li>Monitor Palo Alto Cortex XSOAR playbooks across network events for
+                                                suspicious traffic, URL-filtering alerts, and potential threats.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -544,33 +652,41 @@
             </div>
 
             <div class="project-list">
-                <!-- SAIL Project -->
-                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail">
+                <!-- SAIL / SignBridge Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail" id="proj-sail">
                     <div class="card-summary-header">
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Summer 2026 · Team Lead</span>
-                                <h3>SAIL <span class="project-title-detail">(Sign Language AI Learning Platform)</span></h3>
+                                <h3>SignBridge <span class="project-title-detail">(SAIL &middot; ASL-to-Speech System)</span></h3>
                             </div>
                             <div class="project-badge-group">
                                 <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer"
-                                    class="project-github-link" title="View SAIL source on GitHub"
-                                    aria-label="View SAIL source on GitHub">
+                                    class="project-github-link" title="View SignBridge source on GitHub"
+                                    aria-label="View SignBridge source on GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <span class="project-badge"><i class="fas fa-hands-asl-interpreting"></i></span>
                             </div>
                         </div>
                         <p class="project-summary">
-                            Led development of an AI-powered sign language learning and recognition platform combining computer vision, machine learning, and wearable AR technology to make sign language learning interactive and accessible.
+                            Led a four-member team building SignBridge, a web-based ASL-to-speech system that
+                            tracks 543 hand, face, and pose landmarks per frame across a 2,044-sign-class
+                            recognition pipeline, from live signing to spoken language.
                         </p>
                         <div class="tag-row compact-tags">
                             <span>Python</span>
-                            <span>TensorFlow</span>
+                            <span>Transformers</span>
                             <span>MediaPipe</span>
-                            <span>OpenCV</span>
-                            <span>Machine Learning</span>
-                            <span>Computer Vision</span>
+                            <span>Gemini 2.5</span>
+                            <span>Text-to-Speech</span>
+                            <span>Real-Time Systems</span>
+                        </div>
+                        <div class="project-resource-strip">
+                            <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer"
+                                class="resource-btn resource-btn-primary">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge
+                            </a>
                         </div>
                         <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-sail-details">
                             <span class="toggle-label">View Details</span>
@@ -581,25 +697,107 @@
                     <div class="card-details-wrapper" id="proj-sail-details" hidden="until-found">
                         <div class="card-details-inner">
                             <p>
-                                The platform uses hand landmark detection and gesture recognition to identify American Sign Language (ASL) gestures in real time. Learners receive immediate visual feedback while practicing signs, creating a more engaging and accessible learning experience.
+                                SignBridge tracks a signer through a temporal landmark pipeline, classifies the
+                                sign sequence with a Transformer-based recognition model, refines the output into
+                                natural language with Gemini 2.5, and speaks the result back &mdash; all inside a
+                                single low-latency web application.
                             </p>
                             <div class="project-detail-grid">
                                 <div>
                                     <h4>Key Features &amp; Contributions</h4>
                                     <ul class="project-feature-list">
-                                        <li>Real-time hand tracking and keypoint isolation using MediaPipe.</li>
-                                        <li>AI-powered ASL gesture classification models with optimized inference latency.</li>
-                                        <li>Interactive educational interface offering real-time feedback on signing accuracy.</li>
-                                        <li>Modular architecture designed to easily support future wearable AR integration.</li>
-                                        <li>Formulated and implemented data processing, normalization, and model evaluation pipelines.</li>
+                                        <li>Real-time tracking of 543 hand, face, and pose landmarks per frame
+                                            across a 2,044-sign-class recognition pipeline.</li>
+                                        <li>Integrated temporal tracking, Transformer-based recognition, Gemini
+                                            2.5 language refinement, and text-to-speech into one pipeline.</li>
+                                        <li>Achieved 11.59 ms average local processing latency toward a 30 FPS
+                                            real-time target.</li>
+                                        <li>Led a four-member team through system design, delegation, and
+                                            end-to-end integration.</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="project-gallery">
                                 <figure class="gallery-item gallery-item-wide">
-                                    <img src="assets/images/SAIL.png" alt="SAIL Sign Language AI Platform" loading="lazy">
-                                    <figcaption>SAIL Sign Language AI Learning Interface &amp; Tracking</figcaption>
+                                    <img src="assets/images/SAIL.png" alt="SignBridge ASL-to-speech interface" loading="lazy">
+                                    <figcaption>SignBridge Real-Time ASL Recognition Interface</figcaption>
                                 </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Virtual Sensor-Guided Noise Diagnosis Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-noise-diagnosis">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">May 2026 &ndash; Present · Researcher</span>
+                                <h3>Virtual Sensor-Guided Noise Diagnosis <span class="project-title-detail">(Self-Correction Framework)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Research Project / Repository Private">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-wave-square"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Developed a residual-based framework that diagnoses and self-corrects sensor faults,
+                            integrating fault injection, 10-class sensor fault diagnosis, severity estimation, and
+                            signal correction &mdash; winner of the ASME Undergraduate Engineering Student
+                            Competition.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>PyTorch</span>
+                            <span>Signal Processing</span>
+                            <span>Fault Diagnosis</span>
+                            <span>Virtual Sensing</span>
+                        </div>
+                        <div class="achievement-tags">
+                            <span class="tag">ASME Competition Winner</span>
+                        </div>
+                        <div class="project-resource-strip">
+                            <button type="button" class="resource-btn" data-pdf-modal
+                                data-pdf-src="assets/docs/Siqi_Dai_ASME_slide.pdf"
+                                data-pdf-title="Virtual Sensor-Guided Noise Diagnosis and Self-Correction Framework &mdash; ASME Presentation">
+                                <i class="fas fa-file-powerpoint"></i> View Presentation
+                            </button>
+                            <a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf" target="_blank" rel="noreferrer"
+                                class="resource-btn">
+                                <i class="fas fa-file-alt"></i> Read Paper
+                            </a>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-noise-diagnosis-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-noise-diagnosis-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Builds on a multi-target virtual sensor for a 12-L heavy-duty diesel engine by
+                                injecting artificial sensor faults, classifying fault type, estimating fault
+                                severity, and correcting the corrupted signal &mdash; establishing a foundation for
+                                virtual sensor-guided sensor health monitoring.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Injected controlled sensor faults (noise, bias, drift, and more) into
+                                            virtual-sensor inputs to study fault propagation.</li>
+                                        <li>Trained a 10-class XGBoost fault-diagnosis classifier, reaching 98.74%
+                                            classification accuracy and 98.56% macro F1.</li>
+                                        <li>Built severity estimation and signal-correction stages that reduced
+                                            error by over 90% in representative bias and drift correction cases.</li>
+                                        <li>Presented the framework at the ASME Undergraduate Engineering Student
+                                            Competition with faculty advisor Saurabh K. Gupta.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -610,8 +808,8 @@
                     <div class="card-summary-header">
                         <div class="project-header">
                             <div>
-                                <span class="project-period">Spring 2026 · Researcher</span>
-                                <h3>Digital Twin Engine <span class="project-title-detail">(Virtual Sensor Robustness &amp; Diagnostics)</span></h3>
+                                <span class="project-period">Oct 2025 &ndash; Feb 2026 · Researcher</span>
+                                <h3>Multi-Parameter Virtual Sensing <span class="project-title-detail">(Automotive Engine ANN)</span></h3>
                             </div>
                             <div class="project-badge-group">
                                 <a href="https://github.com/Sherry1247/digital-twin-engine-virtual-sensor-research" target="_blank" rel="noreferrer"
@@ -1024,12 +1222,32 @@
                     <div class="skill-icon-group">
                         <i class="devicon-python-plain colored"></i>
                         <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-cplusplus-plain colored"></i>
                         <i class="devicon-javascript-plain colored"></i>
                         <i class="devicon-html5-plain colored"></i>
                         <i class="devicon-css3-plain colored"></i>
                     </div>
                     <h3>Programming</h3>
-                    <p>Python, Java, JavaScript, HTML5, CSS3</p>
+                    <p>Python, Java, C++, JavaScript, HTML/CSS, SQL</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon-group">
+                        <i class="devicon-pytorch-original colored"></i>
+                        <i class="devicon-tensorflow-original colored"></i>
+                        <i class="devicon-scikitlearn-plain colored"></i>
+                        <i class="devicon-opencv-plain colored"></i>
+                    </div>
+                    <h3>ML &amp; AI</h3>
+                    <p>PyTorch, TensorFlow, scikit-learn, Transformers, OpenCV, MediaPipe, XGBoost</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon-group">
+                        <i class="devicon-pandas-plain colored"></i>
+                        <i class="devicon-numpy-plain colored"></i>
+                        <i class="devicon-matplotlib-plain colored"></i>
+                    </div>
+                    <h3>Data &amp; Scientific</h3>
+                    <p>NumPy, Pandas, Matplotlib, signal processing</p>
                 </article>
                 <article class="skill-card">
                     <div class="skill-icon-group">
@@ -1037,21 +1255,9 @@
                         <i class="devicon-fastapi-plain colored"></i>
                         <i class="devicon-git-plain colored"></i>
                         <i class="devicon-github-original"></i>
-                        <i class="devicon-vscode-plain colored"></i>
-                        <i class="devicon-pytorch-original colored"></i>
                     </div>
                     <h3>Frameworks &amp; Tools</h3>
-                    <p>React, FastAPI, Git, GitHub, VS Code, PyTorch</p>
-                </article>
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="devicon-pandas-plain colored"></i>
-                        <i class="devicon-numpy-plain colored"></i>
-                        <i class="devicon-matplotlib-plain colored"></i>
-                        <i class="devicon-scikitlearn-plain colored"></i>
-                    </div>
-                    <h3>Data &amp; Modeling</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, ANNs</p>
+                    <p>React, FastAPI, Git, GitHub, VS Code</p>
                 </article>
                 <article class="skill-card">
                     <div class="skill-icon-group">
@@ -1276,7 +1482,7 @@
         <div class="container footer-inner">
             <div class="footer-info">
                 <p class="footer-title">Siqi Dai</p>
-                <p class="footer-meta">Owned by Siqi Dai · Last updated: July 20, 2026</p>
+                <p class="footer-meta">Owned by Siqi Dai · Last updated: September 7, 2026</p>
             </div>
             <div class="footer-links">
                 <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -1291,6 +1497,26 @@
     <button id="back-to-top" title="Back to top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
+        <div class="pdf-modal-backdrop" data-pdf-modal-close></div>
+        <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+            <div class="pdf-modal-header">
+                <h4 id="pdf-modal-title">Presentation</h4>
+                <div class="pdf-modal-actions">
+                    <a id="pdf-modal-open" href="#" target="_blank" rel="noreferrer" class="pdf-modal-link">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open in new tab
+                    </a>
+                    <button type="button" class="pdf-modal-close" data-pdf-modal-close aria-label="Close presentation">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-modal-frame" title="Presentation viewer" src=""></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
