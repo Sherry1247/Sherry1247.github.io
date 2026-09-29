@@ -22,14 +22,11 @@ const init = () => {
   document.body.appendChild(themeBtn);
 
   function applyTheme(theme) {
-    if (theme === "dark") {
-      root.setAttribute("data-theme", "dark");
-      themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-      return;
-    }
-
-    root.removeAttribute("data-theme");
-    themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    const nextTheme = theme === "light" ? "light" : "dark";
+    root.setAttribute("data-theme", nextTheme);
+    themeBtn.innerHTML = nextTheme === "dark"
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
   }
 
   const savedTheme = localStorage.getItem("theme");
@@ -154,34 +151,92 @@ const init = () => {
   });
 
   if (typedRole) {
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
+    // Keep the primary positioning statement stable. Animated copy caused
+    // the hero to open with a visually truncated sentence and made the page
+    // harder to scan for recruiters and collaborators.
+    typedRole.textContent = phrases[0];
+  }
 
-    function tick() {
-      const current = phrases[phraseIndex];
-      if (!deleting) {
-        charIndex += 1;
-        typedRole.textContent = current.slice(0, charIndex);
-        if (charIndex === current.length) {
-          deleting = true;
-          window.setTimeout(tick, 1800);
-          return;
-        }
-      } else {
-        charIndex -= 1;
-        typedRole.textContent = current.slice(0, charIndex);
-        if (charIndex === 0) {
-          deleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-        }
-      }
+  // Data-driven overview: group related work into a short set of featured
+  // workstreams. The detailed experience and project sections below remain
+  // the source of truth for the complete history.
+  const portfolioTimeline = document.getElementById("portfolio-timeline");
+  if (portfolioTimeline) {
+    const timelineItems = [
+      { title: "Research & virtual sensing", meta: "Research · ASME / URS", dates: "Fall 2025 – Present", start: 4, end: 100, featured: true, note: "URS research, digital twin modeling, and the ASME-winning self-correction framework." },
+      { title: "Product engineering & leadership", meta: "Engineering · SAIL / Rec App", dates: "Jan 2026 – Present", start: 31, end: 100, featured: true, note: "SignBridge team leadership plus full-stack and recovery work for Rec App." },
+      { title: "Accessibility & spatial HCI", meta: "Research · MadAbility", dates: "Apr – Sep 2026 · Completed", start: 50, end: 100, note: "AR/VR stair navigation research with Quest 3 and RealSense." },
+      { title: "Security operations", meta: "Experience · SOC", dates: "May 2026 – Present", start: 54, end: 100, note: "Incident triage, threat intelligence, and response workflows." },
+      { title: "Generative AI & data projects", meta: "Projects · ML / AI", dates: "Fall 2025 – Spring 2026", start: 4, end: 72, note: "Survival analysis and iterative diffusion-based image editing." },
+      { title: "Applied systems & student tools", meta: "Projects · Spatial / product", dates: "2026", start: 45, end: 88, note: "CourseOptimizer, MediMenu, and industrial asset intelligence." }
+    ];
 
-      window.setTimeout(tick, deleting ? 28 : 42);
-    }
+    const renderTimeline = () => {
+      portfolioTimeline.innerHTML = `
+        <div class="portfolio-timeline-axis" aria-hidden="true">
+          <span>Workstream</span>
+          <div class="portfolio-timeline-years"><span>2025</span><span>Spring 2026</span><span>Summer 2026</span><span>Now</span></div>
+        </div>
+        <div class="portfolio-timeline-list">
+          ${timelineItems.map((item) => `
+            <article class="portfolio-timeline-row${item.featured ? " is-featured" : ""}">
+              <div class="portfolio-timeline-label"><strong>${item.title}</strong><span>${item.meta}</span><small>${item.dates}</small><p class="portfolio-timeline-note">${item.note}</p></div>
+              <div class="portfolio-timeline-track"><span class="portfolio-timeline-bar" style="--timeline-start:${item.start}%;--timeline-width:${item.end - item.start}%"></span><span class="portfolio-timeline-end" style="--timeline-end:${item.end}%"></span></div>
+            </article>
+          `).join("")}
+        </div>
+      `;
 
-    typedRole.textContent = "";
-    tick();
+      requestAnimationFrame(() => portfolioTimeline.classList.add("is-ready"));
+    };
+
+    renderTimeline();
+  }
+
+  // The contact phone behaves like a small piece of interface rather than a
+  // static mockup: live time, pointer-responsive depth, and an expandable
+  // availability indicator. Motion is disabled by the reduced-motion rules.
+  const contactPhone = document.querySelector(".contact-phone");
+  const dynamicIsland = document.querySelector(".iphone-dynamic-island");
+  const phoneTime = document.querySelector(".iphone-time");
+
+  if (phoneTime) {
+    const updatePhoneTime = () => {
+      phoneTime.textContent = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "2-digit"
+      }).format(new Date());
+    };
+    updatePhoneTime();
+    window.setInterval(updatePhoneTime, 30000);
+  }
+
+  if (contactPhone) {
+    contactPhone.addEventListener("pointermove", (event) => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const bounds = contactPhone.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      contactPhone.style.setProperty("--phone-ry", `${x * 7}deg`);
+      contactPhone.style.setProperty("--phone-rx", `${y * -7}deg`);
+      contactPhone.style.setProperty("--phone-glow-x", `${(x + 0.5) * 100}%`);
+      contactPhone.style.setProperty("--phone-glow-y", `${(y + 0.5) * 100}%`);
+    });
+
+    contactPhone.addEventListener("pointerleave", () => {
+      contactPhone.style.removeProperty("--phone-ry");
+      contactPhone.style.removeProperty("--phone-rx");
+      contactPhone.style.removeProperty("--phone-glow-x");
+      contactPhone.style.removeProperty("--phone-glow-y");
+    });
+  }
+
+  if (dynamicIsland) {
+    dynamicIsland.addEventListener("click", () => {
+      const expanded = dynamicIsland.getAttribute("aria-expanded") === "true";
+      dynamicIsland.setAttribute("aria-expanded", String(!expanded));
+      dynamicIsland.closest(".contact-phone")?.classList.toggle("island-expanded", !expanded);
+    });
   }
 
   // Enhanced button interactions
@@ -226,8 +281,7 @@ const init = () => {
     }
   }
 
-  interestCards.forEach((card) => {
-    card.addEventListener("click", () => {
+  const toggleInterest = (card) => {
       const type = card.getAttribute("data-interest-type");
       if (!type) return;
 
@@ -236,6 +290,7 @@ const init = () => {
       // Handle card toggle active
       if (card.classList.contains("active")) {
         card.classList.remove("active");
+        card.setAttribute("aria-expanded", "false");
         expansionPanel.classList.remove("expanded");
         if (targetPanel) {
           targetPanel.classList.remove("active");
@@ -244,15 +299,28 @@ const init = () => {
       }
 
       // Close other cards and panels
-      interestCards.forEach((c) => c.classList.remove("active"));
+      interestCards.forEach((c) => {
+        c.classList.remove("active");
+        c.setAttribute("aria-expanded", "false");
+      });
       panelContents.forEach((p) => p.classList.remove("active"));
 
       // Activate current
       card.classList.add("active");
+      card.setAttribute("aria-expanded", "true");
       if (targetPanel) {
         targetPanel.classList.add("active");
       }
       expansionPanel.classList.add("expanded");
+  };
+
+  interestCards.forEach((card) => {
+    card.addEventListener("click", () => toggleInterest(card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleInterest(card);
+      }
     });
   });
 

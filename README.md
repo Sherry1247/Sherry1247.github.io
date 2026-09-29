@@ -5,8 +5,10 @@ Personal portfolio site for Siqi Dai, built as a static GitHub Pages website: ht
 ## Structure
 
 - `index.html`: main page structure and content
-- `css/style.css`: visual system, layout, theming, and interactions
-- `js/main.js`: theme toggle, scroll state, reveal animations, project hover behavior, and hero type effect
+- `css/style.css`: original component foundations
+- `css/refactor.css`: current design tokens, editorial layouts, responsive rules, and visual polish
+- `js/main.js`: shared theme, navigation, reveal, timeline, interest, and contact interactions
+- `js/courses.js`: course graph data, graph interaction, filters, and course search
 - `assets/images/`: profile image and future image assets
 - `assets/docs/`: resume and downloadable documents
 
@@ -14,7 +16,9 @@ Personal portfolio site for Siqi Dai, built as a static GitHub Pages website: ht
 
 - Light and dark mode
 - Full-screen landing section
-- Interactive project rows
+- Interactive project rows and a compact project timeline
+- Related-course learning graph with accessible keyboard interaction
+- iPhone-inspired animated contact interface
 - Skill logos using Devicon
 - Static-site friendly deployment for GitHub Pages
 
