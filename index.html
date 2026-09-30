@@ -11,6 +11,7 @@
     <meta property="og:title" content="Siqi Dai | Personal Website">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/images/photo.jpg">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://sherry1247.github.io/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +37,10 @@
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <div class="nav-links" id="primary-navigation">
-                <a href="#about">About</a>
-                <a href="#timeline">Timeline</a>
+                <a href="#work">Selected Work</a>
                 <a href="#experience">Experience</a>
                 <a href="courses.html">Course Guide</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#interests">Interests</a>
+                <a href="#projects">Archive</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -54,24 +52,23 @@
                 <div class="hero-content">
                     <p class="eyebrow">Computer Science · UW-Madison</p>
                     <h1>Hi, I’m Siqi.</h1>
-                    <p class="hero-role"><span id="typed-role">I build with machine learning, research, cybersecurity,
-                            and practical software systems.</span></p>
+                    <p class="hero-role"><span id="typed-role">I build intelligent systems that sense, adapt, and help
+                            people act.</span></p>
                     <p class="hero-copy">
-                        I’m a computer science student at the University of Wisconsin-Madison with a strong interest in
-                        technically rigorous work that still feels clean, useful, and well designed.
+                        Research engineer and computer science student working across machine learning, accessible
+                        interaction, and resilient software—from sensor health to real-time sign language systems.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="mailto:sdai66@wisc.edu" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact
-                            Me</a>
+                        <a href="#work" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Explore selected work</a>
                         <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" rel="noreferrer"
                             class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Resume</a>
                     </div>
 
-                    <div class="hero-inline-meta">
-                        <span><i class="fas fa-award"></i> GPA 3.9/4.0</span>
-                        <span><i class="fas fa-microchip"></i> ML + HCI + Security</span>
-                        <span><i class="fas fa-location-dot"></i> Madison, Wisconsin</span>
+                    <div class="hero-proof-grid" aria-label="Selected highlights">
+                        <div><strong>01</strong><span>ASME competition winner</span></div>
+                        <div><strong>4</strong><span>Engineers led on SignBridge</span></div>
+                        <div><strong>3.9</strong><span>UW–Madison GPA</span></div>
                     </div>
                 </div>
 
@@ -89,12 +86,147 @@
                                     class="fab fa-github"></i> GitHub</a>
                             <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"><i
                                     class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="#projects"><i class="fas fa-arrow-right"></i> Selected work</a>
+                            <a href="#work"><i class="fas fa-arrow-right"></i> Selected work</a>
                         </div>
                     </div>
                 </aside>
             </div>
         </header>
+
+        <section id="work" class="section flagship-section" data-reveal>
+            <div class="flagship-heading">
+                <div>
+                    <span class="section-kicker">Selected work</span>
+                    <p class="flagship-count">Three systems · one point of view</p>
+                </div>
+                <h2>Ideas become useful when people can trust the system.</h2>
+                <p class="flagship-lede">My strongest work lives at the intersection of sensing, intelligence, and
+                    human action. These three projects show how I move from a difficult question to a working,
+                    testable system.</p>
+            </div>
+
+            <nav class="work-index" aria-label="Jump to a selected project">
+                <a href="#case-sensor"><span>01</span><strong>Sensor intelligence</strong><small>Diagnose · correct</small></a>
+                <a href="#case-signbridge"><span>02</span><strong>SignBridge</strong><small>See · understand · speak</small></a>
+                <a href="#case-spatial"><span>03</span><strong>Spatial accessibility</strong><small>Map · guide</small></a>
+            </nav>
+
+            <article id="case-sensor" class="flagship-case case-sensor interactive-card" data-reveal>
+                <div class="case-copy">
+                    <p class="case-number">01 / Research intelligence</p>
+                    <h3>A sensor system that can diagnose—and repair—itself.</h3>
+                    <p class="case-summary">I developed a residual-based framework for a heavy-duty engine virtual
+                        sensor that identifies ten classes of sensor faults, estimates severity, and reconstructs the
+                        damaged signal instead of simply raising an alarm.</p>
+                    <div class="case-metrics" aria-label="Project results">
+                        <div><strong>98.74%</strong><span>Fault classification accuracy</span></div>
+                        <div><strong>98.56%</strong><span>Macro F1 score</span></div>
+                        <div><strong>&gt;90%</strong><span>Error reduction in representative cases</span></div>
+                    </div>
+                    <div class="case-actions">
+                        <button type="button" class="resource-btn resource-btn-primary" data-pdf-modal
+                            data-pdf-src="assets/docs/Siqi_Dai_ASME_slide.pdf"
+                            data-pdf-title="Virtual Sensor-Guided Noise Diagnosis — ASME Presentation">
+                            <i class="fas fa-play"></i> View presentation
+                        </button>
+                        <a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf" target="_blank" rel="noreferrer"
+                            class="case-text-link">Read the paper <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="case-stage sensor-console" aria-label="Animated sensor diagnosis interface">
+                    <div class="console-bar"><span><i></i><i></i><i></i></span><strong>sensor.health / live</strong><em>ASME winner</em></div>
+                    <div class="signal-header"><span>CYLINDER PRESSURE · CHANNEL 04</span><span class="live-status"><i></i> Monitoring</span></div>
+                    <svg class="signal-chart" viewBox="0 0 760 250" role="img" aria-label="A noisy sensor signal converging toward a corrected signal">
+                        <defs><linearGradient id="signal-gradient" x1="0" x2="1"><stop offset="0" stop-color="#a9b8d8"/><stop offset="1" stop-color="#d8a06b"/></linearGradient></defs>
+                        <path class="signal-grid" d="M0 50H760M0 100H760M0 150H760M0 200H760M95 0V250M190 0V250M285 0V250M380 0V250M475 0V250M570 0V250M665 0V250"/>
+                        <path class="signal-fault" d="M0 130 C35 112 55 148 82 121 S127 46 151 138 S190 224 218 126 S257 33 283 132 S328 216 360 120 S407 41 433 131 S480 220 510 125 S550 52 578 127 S628 194 655 119 S704 71 760 124"/>
+                        <path class="signal-corrected" d="M0 132 C52 80 94 80 142 132 S235 184 284 132 S376 80 426 132 S520 184 569 132 S660 80 760 132"/>
+                    </svg>
+                    <div class="diagnostic-grid">
+                        <div><span>Detected state</span><strong>Bias + drift</strong><small>Confidence 98.7%</small></div>
+                        <div><span>Correction</span><strong>Residual fusion</strong><small>Signal restored</small></div>
+                        <div class="diagnostic-score"><span>Health score</span><strong>94</strong><small>/ 100</small></div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="case-bridge" aria-hidden="true">
+                <span>01</span><i></i><strong>Reliable signals create trustworthy intelligence.</strong><i></i><span>02</span>
+            </div>
+
+            <article id="case-signbridge" class="flagship-case case-signbridge interactive-card" data-reveal>
+                <div class="case-stage signbridge-console">
+                    <div class="console-bar"><span><i></i><i></i><i></i></span><strong>signbridge / realtime</strong><em>11.59 ms</em></div>
+                    <div class="signbridge-screen" role="img" aria-label="Stylized real-time hand landmark recognition and translation interface">
+                        <div class="vision-label"><span>CAM 01</span><strong>543 landmarks tracked</strong></div>
+                        <svg class="hand-landmarks" viewBox="0 0 620 360" aria-hidden="true">
+                            <path class="landmark-link" d="M286 316L270 263L238 228L193 214L150 234M270 263L260 211L250 145L255 76M270 263L300 204L306 128L317 55M270 263L333 215L356 146L374 84M270 263L359 240L404 194L431 142M260 211L300 204L333 215L359 240M238 228L260 211M193 214L238 228"/>
+                            <g class="landmark-points">
+                                <circle cx="286" cy="316" r="6"/><circle cx="270" cy="263" r="7"/>
+                                <circle cx="238" cy="228" r="5"/><circle cx="193" cy="214" r="5"/><circle cx="150" cy="234" r="6"/>
+                                <circle cx="260" cy="211" r="5"/><circle cx="250" cy="145" r="5"/><circle cx="255" cy="76" r="6"/>
+                                <circle cx="300" cy="204" r="5"/><circle cx="306" cy="128" r="5"/><circle cx="317" cy="55" r="6"/>
+                                <circle cx="333" cy="215" r="5"/><circle cx="356" cy="146" r="5"/><circle cx="374" cy="84" r="6"/>
+                                <circle cx="359" cy="240" r="5"/><circle cx="404" cy="194" r="5"/><circle cx="431" cy="142" r="6"/>
+                            </g>
+                        </svg>
+                        <div class="vision-reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                        <p class="recognition-chip"><i></i> Sign detected · translating</p>
+                        <div class="translation-output"><span>LIVE OUTPUT</span><strong>“How can I help?”</strong><small>Confidence 96.2%</small></div>
+                    </div>
+                    <div class="pipeline-strip" aria-label="SignBridge processing pipeline">
+                        <span><i class="fas fa-hand"></i> Landmarks</span><b></b><span><i class="fas fa-brain"></i> Transformer</span><b></b><span><i class="fas fa-volume-high"></i> Speech</span>
+                    </div>
+                </div>
+                <div class="case-copy">
+                    <p class="case-number">02 / Accessible AI product</p>
+                    <h3>Turning sign language into speech, frame by frame.</h3>
+                    <p class="case-summary">As team lead, I guided four engineers through the design and integration
+                        of a browser-based ASL-to-speech pipeline—from landmark tracking and temporal recognition to
+                        language refinement and spoken output.</p>
+                    <div class="case-metrics" aria-label="Project scale">
+                        <div><strong>543</strong><span>Body and hand landmarks per frame</span></div>
+                        <div><strong>2,044</strong><span>Recognized sign classes</span></div>
+                        <div><strong>11.59 ms</strong><span>Average local processing latency</span></div>
+                    </div>
+                    <div class="case-actions">
+                        <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer" class="resource-btn resource-btn-primary"><i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge</a>
+                        <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer" class="case-text-link">Source code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <div class="case-bridge" aria-hidden="true">
+                <span>02</span><i></i><strong>Recognition matters when it improves human action.</strong><i></i><span>03</span>
+            </div>
+
+            <article id="case-spatial" class="flagship-case case-spatial interactive-card" data-reveal>
+                <div class="case-copy">
+                    <p class="case-number">03 / Spatial HCI research</p>
+                    <h3>Making physical space legible without relying on sight.</h3>
+                    <p class="case-summary">At MadAbility Lab, I explored how depth sensing, semantic segmentation,
+                        and spatial feedback can help low-vision users understand stairs and obstacles in real-world
+                        environments.</p>
+                    <div class="case-principles">
+                        <div><span>Sense</span><strong>RealSense D455 depth capture</strong></div>
+                        <div><span>Interpret</span><strong>Segmentation and spatial grounding</strong></div>
+                        <div><span>Guide</span><strong>Accessible multimodal feedback</strong></div>
+                    </div>
+                    <a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="case-text-link">Visit MadAbility Lab <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="case-stage spatial-console">
+                    <figure class="spatial-main">
+                        <img src="assets/images/AR_VR_point_cloud.png" alt="Point-cloud representation used for spatial accessibility research" loading="lazy">
+                        <figcaption><span>DEPTH MAP 03</span><strong>Environmental point cloud</strong></figcaption>
+                    </figure>
+                    <figure class="spatial-inset">
+                        <img src="assets/images/AR_VR_stair_detection.png" alt="Stair detection research prototype" loading="lazy">
+                        <figcaption>Stair boundary detected</figcaption>
+                    </figure>
+                    <div class="spatial-hud" aria-hidden="true"><span>1.8m</span><i></i><b>PATH CLEAR</b></div>
+                </div>
+            </article>
+        </section>
 
         <section id="about" class="section about-section" data-reveal>
             <div class="about-editorial">
@@ -120,27 +252,16 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Selected project and experience overview -->
-        <section id="timeline" class="section timeline-section" data-reveal>
-            <div class="section-heading">
-                <span class="section-kicker">Timeline</span>
-                <h3 class="section-title">Selected work, mapped over time.</h3>
-            </div>
-            <div class="timeline-toolbar" aria-label="Timeline overview">
-                <span class="timeline-toolbar-label">Selected workstreams</span>
-                <span class="timeline-toolbar-note">Grouped view · full details below</span>
-            </div>
-            <div id="portfolio-timeline" class="portfolio-timeline" aria-live="polite"></div>
         </section>
 
 
-        <section id="experience" class="section" data-reveal>
+        <section id="experience" class="section experience-index" data-reveal>
             <div class="section-heading">
                 <span class="section-kicker">Experience</span>
                 <h3>Research meets real systems.</h3>
             </div>
+            <p class="timeline-order-note">Reverse chronological by start date · open any role for the full scope</p>
 
             <div class="timeline">
                 <!-- SAIL Experience -->
@@ -526,6 +647,11 @@
 
         <!-- Course Guide Section -->
         <section id="course-guide" class="section" data-reveal>
+            <svg class="section-flow-lines flow-lines-course" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+                <path pathLength="1" d="M-40 310 C180 130 315 405 548 220 S905 55 1240 200" />
+                <path pathLength="1" d="M-60 352 C170 205 360 455 610 260 S980 100 1260 250" />
+                <path pathLength="1" d="M25 245 C240 80 440 315 685 145 S1010 20 1190 95" />
+            </svg>
             <div class="section-heading">
                 <span class="section-kicker">Academics</span>
                 <h3>A map of what I’ve learned.</h3>
@@ -559,12 +685,36 @@
                     </div>
                 </div>
             </div>
+
+            <div class="course-learning-grid" aria-label="Skills developed through coursework">
+                <article>
+                    <span class="learning-index">01</span>
+                    <div class="learning-icon"><i class="fas fa-code-branch"></i></div>
+                    <h4>Systems foundations</h4>
+                    <p>Data structures, computer architecture, low-level programming, and reasoning about performance.</p>
+                    <small>CS 200 · 300 · 400 · 252 · 354</small>
+                </article>
+                <article>
+                    <span class="learning-index">02</span>
+                    <div class="learning-icon"><i class="fas fa-wave-square"></i></div>
+                    <h4>Mathematical modeling</h4>
+                    <p>Linear algebra, probability, optimization, and the mathematical language behind machine learning.</p>
+                    <small>MATH 221/222 · 331 · 340 · CS 524 · 532</small>
+                </article>
+                <article>
+                    <span class="learning-index">03</span>
+                    <div class="learning-icon"><i class="fas fa-people-arrows"></i></div>
+                    <h4>Human context</h4>
+                    <p>Accessibility, social impact, research communication, and designing technology around real people.</p>
+                    <small>LIS 202 · ANTHRO 104 · ESL 118 · URS 250</small>
+                </article>
+            </div>
         </section>
 
-        <section id="projects" class="section" data-reveal>
+        <section id="projects" class="section project-archive" data-reveal>
             <div class="section-heading">
-                <span class="section-kicker">Projects</span>
-                <h3>Selected work, built with intent.</h3>
+                <span class="section-kicker">Project archive</span>
+                <h3>More experiments, systems, and tools.</h3>
             </div>
 
             <div class="project-list">
@@ -722,6 +872,7 @@
                 <!-- Digital Twin Engine Project -->
                 <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-digital-twin">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb"><img src="assets/images/Digital_Twin_engineering_image.png" alt="Automotive engine virtual sensing system" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Oct 2025 &ndash; Feb 2026 · Researcher</span>
@@ -792,6 +943,7 @@
                 <!-- Industrial Asset Intelligence Project -->
                 <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-ideathon">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb"><img src="assets/images/slide_overview.jpg" alt="Industrial Asset Intelligence concept" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">July 18, 2026 · Participant</span>
@@ -914,6 +1066,7 @@
                 <!-- Self-Refining Image Generation Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-diff">
                     <div class="card-summary-header">
+                        <div class="archive-thumb archive-thumb-generated" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i><span>Iterate · score · refine</span></div>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Spring 2026 · Ongoing</span>
@@ -964,6 +1117,7 @@
                 <!-- MediMenu Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-medimenu">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb"><img src="assets/images/Medimenu.png" alt="MediMenu meal planning interface" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">CheeseHacks 2026 · Lead Developer</span>
@@ -1021,6 +1175,7 @@
                 <!-- CourseOptimizer Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-courseopt">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb"><img src="assets/images/CourseOptimizer_image.png" alt="CourseOptimizer schedule interface" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Badger Build Festival</span>
@@ -1077,6 +1232,7 @@
                 <!-- Human Survival Probability Analysis Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-survival">
                     <div class="card-summary-header">
+                        <div class="archive-thumb archive-thumb-generated archive-thumb-chart" aria-hidden="true"><i class="fas fa-chart-line"></i><span>10 datasets · survival modeling</span></div>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Fall 2025</span>
@@ -1127,69 +1283,111 @@
             </div>
         </section>
 
-        <section id="skills" class="section" data-reveal>
+        <section id="skills" class="section capability-section" data-reveal>
+            <svg class="section-flow-lines flow-lines-skills" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
+                <path pathLength="1" d="M-80 400 C180 110 350 505 610 235 S955 40 1280 270" />
+                <path pathLength="1" d="M-90 455 C195 185 395 545 690 300 S1030 115 1270 345" />
+                <path pathLength="1" d="M40 330 C265 95 455 385 735 155 S1030 30 1215 125" />
+            </svg>
             <div class="section-heading">
-                <span class="section-kicker">Skills</span>
-                <h3>A working toolkit, not a trophy shelf.</h3>
+                <span class="section-kicker">Capabilities</span>
+                <h3>Tools become useful when they work together.</h3>
             </div>
 
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="devicon-python-plain colored"></i>
-                        <i class="devicon-java-plain colored"></i>
-                        <i class="devicon-cplusplus-plain colored"></i>
-                        <i class="devicon-javascript-plain colored"></i>
-                        <i class="devicon-html5-plain colored"></i>
-                        <i class="devicon-css3-plain colored"></i>
+            <div class="capability-grid">
+                <article class="capability-card capability-language interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="devicon-python-plain"></i></span>
+                        <span><i class="devicon-java-plain"></i></span>
+                        <span><i class="devicon-cplusplus-plain"></i></span>
+                        <span><i class="devicon-javascript-plain"></i></span>
+                        <span><i class="fas fa-database"></i></span>
                     </div>
-                    <h3>Programming</h3>
-                    <p>Python, Java, C++, JavaScript, HTML/CSS, SQL</p>
+                    <p class="capability-label">Express · reason · implement</p>
+                    <h3>Programming languages</h3>
+                    <p>Choosing the right level of abstraction—from low-level systems work to browser interfaces and data workflows.</p>
+                    <div class="capability-stack"><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML/CSS</span><span>SQL</span></div>
+                    <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
                 </article>
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="devicon-pytorch-original colored"></i>
-                        <i class="devicon-tensorflow-original colored"></i>
-                        <i class="devicon-scikitlearn-plain colored"></i>
-                        <i class="devicon-opencv-plain colored"></i>
+                <article class="capability-card capability-ml interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="devicon-pytorch-original"></i></span>
+                        <span><i class="devicon-tensorflow-original"></i></span>
+                        <span><i class="devicon-scikitlearn-plain"></i></span>
+                        <span><i class="fas fa-brain"></i></span>
+                        <span><i class="fas fa-wand-magic-sparkles"></i></span>
                     </div>
-                    <h3>ML &amp; AI</h3>
-                    <p>PyTorch, TensorFlow, scikit-learn, Transformers, OpenCV, MediaPipe, XGBoost</p>
+                    <p class="capability-label">Model · diagnose · refine</p>
+                    <h3>Applied ML systems</h3>
+                    <p>Turning noisy real-world data into models that can be evaluated, interpreted, and deployed.</p>
+                    <div class="capability-stack"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Transformers</span><span>XGBoost</span><span>Generative AI</span></div>
+                    <a href="#case-sensor">Evidence: Virtual Sensor <i class="fas fa-arrow-right"></i></a>
                 </article>
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="devicon-pandas-plain colored"></i>
-                        <i class="devicon-numpy-plain colored"></i>
-                        <i class="devicon-matplotlib-plain colored"></i>
+                <article class="capability-card capability-data interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="devicon-numpy-plain"></i></span>
+                        <span><i class="devicon-pandas-plain"></i></span>
+                        <span><i class="devicon-matplotlib-plain"></i></span>
+                        <span><i class="fas fa-chart-line"></i></span>
+                        <span><i class="fas fa-wave-square"></i></span>
                     </div>
-                    <h3>Data &amp; Scientific</h3>
-                    <p>NumPy, Pandas, Matplotlib, signal processing</p>
+                    <p class="capability-label">Measure · explain · validate</p>
+                    <h3>Data &amp; scientific computing</h3>
+                    <p>Building reproducible analysis pipelines and translating measurements into defensible engineering evidence.</p>
+                    <div class="capability-stack"><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>Signal processing</span><span>Statistics</span></div>
+                    <a href="#case-sensor">Evidence: research systems <i class="fas fa-arrow-right"></i></a>
                 </article>
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="devicon-react-original colored"></i>
-                        <i class="devicon-fastapi-plain colored"></i>
-                        <i class="devicon-git-plain colored"></i>
-                        <i class="devicon-github-original"></i>
+                <article class="capability-card capability-vision interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="devicon-opencv-plain"></i></span>
+                        <span><i class="fas fa-hands-asl-interpreting"></i></span>
+                        <span><i class="fas fa-vr-cardboard"></i></span>
+                        <span><i class="fas fa-cubes"></i></span>
+                        <span><i class="fas fa-universal-access"></i></span>
                     </div>
-                    <h3>Frameworks &amp; Tools</h3>
-                    <p>React, FastAPI, Git, GitHub, VS Code</p>
+                    <p class="capability-label">Sense · interpret · assist</p>
+                    <h3>Vision &amp; accessible interaction</h3>
+                    <p>Combining perception pipelines with interfaces designed around human abilities and constraints.</p>
+                    <div class="capability-stack"><span>MediaPipe</span><span>OpenCV</span><span>Unity</span><span>Intel RealSense</span><span>AR/VR</span><span>Spatial HCI</span><span>Accessibility</span></div>
+                    <a href="#case-signbridge">Evidence: SignBridge <i class="fas fa-arrow-right"></i></a>
                 </article>
-                <article class="skill-card">
-                    <div class="skill-icon-group">
-                        <i class="fas fa-shield-halved"></i>
-                        <i class="fas fa-vr-cardboard"></i>
-                        <i class="fas fa-universal-access"></i>
-                        <i class="fas fa-microchip"></i>
+                <article class="capability-card capability-product interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="devicon-react-original"></i></span>
+                        <span><i class="devicon-fastapi-plain"></i></span>
+                        <span><i class="devicon-firebase-plain"></i></span>
+                        <span><i class="devicon-git-plain"></i></span>
+                        <span><i class="devicon-github-original"></i></span>
                     </div>
-                    <h3>Focus Areas</h3>
-                    <p>Cybersecurity, HCI, accessibility, computer architecture, AI tooling</p>
+                    <p class="capability-label">Architect · build · ship</p>
+                    <h3>Product engineering</h3>
+                    <p>Connecting frontend, backend, APIs, and team execution into coherent end-to-end products.</p>
+                    <div class="capability-stack"><span>React</span><span>FastAPI</span><span>Firebase</span><span>REST APIs</span><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+                    <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-security interactive-card">
+                    <div class="capability-orbit" aria-hidden="true">
+                        <span><i class="fas fa-shield-halved"></i></span>
+                        <span><i class="fas fa-network-wired"></i></span>
+                        <span><i class="fas fa-magnifying-glass-chart"></i></span>
+                        <span><i class="fas fa-microchip"></i></span>
+                        <span><i class="fas fa-rotate"></i></span>
+                    </div>
+                    <p class="capability-label">Observe · investigate · recover</p>
+                    <h3>Security &amp; resilient systems</h3>
+                    <p>Investigating incidents, reasoning across infrastructure, and designing for failure and recovery.</p>
+                    <div class="capability-stack"><span>Cortex XSOAR</span><span>Threat intelligence</span><span>Network forensics</span><span>Incident response</span><span>Computer architecture</span><span>Disaster recovery</span></div>
+                    <a href="#experience">Evidence: SOC &amp; Rec App <i class="fas fa-arrow-right"></i></a>
                 </article>
             </div>
         </section>
 
         <!-- Interests Section -->
         <section id="interests" class="section" data-reveal>
+            <svg class="section-flow-lines flow-lines-interests" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+                <path pathLength="1" d="M-40 315 C205 70 400 430 665 195 S1010 55 1240 175" />
+                <path pathLength="1" d="M-70 375 C180 170 425 485 720 255 S1055 130 1270 285" />
+            </svg>
             <div class="section-heading">
                 <span class="section-kicker">Interests</span>
                 <h3>The things I return to off-screen.</h3>
@@ -1232,6 +1430,7 @@
                         <div class="bookshelf-section">
                             <h4 class="expansion-title"><i class="fas fa-book-open"></i> Favorite Bookshelf</h4>
                             <p class="expansion-subtitle">Hover over or tap a book spine to reveal insights.</p>
+                            <div class="interest-panel-notes"><span>Systems &amp; society</span><span>Design thinking</span><span>Speculative fiction</span></div>
                             <div class="bookshelf-container">
                                 <div class="bookshelf-row">
                                     <div class="book-item" style="--book-color: #1a365d;" data-title="Nexus" data-author="Yuval Noah Harari" data-desc="An insightful exploration of how information networks and communication systems have constructed human societies, leading to the rise of artificial intelligence.">
@@ -1249,6 +1448,12 @@
                                     <div class="book-item tilted-left" style="--book-color: #22543d;" data-title="Why Nations Fail" data-author="D. Acemoglu & J. Robinson" data-desc="A historic economic analysis demonstrating how institutional choices—inclusive versus extractive—determine global power and prosperity.">
                                         <span class="book-spine">Why Nations Fail</span>
                                     </div>
+                                    <div class="book-item" style="--book-color: #7c4a31;" data-title="The Design of Everyday Things" data-author="Don Norman" data-desc="A foundational guide to affordances, feedback, constraints, and designing systems that match the way people actually think and act.">
+                                        <span class="book-spine">Everyday Things</span>
+                                    </div>
+                                    <div class="book-item tilted" style="--book-color: #4c3d67;" data-title="Exhalation" data-author="Ted Chiang" data-desc="Speculative stories that treat intelligence, memory, agency, and technology as precise philosophical experiments.">
+                                        <span class="book-spine">Exhalation</span>
+                                    </div>
                                 </div>
                                 <div class="bookshelf-shelf"></div>
                             </div>
@@ -1263,6 +1468,7 @@
                         <div class="cinema-section">
                             <h4 class="expansion-title"><i class="fas fa-video"></i> Cinematic Film Track</h4>
                             <p class="expansion-subtitle">Hover or tap a frame to view filmmaker details.</p>
+                            <div class="interest-panel-notes"><span>Visual systems</span><span>Psychological horror</span><span>Global cinema</span></div>
                             <div class="filmstrip-container">
                                 <div class="filmstrip-sprockets-top"></div>
                                 <div class="filmstrip-track">
@@ -1294,6 +1500,20 @@
                                             <p>Mervyn LeRoy (1956)</p>
                                         </div>
                                     </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">V</span>
+                                        <div class="frame-content">
+                                            <h5>Arrival</h5>
+                                            <p>Denis Villeneuve (2016)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">VI</span>
+                                        <div class="frame-content">
+                                            <h5>Get Out</h5>
+                                            <p>Jordan Peele (2017)</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="filmstrip-sprockets-bottom"></div>
                             </div>
@@ -1305,6 +1525,7 @@
                         <div class="music-section">
                             <h4 class="expansion-title"><i class="fas fa-music"></i> Sound Waves</h4>
                             <p class="expansion-subtitle">Hover or tap the translucent bubbles to reveal popular tracks.</p>
+                            <div class="interest-panel-notes"><span>Alt pop</span><span>Classic rock</span><span>Atmospheric playlists</span></div>
                             <div class="bubbles-container">
                                 <div class="music-bubble" style="--bubble-delay: 0s; --bubble-size: 120px; --bubble-hue: 280;">
                                     <div class="bubble-content">
@@ -1330,6 +1551,18 @@
                                         <p>Ed Sheeran</p>
                                     </div>
                                 </div>
+                                <div class="music-bubble" style="--bubble-delay: 0.9s; --bubble-size: 118px; --bubble-hue: 34;">
+                                    <div class="bubble-content">
+                                        <h5>Dreams</h5>
+                                        <p>Fleetwood Mac</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 1.5s; --bubble-size: 126px; --bubble-hue: 220;">
+                                    <div class="bubble-content">
+                                        <h5>Space Song</h5>
+                                        <p>Beach House</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1339,6 +1572,7 @@
                         <div class="museums-section">
                             <h4 class="expansion-title"><i class="fas fa-landmark"></i> Cultural Exhibits</h4>
                             <p class="expansion-subtitle">Visiting historical galleries, computing exhibits, and classical museums.</p>
+                            <div class="interest-panel-notes"><span>Material culture</span><span>Interaction design</span><span>Computing history</span></div>
                             <div class="museums-exhibit-grid">
                                 <div class="museum-exhibit-card">
                                     <h5>Art &amp; History Galleries</h5>
@@ -1347,6 +1581,14 @@
                                 <div class="museum-exhibit-card">
                                     <h5>Science &amp; Tech Exhibits</h5>
                                     <p>Fascinated by mechanical computation history, structural physics setups, and structural engineering marvels.</p>
+                                </div>
+                                <div class="museum-exhibit-card">
+                                    <h5>Design &amp; Interaction</h5>
+                                    <p>Studying how typography, wayfinding, objects, and spatial layouts guide attention without explicit instruction.</p>
+                                </div>
+                                <div class="museum-exhibit-card">
+                                    <h5>Local Collections &amp; Archives</h5>
+                                    <p>Looking for the small details—annotations, prototypes, and ordinary artifacts—that reveal how people lived and worked.</p>
                                 </div>
                             </div>
                         </div>

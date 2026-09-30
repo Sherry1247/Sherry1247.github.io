@@ -136,7 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = event.target.value.toLowerCase().trim();
       let visibleRows = 0;
       tableRows.forEach((row) => {
-        const matches = row.dataset.search.includes(query);
+        const searchableText = `${row.dataset.search || ""} ${row.textContent}`.toLowerCase();
+        const matches = searchableText.includes(query);
         row.hidden = !matches;
         if (matches) visibleRows += 1;
       });

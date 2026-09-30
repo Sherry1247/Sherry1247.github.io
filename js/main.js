@@ -11,9 +11,7 @@ const init = () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-links");
   const phrases = [
-    "I build with machine learning, research, cybersecurity, and practical software systems.",
-    "I care about elegant technical work that still feels useful and clear.",
-    "I’m interested in ML systems, accessibility, security, and clean product thinking."
+    "I build intelligent systems that sense, adapt, and help people act."
   ];
 
   const themeBtn = document.createElement("button");
@@ -142,11 +140,15 @@ const init = () => {
 
       card.style.setProperty("--mouse-x", `${mouseX}%`);
       card.style.setProperty("--mouse-y", `${mouseY}%`);
+      card.style.setProperty("--card-ry", `${(mouseX - 50) * 0.025}deg`);
+      card.style.setProperty("--card-rx", `${(50 - mouseY) * 0.018}deg`);
     });
 
     card.addEventListener("mouseleave", () => {
       card.style.removeProperty("--mouse-x");
       card.style.removeProperty("--mouse-y");
+      card.style.removeProperty("--card-ry");
+      card.style.removeProperty("--card-rx");
     });
   });
 
