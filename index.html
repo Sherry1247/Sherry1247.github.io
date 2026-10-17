@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Siqi Dai | Computer Science at UW-Madison</title>
+    <title>Siqi Dai | Data Science &amp; Computer Science at UW-Madison</title>
     <meta name="author" content="Siqi Dai">
     <meta name="description"
-        content="Personal website of Siqi Dai, a UW-Madison computer science student working across machine learning, HCI, cybersecurity, and applied systems.">
+        content="Personal website of Siqi Dai, a UW-Madison Data Science and Computer Science student (Mathematics minor) working across machine learning, HCI, cybersecurity, and applied systems.">
     <meta property="og:title" content="Siqi Dai | Personal Website">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/images/photo.jpg">
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://sherry1247.github.io/">
+    <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="css/tokens.css?v=20261022">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/refactor.css?v=20260929-2">
 </head>
@@ -50,12 +52,12 @@
         <header id="home" class="hero" data-reveal="hero">
             <div class="hero-shell">
                 <div class="hero-content">
-                    <p class="eyebrow">Computer Science · UW-Madison</p>
+                    <p class="eyebrow">Data Science &amp; Computer Science · UW-Madison</p>
                     <h1>Hi, I’m Siqi.</h1>
                     <p class="hero-role"><span id="typed-role">I build intelligent systems that sense, adapt, and help
                             people act.</span></p>
                     <p class="hero-copy">
-                        Research engineer and computer science student working across machine learning, accessible
+                        Research engineer and Data Science + Computer Science student working across machine learning, accessible
                         interaction, and resilient software—from sensor health to real-time sign language systems.
                     </p>
 
@@ -137,7 +139,7 @@
                     <div class="console-bar"><span><i></i><i></i><i></i></span><strong>sensor.health / live</strong><em>ASME winner</em></div>
                     <div class="signal-header"><span>CYLINDER PRESSURE · CHANNEL 04</span><span class="live-status"><i></i> Monitoring</span></div>
                     <svg class="signal-chart" viewBox="0 0 760 250" role="img" aria-label="A noisy sensor signal converging toward a corrected signal">
-                        <defs><linearGradient id="signal-gradient" x1="0" x2="1"><stop offset="0" stop-color="#a9b8d8"/><stop offset="1" stop-color="#d8a06b"/></linearGradient></defs>
+                        <defs><linearGradient id="signal-gradient" x1="0" x2="1"><stop offset="0" stop-color="#a9b8d8"/><stop offset="1" stop-color="#4f8cff"/></linearGradient></defs>
                         <path class="signal-grid" d="M0 50H760M0 100H760M0 150H760M0 200H760M95 0V250M190 0V250M285 0V250M380 0V250M475 0V250M570 0V250M665 0V250"/>
                         <path class="signal-fault" d="M0 130 C35 112 55 148 82 121 S127 46 151 138 S190 224 218 126 S257 33 283 132 S328 216 360 120 S407 41 433 131 S480 220 510 125 S550 52 578 127 S628 194 655 119 S704 71 760 124"/>
                         <path class="signal-corrected" d="M0 132 C52 80 94 80 142 132 S235 184 284 132 S376 80 426 132 S520 184 569 132 S660 80 760 132"/>
@@ -236,7 +238,7 @@
                 </div>
                 <div class="about-copy">
                     <p class="about-lede">
-                        I’m a computer science student at UW–Madison working across applied machine learning,
+                        I’m a Data Science and Computer Science student at UW–Madison, with a Mathematics minor, working across applied machine learning,
                         accessibility research, and security operations.
                     </p>
                     <p>
@@ -245,7 +247,7 @@
                         something clear, testable, and useful.
                     </p>
                     <div class="about-facts" aria-label="Quick facts">
-                        <div class="about-fact"><span>Studying</span><strong>CS + Mathematics</strong></div>
+                        <div class="about-fact"><span>Studying</span><strong>DS + CS · Math minor</strong></div>
                         <div class="about-fact"><span>At</span><strong>UW–Madison</strong></div>
                         <div class="about-fact"><span>GPA</span><strong>3.9 / 4.0</strong></div>
                         <div class="about-fact"><span>Graduating</span><strong>May 2028</strong></div>
@@ -261,15 +263,56 @@
                 <span class="section-kicker">Experience</span>
                 <h3>Research meets real systems.</h3>
             </div>
-            <p class="timeline-order-note">Reverse chronological by start date · open any role for the full scope</p>
+            <p class="timeline-order-note">Most recent first · scroll to follow the timeline · open any role for the full scope</p>
 
-            <div class="timeline">
+            <div class="timeline" id="exp-timeline">
+                <!-- Diego Group Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-diego">
+                    <div class="timeline-date">Sep 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover "><img src="assets/images/QIML_hero.png" alt="QIML selected MRI images and renderings" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Undergraduate Research Assistant</h3>
+                                    <p class="timeline-meta"><a href="https://qiml.radiology.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">Diego Hernando Group (QIML) <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-flask experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Undergraduate research assistant in Prof. Diego Hernando's group at the Quantitative
+                                Imaging Methods Lab, Departments of Radiology and Medical Physics.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Quantitative Imaging</span>
+                                <span>Medical Physics</span>
+                                <span>Radiology</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-diego-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-diego-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Ongoing role in the Quantitative Imaging Methods Lab (QIML) at UW-Madison.
+                                    Project scope and responsibilities will be added here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- SAIL Experience -->
                 <article class="timeline-item collapsible-card" data-card-id="exp-sail">
                     <div class="timeline-date">Jun 2026 - Aug 2026</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
-                            <div class="experience-heading">
+                            <figure class="exp-cover cover-contain"><img src="assets/images/SAIL.png" alt="SignBridge ASL-to-speech interface" loading="lazy"></figure>
+                                                        <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Research &amp; Engineering</span>
                                     <h3>Summer Intern &amp; Team Leader</h3>
@@ -335,7 +378,8 @@
                     <div class="timeline-date">May 2026 - Present</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
-                            <div class="experience-heading">
+                            <figure class="exp-cover cover-fit"><img src="assets/images/Rec_image.png" alt="REC mobile application interface" loading="lazy"></figure>
+                                                        <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Engineering</span>
                                     <h3>Full Stack Software Engineer Intern</h3>
@@ -396,12 +440,71 @@
                     </div>
                 </article>
 
+                <!-- Cybersecurity SOC Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-cyber">
+                    <div class="timeline-date">May 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover cover-contain"><img src="assets/images/Cyber-Badger-Logo.png" alt="UW-Madison Cybersecurity Operations logo" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Security</span>
+                                    <h3>Cybersecurity Operations Center Student Analyst</h3>
+                                    <p class="timeline-meta">UW-Madison</p>
+                                </div>
+                                <i class="fas fa-shield-halved experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Analyze and mitigate security incidents across the university’s network infrastructure, triaging potential threats and coordinating department-wide incident response.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Palo Alto Cortex XSOAR</span>
+                                <span>WiscIT</span>
+                                <span>Threat Intelligence</span>
+                                <span>Email Header Analysis</span>
+                                <span>Network Forensics</span>
+                                <span>Incident Response</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-cyber-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-cyber-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Leverage automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs across university network infrastructure.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Investigate and triage 30+ phishing incidents weekly using WiscIT
+                                                workflows across multiple university departments.</li>
+                                            <li>Monitor Palo Alto Cortex XSOAR playbooks across network events for
+                                                suspicious traffic, URL-filtering alerts, and potential threats.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/Cyber-Badger-Logo.png" alt="UW-Madison Cybersecurity Operations Logo" loading="lazy" style="object-fit: contain; padding: 16px; background: var(--surface);">
+                                        <figcaption>UW-Madison Cybersecurity Operations Center</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- MadAbility Lab Experience -->
                 <article class="timeline-item collapsible-card" data-card-id="exp-madability">
                     <div class="timeline-date">Apr 2026 - Sep 2026</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
-                            <div class="experience-heading">
+                            <figure class="exp-cover "><img src="assets/images/AR_VR_stair_detection.png" alt="AR stair detection with segmentation" loading="lazy"></figure>
+                                                        <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Research</span>
                                     <h3>Student Research Assistant, AR/VR Accessibility Systems</h3>
@@ -462,56 +565,59 @@
                     </div>
                 </article>
 
-                <!-- Cybersecurity SOC Experience -->
-                <article class="timeline-item collapsible-card" data-card-id="exp-cyber">
-                    <div class="timeline-date">May 2026 - Present</div>
+                <!-- L&S IT Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-lsit">
+                    <div class="timeline-date">Jan 2026 - May 2026</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
-                            <div class="experience-heading">
+                            <figure class="exp-cover cover-fit"><img src="assets/images/LS_IT_Infolab.png" alt="L&S IT service desk" loading="lazy"></figure>
+                                                        <div class="experience-heading">
                                 <div>
-                                    <span class="experience-type">Security</span>
-                                    <h3>Cybersecurity Operations Center Student Analyst</h3>
-                                    <p class="timeline-meta">UW-Madison</p>
+                                    <span class="experience-type">Operations</span>
+                                    <h3>L&amp;S IT Service Desk Technician</h3>
+                                    <p class="timeline-meta">College of Letters &amp; Science IT · Madison, WI</p>
                                 </div>
-                                <i class="fas fa-shield-halved experience-icon" aria-hidden="true"></i>
+                                <i class="fas fa-laptop-code experience-icon" aria-hidden="true"></i>
                             </div>
                             <p class="card-summary-text">
-                                Analyze and mitigate security incidents across the university’s network infrastructure, triaging potential threats and coordinating department-wide incident response.
+                                Managed IT support and systems maintenance for the College of Letters &amp; Science, resolving multi-tier technical issues for faculty, staff, and students.
                             </p>
                             <div class="tag-row compact-tags">
-                                <span>Palo Alto Cortex XSOAR</span>
-                                <span>WiscIT</span>
-                                <span>Threat Intelligence</span>
-                                <span>Email Header Analysis</span>
-                                <span>Network Forensics</span>
-                                <span>Incident Response</span>
+                                <span>Halo ITSM</span>
+                                <span>Active Directory</span>
+                                <span>Windows/macOS Admin</span>
+                                <span>Network Diagnostics</span>
+                                <span>Enterprise Hardware</span>
                             </div>
-                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-cyber-details">
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-lsit-details">
                                 <span class="toggle-label">View Details</span>
                                 <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
                             </button>
                         </div>
 
-                        <div class="card-details-wrapper" id="exp-cyber-details" hidden="until-found">
+                        <div class="card-details-wrapper" id="exp-lsit-details" hidden="until-found">
                             <div class="card-details-inner">
                                 <p>
-                                    Leverage automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs across university network infrastructure.
+                                    Troubleshoot critical network, hardware, and OS issues across Windows and macOS environments. Maintained the infrastructure and software configurations of academic labs, implementing regular diagnostics to minimize downtime and ensure seamless instructional operations.
                                 </p>
                                 <div class="experience-detail-grid">
                                     <div>
                                         <h4>Responsibilities &amp; Impact</h4>
                                         <ul class="timeline-points">
-                                            <li>Investigate and triage 30+ phishing incidents weekly using WiscIT
-                                                workflows across multiple university departments.</li>
-                                            <li>Monitor Palo Alto Cortex XSOAR playbooks across network events for
-                                                suspicious traffic, URL-filtering alerts, and potential threats.</li>
+                                            <li>Resolved 30+ hardware and authentication service requests daily with high first-contact resolution rates, documented in Halo.</li>
+                                            <li>Diagnosed and repaired instructional equipment, printers, and network connections in 3+ college computing labs.</li>
+                                            <li>Provisioned and configured enterprise workstations, ensuring compliance with campus-wide security protocols.</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="experience-gallery">
                                     <figure class="gallery-item">
-                                        <img src="assets/images/Cyber-Badger-Logo.png" alt="UW-Madison Cybersecurity Operations Logo" loading="lazy" style="object-fit: contain; padding: 16px; background: var(--surface);">
-                                        <figcaption>UW-Madison Cybersecurity Operations Center</figcaption>
+                                        <img src="assets/images/LS_IT_Infolab.png" alt="L&S IT Computing Infolab" loading="lazy">
+                                        <figcaption>L&amp;S Computer Lab Infrastructure</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img src="assets/images/LS_IT_service_desk.jpeg" alt="L&S IT Service Desk" loading="lazy">
+                                        <figcaption>Service Desk Operations &amp; Support</figcaption>
                                     </figure>
                                 </div>
                             </div>
@@ -524,7 +630,8 @@
                     <div class="timeline-date">Fall 2025 - Present</div>
                     <div class="timeline-panel experience-card">
                         <div class="card-summary-header">
-                            <div class="experience-heading">
+                            <figure class="exp-cover "><img src="assets/images/symposium_present_photo.png" alt="Undergraduate Research Symposium poster presentation" loading="lazy"></figure>
+                                                        <div class="experience-heading">
                                 <div>
                                     <span class="experience-type">Research</span>
                                     <h3>Undergraduate Research Scholar</h3>
@@ -583,75 +690,11 @@
                         </div>
                     </div>
                 </article>
-
-                <!-- L&S IT Experience -->
-                <article class="timeline-item collapsible-card" data-card-id="exp-lsit">
-                    <div class="timeline-date">Jan 2026 - May 2026</div>
-                    <div class="timeline-panel experience-card">
-                        <div class="card-summary-header">
-                            <div class="experience-heading">
-                                <div>
-                                    <span class="experience-type">Operations</span>
-                                    <h3>L&amp;S IT Service Desk Technician</h3>
-                                    <p class="timeline-meta">College of Letters &amp; Science IT · Madison, WI</p>
-                                </div>
-                                <i class="fas fa-laptop-code experience-icon" aria-hidden="true"></i>
-                            </div>
-                            <p class="card-summary-text">
-                                Managed IT support and systems maintenance for the College of Letters &amp; Science, resolving multi-tier technical issues for faculty, staff, and students.
-                            </p>
-                            <div class="tag-row compact-tags">
-                                <span>Halo ITSM</span>
-                                <span>Active Directory</span>
-                                <span>Windows/macOS Admin</span>
-                                <span>Network Diagnostics</span>
-                                <span>Enterprise Hardware</span>
-                            </div>
-                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-lsit-details">
-                                <span class="toggle-label">View Details</span>
-                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
-                            </button>
-                        </div>
-
-                        <div class="card-details-wrapper" id="exp-lsit-details" hidden="until-found">
-                            <div class="card-details-inner">
-                                <p>
-                                    Troubleshoot critical network, hardware, and OS issues across Windows and macOS environments. Maintained the infrastructure and software configurations of academic labs, implementing regular diagnostics to minimize downtime and ensure seamless instructional operations.
-                                </p>
-                                <div class="experience-detail-grid">
-                                    <div>
-                                        <h4>Responsibilities &amp; Impact</h4>
-                                        <ul class="timeline-points">
-                                            <li>Resolved 30+ hardware and authentication service requests daily with high first-contact resolution rates, documented in Halo.</li>
-                                            <li>Diagnosed and repaired instructional equipment, printers, and network connections in 3+ college computing labs.</li>
-                                            <li>Provisioned and configured enterprise workstations, ensuring compliance with campus-wide security protocols.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="experience-gallery">
-                                    <figure class="gallery-item">
-                                        <img src="assets/images/LS_IT_Infolab.png" alt="L&S IT Computing Infolab" loading="lazy">
-                                        <figcaption>L&amp;S Computer Lab Infrastructure</figcaption>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <img src="assets/images/LS_IT_service_desk.jpeg" alt="L&S IT Service Desk" loading="lazy">
-                                        <figcaption>Service Desk Operations &amp; Support</figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
             </div>
         </section>
 
         <!-- Course Guide Section -->
         <section id="course-guide" class="section" data-reveal>
-            <svg class="section-flow-lines flow-lines-course" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
-                <path pathLength="1" d="M-40 310 C180 130 315 405 548 220 S905 55 1240 200" />
-                <path pathLength="1" d="M-60 352 C170 205 360 455 610 260 S980 100 1260 250" />
-                <path pathLength="1" d="M25 245 C240 80 440 315 685 145 S1010 20 1190 95" />
-            </svg>
             <div class="section-heading">
                 <span class="section-kicker">Academics</span>
                 <h3>A map of what I’ve learned.</h3>
@@ -721,6 +764,7 @@
                 <!-- SAIL / SignBridge Project -->
                 <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail" id="proj-sail">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb archive-thumb-contain"><img src="assets/images/SAIL.png" alt="SignBridge ASL-to-speech interface" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Summer 2026 · Team Lead</span>
@@ -1005,6 +1049,7 @@
                 <!-- AR/VR Accessibility Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-arvr">
                     <div class="card-summary-header">
+                        <figure class="archive-thumb"><img src="assets/images/AR_VR_stair_detection.png" alt="AR/VR stair detection" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Apr 2026 – Sep 2026 · Researcher</span>
@@ -1066,21 +1111,23 @@
                 <!-- Self-Refining Image Generation Project -->
                 <article class="project-row interactive-card collapsible-card" data-card-id="proj-diff">
                     <div class="card-summary-header">
-                        <div class="archive-thumb archive-thumb-generated" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i><span>Iterate · score · refine</span></div>
+                        <figure class="archive-thumb archive-thumb-corner"><img src="assets/images/self_improving_editor.jpg" alt="Self-improving background editor comparing InstructPix2Pix, compositing, and Qwen-Image-Edit results" loading="lazy"></figure>
                         <div class="project-header">
                             <div>
                                 <span class="project-period">Spring 2026 · Ongoing</span>
-                                <h3>Self-Refining Image Generation &amp; Editing</h3>
+                                <h3>Self-Improving Background Editor <span class="project-title-detail">(Closed-Loop Image Editing)</span></h3>
                             </div>
                             <div class="project-badge-group">
-                                <span class="project-github-link disabled" title="Repository Private / Ongoing">
+                                <a href="https://github.com/Sherry1247/self_improving_editor" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View Self-Improving Editor source on GitHub"
+                                    aria-label="View Self-Improving Editor source on GitHub">
                                     <i class="fab fa-github"></i>
-                                </span>
+                                </a>
                                 <span class="project-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
                             </div>
                         </div>
                         <p class="project-summary">
-                            Developed an iterative diffusion-based image generation framework featuring a closed-loop feedback mechanism for precise, localized image editing.
+                            Built a closed-loop image editor that replaces the background behind a person or dog while keeping the subject intact: every candidate is scored by a bank of critics, diagnosed, and re-edited.
                         </p>
                         <div class="tag-row compact-tags">
                             <span>Python</span>
@@ -1296,27 +1343,15 @@
 
             <div class="capability-grid">
                 <article class="capability-card capability-language interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="devicon-python-plain"></i></span>
-                        <span><i class="devicon-java-plain"></i></span>
-                        <span><i class="devicon-cplusplus-plain"></i></span>
-                        <span><i class="devicon-javascript-plain"></i></span>
-                        <span><i class="fas fa-database"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:-39deg"><i class="devicon-java-plain colored"></i></span><span style="--a:13deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:64deg"><i class="devicon-javascript-plain colored"></i></span><span style="--a:116deg"><i class="devicon-html5-plain colored"></i></span><span style="--a:167deg"><i class="devicon-css3-plain colored"></i></span><span style="--a:219deg"><i class="devicon-mysql-original colored"></i></span></div></div>
                     <p class="capability-label">Express · reason · implement</p>
                     <h3>Programming languages</h3>
                     <p>Choosing the right level of abstraction—from low-level systems work to browser interfaces and data workflows.</p>
-                    <div class="capability-stack"><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML/CSS</span><span>SQL</span></div>
+                    <div class="capability-stack"><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML/CSS</span><span>MySQL</span></div>
                     <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="capability-card capability-ml interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="devicon-pytorch-original"></i></span>
-                        <span><i class="devicon-tensorflow-original"></i></span>
-                        <span><i class="devicon-scikitlearn-plain"></i></span>
-                        <span><i class="fas fa-brain"></i></span>
-                        <span><i class="fas fa-wand-magic-sparkles"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-pytorch-original colored"></i></span><span style="--a:-30deg"><i class="devicon-tensorflow-original colored"></i></span><span style="--a:30deg"><i class="devicon-scikitlearn-plain colored"></i></span><span style="--a:90deg"><i class="devicon-keras-plain colored"></i></span><span style="--a:150deg"><i class="devicon-jupyter-plain colored"></i></span><span style="--a:210deg"><i class="devicon-python-plain colored"></i></span></div></div>
                     <p class="capability-label">Model · diagnose · refine</p>
                     <h3>Applied ML systems</h3>
                     <p>Turning noisy real-world data into models that can be evaluated, interpreted, and deployed.</p>
@@ -1324,13 +1359,7 @@
                     <a href="#case-sensor">Evidence: Virtual Sensor <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="capability-card capability-data interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="devicon-numpy-plain"></i></span>
-                        <span><i class="devicon-pandas-plain"></i></span>
-                        <span><i class="devicon-matplotlib-plain"></i></span>
-                        <span><i class="fas fa-chart-line"></i></span>
-                        <span><i class="fas fa-wave-square"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-numpy-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-pandas-plain colored"></i></span><span style="--a:30deg"><i class="devicon-matplotlib-plain colored"></i></span><span style="--a:90deg"><i class="devicon-plotly-plain colored"></i></span><span style="--a:150deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:210deg"><i class="devicon-redis-plain colored"></i></span></div></div>
                     <p class="capability-label">Measure · explain · validate</p>
                     <h3>Data &amp; scientific computing</h3>
                     <p>Building reproducible analysis pipelines and translating measurements into defensible engineering evidence.</p>
@@ -1338,13 +1367,7 @@
                     <a href="#case-sensor">Evidence: research systems <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="capability-card capability-vision interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="devicon-opencv-plain"></i></span>
-                        <span><i class="fas fa-hands-asl-interpreting"></i></span>
-                        <span><i class="fas fa-vr-cardboard"></i></span>
-                        <span><i class="fas fa-cubes"></i></span>
-                        <span><i class="fas fa-universal-access"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-opencv-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-unity-plain colored"></i></span><span style="--a:30deg"><i class="devicon-csharp-plain colored"></i></span><span style="--a:90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:150deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:210deg"><i class="devicon-tensorflow-original colored"></i></span></div></div>
                     <p class="capability-label">Sense · interpret · assist</p>
                     <h3>Vision &amp; accessible interaction</h3>
                     <p>Combining perception pipelines with interfaces designed around human abilities and constraints.</p>
@@ -1352,27 +1375,15 @@
                     <a href="#case-signbridge">Evidence: SignBridge <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="capability-card capability-product interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="devicon-react-original"></i></span>
-                        <span><i class="devicon-fastapi-plain"></i></span>
-                        <span><i class="devicon-firebase-plain"></i></span>
-                        <span><i class="devicon-git-plain"></i></span>
-                        <span><i class="devicon-github-original"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-react-original colored"></i></span><span style="--a:-39deg"><i class="devicon-fastapi-plain colored"></i></span><span style="--a:13deg"><i class="devicon-firebase-plain colored"></i></span><span style="--a:64deg"><i class="devicon-redis-plain colored"></i></span><span style="--a:116deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:167deg"><i class="devicon-git-plain colored"></i></span><span style="--a:219deg"><i class="devicon-github-original colored"></i></span></div></div>
                     <p class="capability-label">Architect · build · ship</p>
                     <h3>Product engineering</h3>
                     <p>Connecting frontend, backend, APIs, and team execution into coherent end-to-end products.</p>
-                    <div class="capability-stack"><span>React</span><span>FastAPI</span><span>Firebase</span><span>REST APIs</span><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+                    <div class="capability-stack"><span>React</span><span>FastAPI</span><span>Firebase</span><span>REST APIs</span><span>Redis</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>VS Code</span></div>
                     <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
                 </article>
                 <article class="capability-card capability-security interactive-card">
-                    <div class="capability-orbit" aria-hidden="true">
-                        <span><i class="fas fa-shield-halved"></i></span>
-                        <span><i class="fas fa-network-wired"></i></span>
-                        <span><i class="fas fa-magnifying-glass-chart"></i></span>
-                        <span><i class="fas fa-microchip"></i></span>
-                        <span><i class="fas fa-rotate"></i></span>
-                    </div>
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-linux-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-bash-plain colored"></i></span><span style="--a:30deg"><i class="devicon-python-plain colored"></i></span><span style="--a:90deg"><i class="devicon-docker-plain colored"></i></span><span style="--a:150deg"><i class="devicon-git-plain colored"></i></span><span style="--a:210deg"><i class="devicon-mysql-original colored"></i></span></div></div>
                     <p class="capability-label">Observe · investigate · recover</p>
                     <h3>Security &amp; resilient systems</h3>
                     <p>Investigating incidents, reasoning across infrastructure, and designing for failure and recovery.</p>
@@ -1675,7 +1686,7 @@
         <div class="container footer-inner">
             <div class="footer-info">
                 <p class="footer-title">Siqi Dai</p>
-                <p class="footer-meta">Siqi Dai · Last updated: September 29, 2026</p>
+                <p class="footer-meta">Siqi Dai · Last updated: October 17, 2026</p>
             </div>
             <div class="footer-links">
                 <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -1711,7 +1722,7 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=20260929-2"></script>
+    <script src="js/main.js?v=20261017"></script>
 </body>
 
 </html>
