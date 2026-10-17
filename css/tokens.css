@@ -1,0 +1,67 @@
+/*
+ * Design tokens — the single source of truth for color, type and spacing.
+ * Default is a deep black-blue "tech" dark theme; light is opt-in via
+ * <html data-theme="light"> (set by the inline script in <head> / js/main.js).
+ * Component CSS must reference these variables, never hard-coded colors.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* surfaces */
+  --bg: #02050b;
+  --surface: #050a14;
+  --surface-soft: #09111f;
+
+  /* text */
+  --text: #e4eaf5;
+  --text-soft: #a3b0c8;
+  --muted: #6f7f9e;
+
+  /* lines */
+  --line: rgba(190, 205, 232, 0.12);
+  --line-strong: rgba(190, 205, 232, 0.26);
+
+  /* accent: muted steel blue — readable on near-black, never neon */
+  --accent: #5b7fb8;
+  --accent-cool: #8aa4cf;
+  --accent-rgb: 91, 127, 184;
+  --accent-soft: rgba(var(--accent-rgb), 0.14);
+
+  /* effects */
+  --shadow-soft: 0 18px 55px rgba(0, 0, 0, 0.22);
+  --shadow: 0 26px 70px rgba(0, 0, 0, 0.3);
+  --hero-card: rgba(5, 10, 20, 0.72);
+  --nav-bg: rgba(2, 5, 11, 0.7);
+
+  /* layout */
+  --content-width: 1120px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --transition: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* type */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+
+  interpolate-size: allow-keywords;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7fc;
+  --surface: #ffffff;
+  --surface-soft: #e9eef8;
+  --text: #0a1426;
+  --text-soft: #41547a;
+  --muted: #6b7b9c;
+  --line: rgba(10, 20, 38, 0.12);
+  --line-strong: rgba(10, 20, 38, 0.26);
+  --accent: #2a58b0;
+  --accent-cool: #3d6bc0;
+  --accent-rgb: 42, 88, 176;
+  --shadow-soft: 0 14px 40px rgba(10, 20, 38, 0.07);
+  --shadow: 0 20px 50px rgba(10, 20, 38, 0.1);
+  --hero-card: rgba(255, 255, 255, 0.78);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+}
