@@ -6,7 +6,6 @@ const init = () => {
   const revealItems = document.querySelectorAll("[data-reveal]");
   const navLinks = document.querySelectorAll(".nav-links a");
   const topBtn = document.getElementById("back-to-top");
-  const interactiveCards = document.querySelectorAll(".interactive-card");
   const typedRole = document.getElementById("typed-role");
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-links");
@@ -28,7 +27,7 @@ const init = () => {
   }
 
   const savedTheme = localStorage.getItem("theme");
-  applyTheme(savedTheme || "dark");
+  applyTheme(savedTheme === "light" ? "light" : "dark");
 
   themeBtn.addEventListener("click", () => {
     const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -132,26 +131,6 @@ const init = () => {
 
   sections.forEach((section) => navObserver.observe(section));
 
-  interactiveCards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const mouseX = ((event.clientX - rect.left) / rect.width) * 100;
-      const mouseY = ((event.clientY - rect.top) / rect.height) * 100;
-
-      card.style.setProperty("--mouse-x", `${mouseX}%`);
-      card.style.setProperty("--mouse-y", `${mouseY}%`);
-      card.style.setProperty("--card-ry", `${(mouseX - 50) * 0.025}deg`);
-      card.style.setProperty("--card-rx", `${(50 - mouseY) * 0.018}deg`);
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.removeProperty("--mouse-x");
-      card.style.removeProperty("--mouse-y");
-      card.style.removeProperty("--card-ry");
-      card.style.removeProperty("--card-rx");
-    });
-  });
-
   if (typedRole) {
     // Keep the primary positioning statement stable. Animated copy caused
     // the hero to open with a visually truncated sentence and made the page
@@ -193,6 +172,35 @@ const init = () => {
     };
 
     renderTimeline();
+  }
+
+
+  // Experience timeline: light up the rail and each role as it scrolls into view.
+  const expTimeline = document.getElementById("exp-timeline");
+  if (expTimeline) {
+    const items = Array.from(expTimeline.querySelectorAll(".timeline-item"));
+    root.classList.add("js-timeline");
+    let ticking = false;
+    const updateTimeline = () => {
+      ticking = false;
+      const trigger = window.innerHeight * 0.62;
+      const top = expTimeline.getBoundingClientRect().top;
+      items.forEach((item) => {
+        const lit = item.getBoundingClientRect().top < trigger;
+        item.classList.toggle("is-lit", lit);
+      });
+      const rail = Math.max(0, Math.min(trigger - top, expTimeline.offsetHeight));
+      expTimeline.style.setProperty("--progress", `${rail}px`);
+    };
+    const requestUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateTimeline);
+      }
+    };
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    updateTimeline();
   }
 
   // The contact phone behaves like a small piece of interface rather than a
