@@ -38,7 +38,7 @@ body {
   z-index: 2000;
   padding: 10px 14px;
   border-radius: 999px;
-  color: #06101f;
+  color: var(--on-accent);
   background: var(--accent);
   font-weight: 800;
   transition: top var(--transition);
@@ -162,13 +162,13 @@ body {
 }
 
 .btn-primary {
-  color: #06101f;
+  color: var(--on-accent);
   border-color: var(--accent);
   background: var(--accent);
 }
 
 .btn-primary:hover {
-  color: #06101f;
+  color: var(--on-accent);
   background: var(--accent-cool);
 }
 
@@ -195,12 +195,8 @@ body {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(24, 25, 28, 0.66);
+  background: var(--hero-card);
   box-shadow: var(--shadow-soft);
-}
-
-[data-theme="light"] .profile-float {
-  background: rgba(251, 248, 243, 0.78);
 }
 
 .profile-photo-wrap {
@@ -343,7 +339,7 @@ body {
 
 .about-fact span {
   color: var(--accent);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -421,7 +417,7 @@ body {
 .portfolio-timeline-axis {
   padding: 8px 0 7px;
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -476,7 +472,7 @@ body {
 
 .portfolio-timeline-label small {
   color: var(--accent);
-  font-size: 0.61rem;
+  font-size: 0.7rem;
   font-weight: 700;
 }
 
@@ -621,7 +617,7 @@ body {
 }
 
 .card-toggle-btn:hover {
-  color: #06101f;
+  color: var(--on-accent);
   background: var(--accent);
 }
 
@@ -769,7 +765,7 @@ body {
   top: 25px;
   left: 0;
   color: var(--accent);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.13em;
 }
@@ -943,7 +939,7 @@ body {
   border-radius: 999px;
   color: var(--text-soft);
   background: var(--surface-soft);
-  font-size: .65rem;
+  font-size: 0.7rem;
 }
 
 .interest-expansion-panel.expanded {
@@ -1209,7 +1205,7 @@ body {
 .island-copy {
   max-width: 0;
   overflow: hidden;
-  font-size: 0.64rem;
+  font-size: 0.7rem;
   font-weight: 800;
   opacity: 0;
   white-space: nowrap;
@@ -1426,7 +1422,7 @@ body {
   align-items: center;
   gap: 8px;
   color: rgba(226, 234, 247, 0.38);
-  font-size: 0.58rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1801,7 +1797,7 @@ body {
   border-radius: 999px;
   color: var(--text-soft);
   background: var(--surface-soft);
-  font-size: .62rem;
+  font-size: 0.7rem;
   white-space: nowrap;
 }
 
@@ -2145,7 +2141,7 @@ body {
   top: -34px;
   right: 0;
   color: var(--muted);
-  font-size: 0.56rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   opacity: 0.66;
@@ -2180,7 +2176,7 @@ body {
 
 .hero-proof-grid span {
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.35;
@@ -2285,7 +2281,7 @@ body {
 
 .work-index small {
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -2315,7 +2311,7 @@ body {
 
 .case-bridge strong {
   color: var(--text-soft);
-  font-size: .66rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-align: center;
@@ -2370,7 +2366,7 @@ body {
 .case-number {
   margin-bottom: 18px;
   color: var(--accent);
-  font-size: 0.67rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -2424,7 +2420,7 @@ body {
 
 .case-metrics span {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   line-height: 1.4;
 }
 
@@ -2456,7 +2452,7 @@ body {
   min-width: 0;
   border: 1px solid rgba(226, 234, 247, 0.16);
   border-radius: 25px;
-  background: rgba(8, 9, 11, 0.82);
+  background: color-mix(in srgb, var(--surface) 94%, #000);
   box-shadow: 0 35px 80px rgba(0,0,0,.38), inset 0 1px rgba(255,255,255,.05);
   transform: perspective(1200px) rotateY(var(--card-ry, 0deg)) rotateX(var(--card-rx, 0deg));
   transition: transform 180ms ease;
@@ -2470,7 +2466,7 @@ body {
   padding: 0 18px;
   border-bottom: 1px solid rgba(245,238,230,.1);
   color: rgba(245,238,230,.7);
-  font-size: .64rem;
+  font-size: 0.7rem;
   letter-spacing: .06em;
 }
 
@@ -2508,7 +2504,7 @@ body {
   justify-content: space-between;
   padding: 24px 24px 2px;
   color: rgba(245,238,230,.55);
-  font-size: .6rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .12em;
 }
@@ -2576,7 +2572,7 @@ body {
 .diagnostic-grid span,
 .diagnostic-grid small {
   color: rgba(245,238,230,.44);
-  font-size: .58rem;
+  font-size: 0.7rem;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
@@ -2628,12 +2624,12 @@ body {
   left: 18px;
   gap: 3px;
   color: rgba(245,238,230,.72);
-  font-size: .62rem;
+  font-size: 0.7rem;
 }
 
 .vision-label span {
   color: var(--accent);
-  font-size: .54rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .14em;
 }
@@ -2706,7 +2702,7 @@ body {
   color: #8fe0b4;
   background: rgba(8,9,11,.72);
   backdrop-filter: blur(12px);
-  font-size: .65rem;
+  font-size: 0.7rem;
   font-weight: 800;
 }
 
@@ -2729,7 +2725,7 @@ body {
 .translation-output span,
 .translation-output small {
   color: rgba(245,238,230,.42);
-  font-size: .52rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .1em;
 }
@@ -2761,7 +2757,7 @@ body {
   border: 1px solid rgba(245,238,230,.1);
   border-radius: 12px;
   color: rgba(245,238,230,.74);
-  font-size: .62rem;
+  font-size: 0.7rem;
   font-weight: 800;
 }
 
@@ -2791,7 +2787,7 @@ body {
 
 .case-principles span {
   color: var(--accent);
-  font-size: .62rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2850,7 +2846,7 @@ body {
 
 .spatial-main figcaption span {
   color: #72c69a;
-  font-size: .55rem;
+  font-size: 0.7rem;
   letter-spacing: .14em;
 }
 
@@ -2879,7 +2875,7 @@ body {
 .spatial-inset figcaption {
   padding: 10px 12px;
   color: #8fe0b4;
-  font-size: .58rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -2892,7 +2888,7 @@ body {
   top: 40%;
   left: 52%;
   color: #8fe0b4;
-  font-size: .62rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .12em;
 }
@@ -2922,7 +2918,7 @@ body {
 .timeline-order-note {
   margin: -18px 0 24px 206px;
   color: var(--muted);
-  font-size: .62rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -3083,7 +3079,7 @@ body {
   position: relative;
   z-index: 1;
   color: var(--text-soft);
-  font-size: .58rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -3155,7 +3151,7 @@ body {
   padding-top: 11px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: .57rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: .05em;
 }
@@ -3305,7 +3301,7 @@ body {
 .capability-label {
   margin: 0;
   color: var(--capability-color);
-  font-size: .58rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -3338,14 +3334,14 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  font-size: .58rem;
+  font-size: 0.7rem;
 }
 
 .capability-card > a {
   align-self: end;
   margin-top: 16px;
   color: var(--text);
-  font-size: .65rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .06em;
   text-decoration: none;
@@ -3403,7 +3399,7 @@ body {
 
 .learning-outcomes-grid article > span {
   color: var(--accent);
-  font-size: .58rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -3437,7 +3433,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  font-size: .54rem;
+  font-size: 0.7rem;
 }
 
 [data-theme="light"] .flagship-case {
@@ -3623,7 +3619,7 @@ body {
     bottom: 9px;
     left: 9px;
     padding: 7px 9px;
-    font-size: .56rem;
+    font-size: 0.7rem;
   }
 
   .spatial-console {
@@ -3972,20 +3968,23 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
 }
 .flagship-case::before { display: none; }
 
+/* Interest + capability cards keep a real edge (the flat divider style made the
+   edge and the clipped glow look broken, especially in light mode). */
 .interest-card,
 .capability-card {
-  border: 0;
-  border-top: 1px solid var(--line);
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  padding-left: 0;
-  padding-right: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  padding: 25px;
+  overflow: hidden;
 }
-.interest-card:hover, .capability-card:hover, .capability-card:focus-within {
-  border-top-color: var(--accent);
-  transform: none;
-  background: none;
+.interest-card:hover, .interest-card:focus-visible, .interest-card.active,
+.capability-card:hover, .capability-card:focus-within {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, var(--accent-soft), var(--surface));
+  box-shadow: var(--shadow);
 }
 
 .profile-float {
@@ -4005,3 +4004,159 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
   padding-right: 0;
 }
 .content-card:hover { transform: none; }
+
+
+/* ---------- Global reduced-motion: every looping/decorative animation stops ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Skills: hover / in-view interactions ---------- */
+
+@property --spin {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes skillSpin { to { --spin: 360deg; } }
+
+.capability-card {
+  position: relative;
+  isolation: isolate;
+}
+
+/* cursor-following spotlight */
+.capability-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.16), transparent 70%);
+  transition: opacity 300ms ease;
+}
+
+/* the ring turns slowly; tiles counter-rotate so logos stay upright */
+.skill-orbit-ring {
+  animation: skillSpin 42s linear infinite;
+  animation-play-state: paused;
+}
+.skill-orbit-ring span {
+  transform: rotate(calc(var(--a) + var(--spin))) translateX(var(--r)) rotate(calc(-1 * (var(--a) + var(--spin))));
+  transition: scale 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+.skill-orbit::after { transition: opacity 300ms ease, scale 300ms ease; }
+
+.skill-orbit-ring span::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  padding: 4px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  translate: -50% 4px;
+  transition: opacity 160ms ease, translate 160ms ease;
+}
+.skill-orbit-ring span:hover { scale: 1.22; z-index: 3; box-shadow: 0 8px 22px rgba(var(--accent-rgb), 0.45); }
+.skill-orbit-ring span:hover::after { opacity: 1; translate: -50% 0; }
+
+/* chips: slightly larger text for legibility, staggered light-up on card hover */
+.capability-stack span {
+  font-size: 0.72rem;
+  transition: color 200ms ease, border-color 200ms ease, background 200ms ease, translate 200ms ease;
+}
+.capability-stack span:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.capability-stack span:nth-child(2) { transition-delay: 30ms; }
+.capability-stack span:nth-child(3) { transition-delay: 60ms; }
+.capability-stack span:nth-child(4) { transition-delay: 90ms; }
+.capability-stack span:nth-child(5) { transition-delay: 120ms; }
+.capability-stack span:nth-child(6) { transition-delay: 150ms; }
+.capability-stack span:nth-child(n+7) { transition-delay: 180ms; }
+
+.capability-card > a i { transition: translate 200ms ease; }
+
+@media (hover: hover) {
+  .capability-card:hover::before { opacity: 1; }
+  .capability-card:hover .skill-orbit-ring,
+  .capability-card:focus-within .skill-orbit-ring { animation-play-state: running; }
+  .capability-card:hover .skill-orbit::after { opacity: 0.95; scale: 1.5; }
+  .capability-card:hover .capability-stack span,
+  .capability-card:focus-within .capability-stack span {
+    color: var(--text-soft);
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+    translate: 0 -2px;
+  }
+  .capability-card:hover > a i { translate: 4px 0; }
+}
+
+/* touch devices: no hover, so the orbit plays while the card is on screen */
+.capability-card.is-live .skill-orbit-ring { animation-play-state: running; }
+.capability-card.is-live .skill-orbit::after { opacity: 0.9; scale: 1.4; }
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-orbit-ring { animation: none; }
+}
+
+
+/* ---------- Mobile polish ---------- */
+@media (max-width: 760px) {
+  /* one consistent gutter */
+  .about-intro { padding-left: 0; }
+
+  /* comfortable tap targets for inline text links */
+  .case-text-link,
+  .research-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  /* heavy blur is expensive on phones */
+  .site-nav, .case-stage, .contact-phone-shell, .hero-card, .profile-card {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* no hover on touch screens: don't leave cards stuck in a lifted state after a tap */
+@media (hover: none) {
+  .interest-card:hover,
+  .capability-card:hover,
+  .content-card:hover { transform: none; }
+}
+
+
+/* Product consoles are always deep navy: inside them, use the dark-theme palette
+   so accents and labels stay readable when the page itself is in light mode. */
+[data-theme="light"] .case-stage,
+[data-theme="light"] .contact-phone-shell {
+  --accent: #7ea3e6;
+  --accent-cool: #adc5f0;
+  --accent-rgb: 126, 163, 230;
+  --text: #f1f5fc;
+  --text-soft: #c5d0e6;
+  --muted: #94a5c6;
+  --line: rgba(190, 205, 232, 0.2);
+  --line-strong: rgba(190, 205, 232, 0.38);
+  --on-accent: #06101f;
+}

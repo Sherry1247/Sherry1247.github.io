@@ -249,6 +249,34 @@ const init = () => {
     });
   }
 
+
+  // Skills: label orbit logos from their devicon class, spotlight follows the pointer,
+  // and on touch screens the orbit plays while a card is on screen.
+  const skillNames = { cplusplus: "C++", csharp: "C#", html5: "HTML5", css3: "CSS3", mysql: "MySQL", pytorch: "PyTorch", tensorflow: "TensorFlow", scikitlearn: "scikit-learn", numpy: "NumPy", opencv: "OpenCV", fastapi: "FastAPI", github: "GitHub", javascript: "JavaScript", jupyter: "Jupyter", keras: "Keras", pandas: "pandas", matplotlib: "Matplotlib", plotly: "Plotly", redis: "Redis", unity: "Unity", react: "React", firebase: "Firebase", git: "Git", python: "Python", java: "Java" };
+  document.querySelectorAll(".skill-orbit-ring span").forEach((tile) => {
+    const match = tile.querySelector("i")?.className.match(/devicon-([a-z0-9]+)-/);
+    if (!match) return;
+    const key = match[1];
+    tile.dataset.label = skillNames[key] || key.charAt(0).toUpperCase() + key.slice(1);
+  });
+
+  const capabilityCards = document.querySelectorAll(".capability-card");
+  capabilityCards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      if (event.pointerType === "touch") return;
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${event.clientX - bounds.left}px`);
+      card.style.setProperty("--my", `${event.clientY - bounds.top}px`);
+    });
+  });
+  if (window.matchMedia("(hover: none)").matches && "IntersectionObserver" in window) {
+    const liveObserver = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.target.classList.toggle("is-live", e.isIntersecting)),
+      { threshold: 0.6 }
+    );
+    capabilityCards.forEach((card) => liveObserver.observe(card));
+  }
+
   // Enhanced button interactions
   const buttons = document.querySelectorAll(".btn");
   buttons.forEach((btn) => {
