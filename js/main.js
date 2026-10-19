@@ -149,7 +149,7 @@ const init = () => {
       { title: "Accessibility & spatial HCI", meta: "Research · MadAbility", dates: "Apr – Sep 2026 · Completed", start: 50, end: 100, note: "AR/VR stair navigation research with Quest 3 and RealSense." },
       { title: "Security operations", meta: "Experience · SOC", dates: "May 2026 – Present", start: 54, end: 100, note: "Incident triage, threat intelligence, and response workflows." },
       { title: "Generative AI & data projects", meta: "Projects · ML / AI", dates: "Fall 2025 – Spring 2026", start: 4, end: 72, note: "Survival analysis and iterative diffusion-based image editing." },
-      { title: "Applied systems & student tools", meta: "Projects · Spatial / product", dates: "2026", start: 45, end: 88, note: "CourseOptimizer, MediMenu, and industrial asset intelligence." }
+      { title: "Applied systems & student tools", meta: "Projects · Spatial / product", dates: "2026", start: 45, end: 88, note: "BadgerPlan, Titanic Time Travel, MediMenu, and industrial asset intelligence." }
     ];
 
     const renderTimeline = () => {
