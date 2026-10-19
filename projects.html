@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Siqi Dai</title>
+<meta name="author" content="Siqi Dai">
+<meta name="description" content="Selected projects: machine learning, real-time systems, accessibility, and hackathons.">
+<meta property="og:title" content="Projects | Siqi Dai"><meta property="og:description" content="Selected projects: machine learning, real-time systems, accessibility, and hackathons.">
+<meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="stylesheet" href="css/site.css?v=20261018">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html">Siqi Dai</a>
+<nav aria-label="Primary"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html" aria-current="page">Projects</a><a href="courses.html">Course Guide</a></nav>
+<button id="theme" type="button" aria-label="Toggle dark mode" title="Toggle light/dark">◐</button>
+</div></header>
+<main id="main" class="wrap">
+<h1>Projects</h1>
+<p class="lead">Research, systems, and hackathon work. Source and write-ups are linked where public.</p>
+<article class="entry" id="titanic-time-travel">
+<div class="entry-head"><h3>Titanic Time Travel</h3><span class="date">2026 · Solo project</span></div>
+<p class="sub">The Last Crossing · interactive web experience</p>
+<a class="cover" href="https://titanic-time-travel.vercel.app/" rel="noreferrer"><img src="assets/images/Titanic_time_travel.webp" width="1200" height="675" decoding="async" alt="Titanic Time Travel cover"></a>
+<p>An immersive, scrolling web experience about the Titanic wreck: zoom in on an interactive map, descend with a diver to the wreck at 3,840 m, explore it, then step into a passenger’s life. Bilingual (English / 简体中文).</p>
+<p class="tags">JavaScript · Interactive storytelling · Scroll-driven animation · Bilingual UI · Vercel</p>
+<p class="links">[<a href="https://titanic-time-travel.vercel.app/" rel="noreferrer">Demo</a>]</p>
+</article>
+<article class="entry" id="badgerplan">
+<div class="entry-head"><h3>BadgerPlan</h3><span class="date">2026 · Independent project</span></div>
+<p class="sub">Academic planning for UW–Madison students</p>
+<a class="cover" href="https://badgerplan.onrender.com/" rel="noreferrer"><img src="assets/images/BadgerPlan.webp" width="1200" height="675" decoding="async" alt="BadgerPlan cover"></a>
+<p>A degree-planning web app that builds semester-by-semester plans, checks requirements (DARS-style), compares double majors, and lets students explore courses, professors, and majors using historical grade and offering data.</p>
+<ul><li>Drag-and-drop plan editor that validates prerequisites, offering season, and credit load on every move.</li><li>Searchable catalog of about 8,982 courses and 262 majors, with grade history and offering frequency.</li><li>Next-term weekly schedule, key dates exportable as .ics, campus map, transcript import (processed in the browser), and JSON save / import.</li></ul>
+<p class="tags">Web app · Data exploration · Constraint checking · Madgrades data · Render</p>
+<p class="links">[<a href="https://badgerplan.onrender.com/" rel="noreferrer">Demo</a>]</p>
+</article>
+<article class="entry" id="signbridge">
+<div class="entry-head"><h3>SignBridge</h3><span class="date">Summer 2026 · Team lead</span></div>
+<p class="sub">SAIL · ASL-to-Speech System</p>
+<a class="cover" href="https://signbridge-web-two.vercel.app/#overview" rel="noreferrer"><img src="assets/images/SAIL.webp" width="1200" height="675" decoding="async" alt="SignBridge cover"></a>
+<p>Led a four-member team building SignBridge, a web-based ASL-to-speech system that tracks 543 hand, face, and pose landmarks per frame across a 2,044-sign-class recognition pipeline, from live signing to spoken language.</p>
+<ul><li>Real-time tracking of 543 hand, face, and pose landmarks per frame across a 2,044-sign-class recognition pipeline.</li><li>Integrated temporal tracking, Transformer-based recognition, Gemini 2.5 language refinement, and text-to-speech into one pipeline.</li><li>Achieved 11.59 ms average local processing latency toward a 30 FPS real-time target.</li><li>Led a four-member team through system design, delegation, and end-to-end integration.</li></ul>
+<p class="tags">Python · Transformers · MediaPipe · Gemini 2.5 · Text-to-Speech · Real-Time Systems</p>
+<p class="links">[<a href="https://signbridge-web-two.vercel.app/#overview" rel="noreferrer">Demo</a>] / [<a href="https://github.com/AbhiramAmaravadi/signbridge" rel="noreferrer">Code</a>]</p>
+</article>
+<article class="entry" id="virtual-sensor">
+<div class="entry-head"><h3>Virtual Sensor-Guided Noise Diagnosis <span class="badge">ASME competition winner</span></h3><span class="date">May 2026 – Present · Researcher</span></div>
+<p class="sub">Self-Correction Framework</p>
+<p>Developed a residual-based framework that diagnoses and self-corrects sensor faults, integrating fault injection, 10-class sensor fault diagnosis, severity estimation, and signal correction — winner of the ASME Undergraduate Engineering Student Competition.</p>
+<ul><li>Injected controlled sensor faults (noise, bias, drift, and more) into virtual-sensor inputs to study fault propagation.</li><li>Trained a 10-class XGBoost fault-diagnosis classifier, reaching 98.74% classification accuracy and 98.56% macro F1.</li><li>Built severity estimation and signal-correction stages that reduced error by over 90% in representative bias and drift correction cases.</li><li>Presented the framework at the ASME Undergraduate Engineering Student Competition with faculty advisor Saurabh K. Gupta.</li></ul>
+<p class="tags">Python · XGBoost · PyTorch · Signal Processing · Fault Diagnosis · Virtual Sensing</p>
+<p class="links">[<a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf">Paper</a>] / [<a href="assets/docs/Siqi_Dai_ASME_slide.pdf">Slides</a>]</p>
+</article>
+<article class="entry" id="multi-parameter-virtual-sensing">
+<div class="entry-head"><h3>Multi-Parameter Virtual Sensing</h3><span class="date">Oct 2025 – Feb 2026 · Researcher</span></div>
+<p class="sub">Automotive Engine ANN</p>
+<a class="cover" href="https://github.com/Sherry1247/digital-twin-engine-virtual-sensor-research" rel="noreferrer"><img src="assets/images/Digital_Twin_engineering_image.webp" width="1200" height="675" decoding="async" alt="Multi-Parameter Virtual Sensing cover"></a>
+<p>Designed and developed a multi-target virtual sensing framework using a single artificial neural network (ANN) to replace multiple expensive physical sensors in a 12L 6-cylinder diesel engine.</p>
+<ul><li>Engineered multi-output ANN architectures (ANN-6 and ANN-13) in PyTorch for non-linear thermodynamic engine states.</li><li>Preprocessed and analyzed real-world high-fidelity experimental data across full engine load and speed ranges.</li><li>Achieved predictive R² scores of 0.9945 for intake air mass flow, 0.9891 for NOx emissions, and 0.9841 for start of combustion.</li><li>Validated model generalization using stratified splits against Linear Regression, Random Forest, and SVR baselines.</li></ul>
+<p class="tags">Python · PyTorch · NumPy · Pandas · Scikit-learn · Virtual Sensing · Deep Learning · Thermodynamics</p>
+<p class="links">[<a href="https://github.com/Sherry1247/digital-twin-engine-virtual-sensor-research" rel="noreferrer">Code</a>]</p>
+</article>
+<article class="entry" id="industrial-asset-intelligence">
+<div class="entry-head"><h3>Industrial Asset Intelligence</h3><span class="date">July 2026 · Participant</span></div>
+<p class="sub">Spatial Intelligence Ideathon</p>
+<a class="cover" href="#" rel="noreferrer"><img src="assets/images/Ideathon_image.webp" width="1200" height="675" decoding="async" alt="Industrial Asset Intelligence cover"></a>
+<p>Designed a spatial computing solution for industrial manufacturing environments during a one-day interdisciplinary startup ideathon, preserving equipment maintenance knowledge and reducing downtime.</p>
+<ul><li>Formulated product strategy and technical architecture for shared AR spaces in manufacturing environments.</li><li>Conducted rapid customer discovery and developed sustainable B2B SaaS business models.</li><li>Led pitch deck creation and high-fidelity product dashboard demonstrations.</li><li>Designed spatial anchoring logic to ground equipment documentation to physical machinery.</li></ul>
+<p class="tags">Spatial Computing · Shared AR · Digital Twins · Indoor Positioning · AI Knowledge Management</p>
+</article>
+<article class="entry" id="ar-vr-accessibility-spatial-hci">
+<div class="entry-head"><h3>AR/VR Accessibility &amp; Spatial HCI</h3><span class="date">Apr 2026 – Sep 2026 · Researcher</span></div>
+<a class="cover" href="#" rel="noreferrer"><img src="assets/images/AR_VR_stair_detection.webp" width="1200" height="675" decoding="async" alt="AR/VR Accessibility &amp; Spatial HCI cover"></a>
+<p>Research project focusing on accessibility in immersive environments, utilizing depth-sensing cameras and spatial computing to assist low-vision users with real-world navigation.</p>
+<ul><li>Leveraged Intel RealSense D455 depth data to map physical obstacles and estimate distances in real time.</li><li>Formulated 3D spatial audio feedback models to communicate navigation markers and hazard warnings.</li><li>Integrated gesture-based control paths to simplify VR interface navigation for accessibility.</li></ul>
+<p class="tags">Unity · Meta Quest SDK · C# · Intel RealSense API · Spatial Computing · HCI</p>
+</article>
+<article class="entry" id="self-improving-background-editor">
+<div class="entry-head"><h3>Self-Improving Background Editor</h3><span class="date">Spring 2026 · Ongoing</span></div>
+<p class="sub">Closed-Loop Image Editing</p>
+<a class="cover" href="https://github.com/Sherry1247/self_improving_editor" rel="noreferrer"><img src="assets/images/self_improving_editor.webp" width="1200" height="675" decoding="async" alt="Self-Improving Background Editor cover"></a>
+<p>Built a closed-loop image editor that replaces the background behind a person or dog while keeping the subject intact: every candidate is scored by a bank of critics, diagnosed, and re-edited.</p>
+<ul><li>Implemented local cross-attention control to isolate edits without affecting background pixels.</li><li>Formulated a closed-loop feedback pipeline that scores and refines image details iteratively.</li><li>Optimized diffusion step sequencing, reducing inference times for image-to-image tasks.</li></ul>
+<p class="tags">Python · PyTorch · Hugging Face Diffusers · Generative AI · Computer Vision</p>
+<p class="links">[<a href="https://github.com/Sherry1247/self_improving_editor" rel="noreferrer">Code</a>]</p>
+</article>
+<article class="entry" id="medimenu">
+<div class="entry-head"><h3>MediMenu</h3><span class="date">CheeseHacks 2026 · Lead developer</span></div>
+<p class="sub">AI Meal Planner</p>
+<a class="cover" href="https://github.com/samkwak188/MediMenu" rel="noreferrer"><img src="assets/images/Medimenu.webp" width="1200" height="675" decoding="async" alt="MediMenu cover"></a>
+<p>Designed and built an AI-assisted meal planner and personalization engine during the CheeseHacks 2026 hackathon, leading a 4-person development team.</p>
+<ul><li>Integrated GPT-4o API for personalized, context-aware recipe recommendations.</li><li>Developed a FastAPI backend with asynchronous query handling for rapid response times.</li><li>Constructed a React-based frontend dashboard with visual recipe cards and nutritional breakdowns.</li></ul>
+<p class="tags">React · FastAPI · GPT-4o · Python · REST APIs · UI/UX Design</p>
+<p class="links">[<a href="https://github.com/samkwak188/MediMenu" rel="noreferrer">Code</a>]</p>
+</article>
+<article class="entry" id="human-survival-probability-analysis">
+<div class="entry-head"><h3>Human Survival Probability Analysis</h3><span class="date">Fall 2025</span></div>
+<p>Conducted a statistical and machine learning study analyzing socioeconomic factors and their correlations with human survival outcomes across ten large-scale datasets.</p>
+<ul><li>Processed and merged ten heterogeneous datasets, handling class imbalances and multi-collinearity.</li><li>Trained and optimized multi-layer ANN classifiers in Python.</li><li>Produced publication-ready statistical visualizations of feature importances and correlation matrices.</li></ul>
+<p class="tags">Python · Pandas · NumPy · Seaborn · Matplotlib · Artificial Neural Networks (ANNs)</p>
+</article>
+</main>
+<footer class="wrap foot"><span>© Siqi Dai · Last updated October 2026</span>
+<span><a href="mailto:sdai66@wisc.edu">Email</a> · <a href="https://github.com/Sherry1247" rel="noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/siqi-dai-20b512296" rel="noreferrer">LinkedIn</a> · <a href="assets/docs/Siqi_Dai_resume_updated.pdf">Résumé</a></span></footer>
+<script src="js/site.js?v=20261018"></script>
+</body>
+</html>
