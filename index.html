@@ -1,73 +1,1728 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Siqi Dai</title>
-<meta name="author" content="Siqi Dai">
-<meta name="description" content="Siqi Dai — Data Science and Computer Science student at UW–Madison. ML engineering, agents, and accessible systems.">
-<meta property="og:title" content="Siqi Dai"><meta property="og:description" content="Siqi Dai — Data Science and Computer Science student at UW–Madison. ML engineering, agents, and accessible systems.">
-<meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
-<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-<script>try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<link rel="stylesheet" href="css/site.css?v=20261018">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siqi Dai | Data Science &amp; Computer Science at UW-Madison</title>
+    <meta name="author" content="Siqi Dai">
+    <meta name="description"
+        content="Personal website of Siqi Dai, a UW-Madison Data Science and Computer Science student (Mathematics minor) working across machine learning, HCI, cybersecurity, and applied systems.">
+    <meta property="og:title" content="Siqi Dai | Personal Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://sherry1247.github.io/">
+    <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="css/tokens.css?v=20261018">
+    <link rel="stylesheet" href="css/style.css?v=20261018">
+    <link rel="stylesheet" href="css/refactor.css?v=20261018">
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap bar">
-<a class="brand" href="index.html">Siqi Dai</a>
-<nav aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="courses.html">Course Guide</a></nav>
-<button id="theme" type="button" aria-label="Toggle dark mode" title="Toggle light/dark">◐</button>
-</div></header>
-<main id="main" class="wrap">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="progress-bar" aria-hidden="true"></div>
+    <div class="hero-backdrop" aria-hidden="true"></div>
 
-<section class="intro">
-<img class="portrait" src="assets/images/photo.webp" width="160" height="160" alt="Portrait of Siqi Dai" decoding="async">
-<div>
-<h1>Siqi Dai</h1>
-<p class="lead">Undergraduate at the University of Wisconsin–Madison (B.S. Data Science + Computer Science, Mathematics minor; expected May 2028).</p>
-<p class="links">[<a href="mailto:sdai66@wisc.edu">Email</a>] [<a href="assets/docs/Siqi_Dai_resume_updated.pdf">Résumé</a>] [<a href="https://github.com/Sherry1247" rel="noreferrer">GitHub</a>] [<a href="https://www.linkedin.com/in/siqi-dai-20b512296" rel="noreferrer">LinkedIn</a>]</p>
-</div>
-</section>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Go to homepage">SD</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Open navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="nav-links" id="primary-navigation">
+                <a href="#work">Selected Work</a>
+                <a href="#experience">Experience</a>
+                <a href="courses.html">Course Guide</a>
+                <a href="#projects">Archive</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<p class="status"><strong>Looking for 2027 summer internships</strong> in software engineering, machine learning engineering, and agent systems.</p>
+    <main id="main-content" class="container">
+        <header id="home" class="hero" data-reveal="hero">
+            <div class="hero-shell">
+                <div class="hero-content">
+                    <p class="eyebrow">Data Science &amp; Computer Science · UW-Madison</p>
+                    <h1>Hi, I’m Siqi.</h1>
+                    <p class="hero-role"><span id="typed-role">I build intelligent systems that sense, adapt, and help
+                            people act.</span></p>
+                    <p class="hero-copy">
+                        Research engineer and Data Science + Computer Science student working across machine learning, accessible
+                        interaction, and resilient software—from sensor health to real-time sign language systems.
+                    </p>
 
-<h2>About</h2>
-<p>I build intelligent systems that sense, adapt, and help people act. My work sits between a technical question and a real person who needs the answer to work: machine learning for sensors and engines, real-time sign-language recognition, accessible AR/VR interaction, and resilient production software.</p>
-<p>Currently I do research in the <a href="experience.html#exp-diego">Quantitative Imaging Methods Lab</a>, work as a full-stack intern at Rec App, and analyze incidents at the UW–Madison Cybersecurity Operations Center. GPA 3.9 / 4.0.</p>
+                    <div class="hero-actions">
+                        <a href="#work" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Explore selected work</a>
+                        <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" rel="noreferrer"
+                            class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Resume</a>
+                    </div>
 
-<h2>Highlights</h2>
-<ul class="plain">
-<li><strong>Winner</strong>, ASME Undergraduate Engineering Student Competition — <a href="projects.html#virtual-sensor">virtual sensor-guided fault diagnosis</a> (98.74% accuracy, &gt;90% error reduction). [<a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf">paper</a>] [<a href="assets/docs/Siqi_Dai_ASME_slide.pdf">slides</a>]</li>
-<li><strong>Led a team of four</strong> building <a href="projects.html#signbridge">SignBridge</a>, a real-time ASL-to-speech web app (543 landmarks, 2,044 sign classes, 11.59 ms local latency). [<a href="https://signbridge-web-two.vercel.app/#overview" rel="noreferrer">demo</a>]</li>
-<li><strong>Full stack intern</strong> on an 8-developer Agile team; led disaster-recovery hardening for Firestore / Firebase.</li>
-<li>Presented undergraduate research at the URS symposium. [<a href="assets/docs/URS_symposium_poster.pdf">poster</a>]</li>
-</ul>
+                    <div class="hero-proof-grid" aria-label="Selected highlights">
+                        <div><strong>01</strong><span>ASME competition winner</span></div>
+                        <div><strong>4</strong><span>Engineers led on SignBridge</span></div>
+                        <div><strong>3.9</strong><span>UW–Madison GPA</span></div>
+                    </div>
+                </div>
 
-<h2>Explore</h2>
-<ul class="plain">
-<li><a href="experience.html"><strong>Experience</strong></a> — research, engineering, and security roles</li>
-<li><a href="projects.html"><strong>Projects</strong></a> — ML, systems, accessibility, hackathons</li>
-<li><a href="courses.html"><strong>Course Guide</strong></a> — an interactive map of my UW–Madison coursework</li>
-</ul>
+                <aside class="profile-card profile-float">
+                    <div class="profile-photo-wrap">
+                        <img decoding="async" src="assets/images/photo.webp" alt="Portrait of Siqi Dai" class="profile-photo" width="940"
+                            height="300" fetchpriority="high">
+                    </div>
+                    <div class="profile-card-body">
+                        <h2>Siqi Dai</h2>
+                        <p>CS student at UW-Madison focused on applied machine learning, research systems,
+                            accessibility, and security operations.</p>
+                        <div class="profile-links">
+                            <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#work"><i class="fas fa-arrow-right"></i> Selected work</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </header>
 
-<h2>Skills</h2>
-<dl class="skills">
-<dt>Languages</dt><dd>Python, Java, C++, JavaScript, HTML/CSS, SQL</dd>
-<dt>ML / data</dt><dd>PyTorch, TensorFlow, scikit-learn, XGBoost, Transformers, generative AI, NumPy, Pandas</dd>
-<dt>Vision / HCI</dt><dd>MediaPipe, OpenCV, Unity, Intel RealSense, AR/VR, accessibility</dd>
-<dt>Engineering</dt><dd>React, FastAPI, Firebase, REST APIs, Redis, Git/GitHub</dd>
-<dt>Security</dt><dd>Cortex XSOAR, threat intelligence, network forensics, incident response</dd>
-</dl>
+        <section id="work" class="section flagship-section" data-reveal>
+            <div class="flagship-heading">
+                <div>
+                    <span class="section-kicker">Selected work</span>
+                    <p class="flagship-count">Three systems · one point of view</p>
+                </div>
+                <h2>Ideas become useful when people can trust the system.</h2>
+                <p class="flagship-lede">My strongest work lives at the intersection of sensing, intelligence, and
+                    human action. These three projects show how I move from a difficult question to a working,
+                    testable system.</p>
+            </div>
 
-<h2>Outside of work</h2>
-<p>Reading (technical books, papers, fiction), cinema, music, and museums.</p>
+            <nav class="work-index" aria-label="Jump to a selected project">
+                <a href="#case-sensor"><span>01</span><strong>Sensor intelligence</strong><small>Diagnose · correct</small></a>
+                <a href="#case-signbridge"><span>02</span><strong>SignBridge</strong><small>See · understand · speak</small></a>
+                <a href="#case-spatial"><span>03</span><strong>Spatial accessibility</strong><small>Map · guide</small></a>
+            </nav>
 
-<h2>Contact</h2>
-<p>For research, engineering, internships, or collaboration: <a href="mailto:sdai66@wisc.edu">sdai66@wisc.edu</a>.</p>
-</main>
-<footer class="wrap foot"><span>© Siqi Dai · Last updated October 2026</span>
-<span><a href="mailto:sdai66@wisc.edu">Email</a> · <a href="https://github.com/Sherry1247" rel="noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/siqi-dai-20b512296" rel="noreferrer">LinkedIn</a> · <a href="assets/docs/Siqi_Dai_resume_updated.pdf">Résumé</a></span></footer>
-<script src="js/site.js?v=20261018"></script>
+            <article id="case-sensor" class="flagship-case case-sensor interactive-card" data-reveal>
+                <div class="case-copy">
+                    <p class="case-number">01 / Research intelligence</p>
+                    <h3>A sensor system that can diagnose—and repair—itself.</h3>
+                    <p class="case-summary">I developed a residual-based framework for a heavy-duty engine virtual
+                        sensor that identifies ten classes of sensor faults, estimates severity, and reconstructs the
+                        damaged signal instead of simply raising an alarm.</p>
+                    <div class="case-metrics" aria-label="Project results">
+                        <div><strong>98.74%</strong><span>Fault classification accuracy</span></div>
+                        <div><strong>98.56%</strong><span>Macro F1 score</span></div>
+                        <div><strong>&gt;90%</strong><span>Error reduction in representative cases</span></div>
+                    </div>
+                    <div class="case-actions">
+                        <button type="button" class="resource-btn resource-btn-primary" data-pdf-modal
+                            data-pdf-src="assets/docs/Siqi_Dai_ASME_slide.pdf"
+                            data-pdf-title="Virtual Sensor-Guided Noise Diagnosis — ASME Presentation">
+                            <i class="fas fa-play"></i> View presentation
+                        </button>
+                        <a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf" target="_blank" rel="noreferrer"
+                            class="case-text-link">Read the paper <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="case-stage sensor-console" aria-label="Animated sensor diagnosis interface">
+                    <div class="console-bar"><span><i></i><i></i><i></i></span><strong>sensor.health / live</strong><em>ASME winner</em></div>
+                    <div class="signal-header"><span>CYLINDER PRESSURE · CHANNEL 04</span><span class="live-status"><i></i> Monitoring</span></div>
+                    <svg class="signal-chart" viewBox="0 0 760 250" role="img" aria-label="A noisy sensor signal converging toward a corrected signal">
+                        <defs><linearGradient id="signal-gradient" x1="0" x2="1"><stop offset="0" stop-color="#a9b8d8"/><stop offset="1" stop-color="#4f8cff"/></linearGradient></defs>
+                        <path class="signal-grid" d="M0 50H760M0 100H760M0 150H760M0 200H760M95 0V250M190 0V250M285 0V250M380 0V250M475 0V250M570 0V250M665 0V250"/>
+                        <path class="signal-fault" d="M0 130 C35 112 55 148 82 121 S127 46 151 138 S190 224 218 126 S257 33 283 132 S328 216 360 120 S407 41 433 131 S480 220 510 125 S550 52 578 127 S628 194 655 119 S704 71 760 124"/>
+                        <path class="signal-corrected" d="M0 132 C52 80 94 80 142 132 S235 184 284 132 S376 80 426 132 S520 184 569 132 S660 80 760 132"/>
+                    </svg>
+                    <div class="diagnostic-grid">
+                        <div><span>Detected state</span><strong>Bias + drift</strong><small>Confidence 98.7%</small></div>
+                        <div><span>Correction</span><strong>Residual fusion</strong><small>Signal restored</small></div>
+                        <div class="diagnostic-score"><span>Health score</span><strong>94</strong><small>/ 100</small></div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="case-bridge" aria-hidden="true">
+                <span>01</span><i></i><strong>Reliable signals create trustworthy intelligence.</strong><i></i><span>02</span>
+            </div>
+
+            <article id="case-signbridge" class="flagship-case case-signbridge interactive-card" data-reveal>
+                <div class="case-stage signbridge-console">
+                    <div class="console-bar"><span><i></i><i></i><i></i></span><strong>signbridge / realtime</strong><em>11.59 ms</em></div>
+                    <div class="signbridge-screen" role="img" aria-label="Stylized real-time hand landmark recognition and translation interface">
+                        <div class="vision-label"><span>CAM 01</span><strong>543 landmarks tracked</strong></div>
+                        <svg class="hand-landmarks" viewBox="0 0 620 360" aria-hidden="true">
+                            <path class="landmark-link" d="M286 316L270 263L238 228L193 214L150 234M270 263L260 211L250 145L255 76M270 263L300 204L306 128L317 55M270 263L333 215L356 146L374 84M270 263L359 240L404 194L431 142M260 211L300 204L333 215L359 240M238 228L260 211M193 214L238 228"/>
+                            <g class="landmark-points">
+                                <circle cx="286" cy="316" r="6"/><circle cx="270" cy="263" r="7"/>
+                                <circle cx="238" cy="228" r="5"/><circle cx="193" cy="214" r="5"/><circle cx="150" cy="234" r="6"/>
+                                <circle cx="260" cy="211" r="5"/><circle cx="250" cy="145" r="5"/><circle cx="255" cy="76" r="6"/>
+                                <circle cx="300" cy="204" r="5"/><circle cx="306" cy="128" r="5"/><circle cx="317" cy="55" r="6"/>
+                                <circle cx="333" cy="215" r="5"/><circle cx="356" cy="146" r="5"/><circle cx="374" cy="84" r="6"/>
+                                <circle cx="359" cy="240" r="5"/><circle cx="404" cy="194" r="5"/><circle cx="431" cy="142" r="6"/>
+                            </g>
+                        </svg>
+                        <div class="vision-reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                        <p class="recognition-chip"><i></i> Sign detected · translating</p>
+                        <div class="translation-output"><span>LIVE OUTPUT</span><strong>“How can I help?”</strong><small>Confidence 96.2%</small></div>
+                    </div>
+                    <div class="pipeline-strip" aria-label="SignBridge processing pipeline">
+                        <span><i class="fas fa-hand"></i> Landmarks</span><b></b><span><i class="fas fa-brain"></i> Transformer</span><b></b><span><i class="fas fa-volume-high"></i> Speech</span>
+                    </div>
+                </div>
+                <div class="case-copy">
+                    <p class="case-number">02 / Accessible AI product</p>
+                    <h3>Turning sign language into speech, frame by frame.</h3>
+                    <p class="case-summary">As team lead, I guided four engineers through the design and integration
+                        of a browser-based ASL-to-speech pipeline—from landmark tracking and temporal recognition to
+                        language refinement and spoken output.</p>
+                    <div class="case-metrics" aria-label="Project scale">
+                        <div><strong>543</strong><span>Body and hand landmarks per frame</span></div>
+                        <div><strong>2,044</strong><span>Recognized sign classes</span></div>
+                        <div><strong>11.59 ms</strong><span>Average local processing latency</span></div>
+                    </div>
+                    <div class="case-actions">
+                        <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer" class="resource-btn resource-btn-primary"><i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge</a>
+                        <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer" class="case-text-link">Source code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <div class="case-bridge" aria-hidden="true">
+                <span>02</span><i></i><strong>Recognition matters when it improves human action.</strong><i></i><span>03</span>
+            </div>
+
+            <article id="case-spatial" class="flagship-case case-spatial interactive-card" data-reveal>
+                <div class="case-copy">
+                    <p class="case-number">03 / Spatial HCI research</p>
+                    <h3>Making physical space legible without relying on sight.</h3>
+                    <p class="case-summary">At MadAbility Lab, I explored how depth sensing, semantic segmentation,
+                        and spatial feedback can help low-vision users understand stairs and obstacles in real-world
+                        environments.</p>
+                    <div class="case-principles">
+                        <div><span>Sense</span><strong>RealSense D455 depth capture</strong></div>
+                        <div><span>Interpret</span><strong>Segmentation and spatial grounding</strong></div>
+                        <div><span>Guide</span><strong>Accessible multimodal feedback</strong></div>
+                    </div>
+                    <a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="case-text-link">Visit MadAbility Lab <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="case-stage spatial-console">
+                    <figure class="spatial-main">
+                        <img decoding="async" width="1372" height="764" src="assets/images/AR_VR_point_cloud.webp" alt="Point-cloud representation used for spatial accessibility research" loading="lazy">
+                        <figcaption><span>DEPTH MAP 03</span><strong>Environmental point cloud</strong></figcaption>
+                    </figure>
+                    <figure class="spatial-inset">
+                        <img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="Stair detection research prototype" loading="lazy">
+                        <figcaption>Stair boundary detected</figcaption>
+                    </figure>
+                    <div class="spatial-hud" aria-hidden="true"><span>1.8m</span><i></i><b>PATH CLEAR</b></div>
+                </div>
+            </article>
+        </section>
+
+        <section id="about" class="section about-section" data-reveal>
+            <div class="about-editorial">
+                <span class="section-kicker about-marker">About</span>
+                <div class="about-intro">
+                    <h2>I like rigorous ideas that become useful systems.</h2>
+                </div>
+                <div class="about-copy">
+                    <p class="about-lede">
+                        I’m a Data Science and Computer Science student at UW–Madison, with a Mathematics minor, working across applied machine learning,
+                        accessibility research, and security operations.
+                    </p>
+                    <p>
+                        My work usually sits between a technical question and a real person who needs the answer to
+                        work. I enjoy building models, studying interaction, and turning messy system constraints into
+                        something clear, testable, and useful.
+                    </p>
+                    <div class="about-facts" aria-label="Quick facts">
+                        <div class="about-fact"><span>Studying</span><strong>DS + CS · Math minor</strong></div>
+                        <div class="about-fact"><span>At</span><strong>UW–Madison</strong></div>
+                        <div class="about-fact"><span>GPA</span><strong>3.9 / 4.0</strong></div>
+                        <div class="about-fact"><span>Graduating</span><strong>May 2028</strong></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="experience" class="section experience-index" data-reveal>
+            <div class="section-heading">
+                <span class="section-kicker">Experience</span>
+                <h3>Research meets real systems.</h3>
+            </div>
+            <p class="timeline-order-note">Most recent first · scroll to follow the timeline · open any role for the full scope</p>
+
+            <div class="timeline" id="exp-timeline">
+                <!-- Diego Group Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-diego">
+                    <div class="timeline-date">Sep 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover "><img decoding="async" width="1600" height="500" src="assets/images/QIML_hero.webp" alt="QIML selected MRI images and renderings" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Undergraduate Research Assistant</h3>
+                                    <p class="timeline-meta"><a href="https://qiml.radiology.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">Diego Hernando Group (QIML) <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-flask experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Undergraduate research assistant in Prof. Diego Hernando's group at the Quantitative
+                                Imaging Methods Lab, Departments of Radiology and Medical Physics.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Quantitative Imaging</span>
+                                <span>Medical Physics</span>
+                                <span>Radiology</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-diego-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-diego-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Ongoing role in the Quantitative Imaging Methods Lab (QIML) at UW-Madison.
+                                    Project scope and responsibilities will be added here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SAIL Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-sail">
+                    <div class="timeline-date">Jun 2026 - Aug 2026</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover cover-contain"><img decoding="async" width="400" height="400" src="assets/images/SAIL.webp" alt="SignBridge ASL-to-speech interface" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research &amp; Engineering</span>
+                                    <h3>Summer Intern &amp; Team Leader</h3>
+                                    <p class="timeline-meta">Summer of AI Laboratory (SAIL) &middot; Madison, WI</p>
+                                </div>
+                                <i class="fas fa-hands-asl-interpreting experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Led a four-member team building SignBridge, a web-based ASL-to-speech system, from
+                                real-time landmark tracking through Transformer-based recognition to spoken output.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Python</span>
+                                <span>Transformers</span>
+                                <span>MediaPipe</span>
+                                <span>Gemini 2.5</span>
+                                <span>Text-to-Speech</span>
+                                <span>Team Leadership</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-sail-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-sail-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Directed a 2,044-sign-class ASL recognition pipeline processing 543 hand, face, and
+                                    pose landmarks per frame, integrating temporal tracking, Transformer-based
+                                    recognition, Gemini 2.5 language refinement, and text-to-speech into a single
+                                    low-latency web application.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Led a four-member team through system design, task delegation, and
+                                                integration across the full recognition-to-speech pipeline.</li>
+                                            <li>Integrated temporal landmark tracking, Transformer-based sign
+                                                recognition, Gemini 2.5 language refinement, and text-to-speech.</li>
+                                            <li>Achieved 11.59 ms average local processing latency toward a 30 FPS
+                                                real-time target.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="document-links">
+                                    <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank"
+                                        rel="noreferrer" class="doc-link">
+                                        <i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge
+                                    </a>
+                                    <a href="#proj-sail" class="doc-link">
+                                        <i class="fas fa-diagram-project"></i> View Project Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- REC Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-rec">
+                    <div class="timeline-date">May 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover cover-fit"><img decoding="async" width="1600" height="839" src="assets/images/Rec_image.webp" alt="REC mobile application interface" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Engineering</span>
+                                    <h3>Full Stack Software Engineer Intern</h3>
+                                    <p class="timeline-meta">Rec App &middot; Remote</p>
+                                </div>
+                                <i class="fas fa-code experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Develop mobile and backend features for a service-professional recommendation
+                                platform within an eight-developer Agile team, and lead disaster-recovery hardening
+                                across the stack.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Python</span>
+                                <span>Firebase</span>
+                                <span>Firestore</span>
+                                <span>Git/GitHub</span>
+                                <span>Agile</span>
+                                <span>Disaster Recovery</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-rec-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-rec-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Work within an eight-developer Agile team building mobile and backend features
+                                    end to end, while owning the platform's disaster-recovery posture across its
+                                    core data and auth infrastructure.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Developed mobile and backend features for a service-professional
+                                                recommendation platform within an eight-developer Agile team.</li>
+                                            <li>Implemented disaster-recovery procedures covering GitHub repository
+                                                backups, Firestore backup verification, Firebase Authentication
+                                                exports, and Firebase Storage inventory.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1600" height="839" src="assets/images/Rec_image.webp" alt="REC Application interface overview" loading="lazy">
+                                        <figcaption>REC Mobile Application Feature Work</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1600" height="827" src="assets/images/Rec_image2.webp" alt="REC Profile and search system" loading="lazy">
+                                        <figcaption>User Journey &amp; Recommendation Flow</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cybersecurity SOC Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-cyber">
+                    <div class="timeline-date">May 2026 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover cover-contain"><img decoding="async" width="1024" height="935" src="assets/images/Cyber-Badger-Logo.webp" alt="UW-Madison Cybersecurity Operations logo" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Security</span>
+                                    <h3>Cybersecurity Operations Center Student Analyst</h3>
+                                    <p class="timeline-meta">UW-Madison</p>
+                                </div>
+                                <i class="fas fa-shield-halved experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Analyze and mitigate security incidents across the university’s network infrastructure, triaging potential threats and coordinating department-wide incident response.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Palo Alto Cortex XSOAR</span>
+                                <span>WiscIT</span>
+                                <span>Threat Intelligence</span>
+                                <span>Email Header Analysis</span>
+                                <span>Network Forensics</span>
+                                <span>Incident Response</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-cyber-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-cyber-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Leverage automated security orchestration tools to monitor enterprise-scale playbooks, identifying indicators of compromise (IOCs) and malicious URLs across university network infrastructure.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Investigate and triage 30+ phishing incidents weekly using WiscIT
+                                                workflows across multiple university departments.</li>
+                                            <li>Monitor Palo Alto Cortex XSOAR playbooks across network events for
+                                                suspicious traffic, URL-filtering alerts, and potential threats.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1024" height="935" src="assets/images/Cyber-Badger-Logo.webp" alt="UW-Madison Cybersecurity Operations Logo" loading="lazy" style="object-fit: contain; padding: 16px; background: var(--surface);">
+                                        <figcaption>UW-Madison Cybersecurity Operations Center</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MadAbility Lab Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-madability">
+                    <div class="timeline-date">Apr 2026 - Sep 2026</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover "><img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR stair detection with segmentation" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Student Research Assistant, AR/VR Accessibility Systems</h3>
+                                    <p class="timeline-meta"><a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">MadAbility Lab <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-vr-cardboard experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Design experimental study protocols and apply segmentation models to evaluate AR
+                                stair-navigation assistance for low-vision users.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>SAM 3</span>
+                                <span>Computer Vision</span>
+                                <span>AR/VR</span>
+                                <span>Study Design</span>
+                                <span>HCI Research</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-madability-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-madability-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Supporting accessibility-focused HCI research on AR stair-navigation assistance,
+                                    from experimental design through applying modern segmentation models to
+                                    underexplored navigation scenarios.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Designed an experimental study protocol for evaluating AR
+                                                stair-navigation assistance, specifying participant tasks, trial
+                                                procedures, study conditions, and data-collection steps for future
+                                                human-subject testing.</li>
+                                            <li>Applied SAM 3 to segment ascending and descending stair environments,
+                                                focusing on descending-stair navigation as an underexplored
+                                                accessibility challenge.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1372" height="764" src="assets/images/AR_VR_point_cloud.webp" alt="AR/VR spatial point cloud visualization" loading="lazy">
+                                        <figcaption>Spatial Point Cloud Hazard Mapping</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR/VR stair detection system" loading="lazy">
+                                        <figcaption>Descending-Stair Segmentation with SAM 3</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- L&S IT Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-lsit">
+                    <div class="timeline-date">Jan 2026 - May 2026</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover cover-fit"><img decoding="async" width="1600" height="500" src="assets/images/LS_IT_Infolab.webp" alt="L&S IT service desk" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Operations</span>
+                                    <h3>L&amp;S IT Service Desk Technician</h3>
+                                    <p class="timeline-meta">College of Letters &amp; Science IT · Madison, WI</p>
+                                </div>
+                                <i class="fas fa-laptop-code experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Managed IT support and systems maintenance for the College of Letters &amp; Science, resolving multi-tier technical issues for faculty, staff, and students.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Halo ITSM</span>
+                                <span>Active Directory</span>
+                                <span>Windows/macOS Admin</span>
+                                <span>Network Diagnostics</span>
+                                <span>Enterprise Hardware</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-lsit-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-lsit-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Troubleshoot critical network, hardware, and OS issues across Windows and macOS environments. Maintained the infrastructure and software configurations of academic labs, implementing regular diagnostics to minimize downtime and ensure seamless instructional operations.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Resolved 30+ hardware and authentication service requests daily with high first-contact resolution rates, documented in Halo.</li>
+                                            <li>Diagnosed and repaired instructional equipment, printers, and network connections in 3+ college computing labs.</li>
+                                            <li>Provisioned and configured enterprise workstations, ensuring compliance with campus-wide security protocols.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1600" height="500" src="assets/images/LS_IT_Infolab.webp" alt="L&S IT Computing Infolab" loading="lazy">
+                                        <figcaption>L&amp;S Computer Lab Infrastructure</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="738" height="327" src="assets/images/LS_IT_service_desk.webp" alt="L&S IT Service Desk" loading="lazy">
+                                        <figcaption>Service Desk Operations &amp; Support</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- URS Experience -->
+                <article class="timeline-item collapsible-card" data-card-id="exp-urs">
+                    <div class="timeline-date">Fall 2025 - Present</div>
+                    <div class="timeline-panel experience-card">
+                        <div class="card-summary-header">
+                            <figure class="exp-cover "><img decoding="async" width="1600" height="1146" src="assets/images/symposium_present_photo.webp" alt="Undergraduate Research Symposium poster presentation" loading="lazy"></figure>
+                                                        <div class="experience-heading">
+                                <div>
+                                    <span class="experience-type">Research</span>
+                                    <h3>Undergraduate Research Scholar</h3>
+                                    <p class="timeline-meta"><a href="https://urs.ls.wisc.edu/" target="_blank" rel="noreferrer" class="research-link">Undergraduate Research Scholars (URS) <i class="fas fa-external-link-alt" style="font-size: 0.75em; margin-left: 2px;"></i></a> · UW-Madison</p>
+                                </div>
+                                <i class="fas fa-microchip experience-icon" aria-hidden="true"></i>
+                            </div>
+                            <p class="card-summary-text">
+                                Conducted machine learning research on virtual sensing architectures for automotive power systems, resulting in an award-winning technical paper.
+                            </p>
+                            <div class="tag-row compact-tags">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>NumPy</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
+                                <span>Regression Analysis</span>
+                                <span>Scholarly Communication</span>
+                            </div>
+                            <button class="card-toggle-btn" aria-expanded="false" aria-controls="exp-urs-details">
+                                <span class="toggle-label">View Details</span>
+                                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-details-wrapper" id="exp-urs-details" hidden="until-found">
+                            <div class="card-details-inner">
+                                <p>
+                                    Formulated a unified deep learning model to estimate engine combustion states and NOx emissions. Collaborated with mechanical engineering faculty to preprocess real-world engine sensor datasets, design neural architectures, and validate predictions against classical regression baselines, culminating in winning the Central State Section of The Combustion Institute Undergrad Research Competition.
+                                </p>
+                                <div class="experience-detail-grid">
+                                    <div>
+                                        <h4>Responsibilities &amp; Impact</h4>
+                                        <ul class="timeline-points">
+                                            <li>Preprocessed and normalized high-dimensional diesel engine sensor data spanning 217 operating points.</li>
+                                            <li>Designed, trained, and optimized artificial neural network (ANN) architectures in Python and PyTorch.</li>
+                                            <li>Authored and presented a technical paper at the Combustion Institute CSSI competition.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience-gallery">
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1600" height="1146" src="assets/images/symposium_present_photo.webp" alt="Undergraduate Research Symposium poster presentation" loading="lazy">
+                                        <figcaption>UW-Madison Undergraduate Research Symposium Poster Presentation</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="1126" height="750" src="assets/images/Digital_Twin_engineering_image.webp" alt="Digital Twin Virtual Sensing Model" loading="lazy">
+                                        <figcaption>Virtual Sensing Deep Learning Architecture</figcaption>
+                                    </figure>
+                                    <figure class="gallery-item">
+                                        <img decoding="async" width="320" height="180" src="assets/images/URS_image.webp" alt="URS Research Certificate" loading="lazy">
+                                        <figcaption>Research Project Recognition</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Course Guide Section -->
+        <section id="course-guide" class="section" data-reveal>
+            <div class="section-heading">
+                <span class="section-kicker">Academics</span>
+                <h3>A map of what I’ve learned.</h3>
+            </div>
+            
+            <div class="course-guide-banner">
+                <div class="course-guide-content">
+                    <p class="course-guide-tag">17 courses · 7 disciplines</p>
+                    <h4>Coursework, connected by ideas.</h4>
+                    <p class="course-guide-desc">
+                        Explore the path from programming foundations and mathematics to machine learning, systems,
+                        research, and human context—then browse the complete UW–Madison archive.
+                    </p>
+                    <a href="courses.html" class="btn btn-primary course-guide-btn">
+                        <i class="fas fa-graduation-cap"></i> Explore Course Guide <i class="fas fa-arrow-right" style="font-size: 0.82em; margin-left: 4px;"></i>
+                    </a>
+                </div>
+                <div class="course-guide-visual">
+                    <div class="course-preview-map" aria-hidden="true">
+                        <span class="preview-node preview-node-one">CS 200</span>
+                        <span class="preview-node preview-node-two">CS 300</span>
+                        <span class="preview-node preview-node-three">MATH 340</span>
+                        <span class="preview-node preview-node-four">CS 532</span>
+                        <span class="preview-node preview-node-five">CS 639</span>
+                        <svg viewBox="0 0 420 230" focusable="false">
+                            <path d="M74 60 C130 60 132 112 190 112" />
+                            <path d="M190 112 C250 112 250 62 338 62" />
+                            <path d="M76 182 C145 182 150 136 190 112" />
+                            <path d="M190 112 C264 112 278 176 350 176" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-learning-grid" aria-label="Skills developed through coursework">
+                <article>
+                    <span class="learning-index">01</span>
+                    <div class="learning-icon"><i class="fas fa-code-branch"></i></div>
+                    <h4>Systems foundations</h4>
+                    <p>Data structures, computer architecture, low-level programming, and reasoning about performance.</p>
+                    <small>CS 200 · 300 · 400 · 252 · 354</small>
+                </article>
+                <article>
+                    <span class="learning-index">02</span>
+                    <div class="learning-icon"><i class="fas fa-wave-square"></i></div>
+                    <h4>Mathematical modeling</h4>
+                    <p>Linear algebra, probability, optimization, and the mathematical language behind machine learning.</p>
+                    <small>MATH 221/222 · 331 · 340 · CS 524 · 532</small>
+                </article>
+                <article>
+                    <span class="learning-index">03</span>
+                    <div class="learning-icon"><i class="fas fa-people-arrows"></i></div>
+                    <h4>Human context</h4>
+                    <p>Accessibility, social impact, research communication, and designing technology around real people.</p>
+                    <small>LIS 202 · ANTHRO 104 · ESL 118 · URS 250</small>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section project-archive" data-reveal>
+            <div class="section-heading">
+                <span class="section-kicker">Project archive</span>
+                <h3>More experiments, systems, and tools.</h3>
+            </div>
+
+            <div class="project-list">
+                <!-- SAIL / SignBridge Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail" id="proj-sail">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb archive-thumb-contain"><img decoding="async" width="400" height="400" src="assets/images/SAIL.webp" alt="SignBridge ASL-to-speech interface" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Summer 2026 · Team Lead</span>
+                                <h3>SignBridge <span class="project-title-detail">(SAIL &middot; ASL-to-Speech System)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View SignBridge source on GitHub"
+                                    aria-label="View SignBridge source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-hands-asl-interpreting"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Led a four-member team building SignBridge, a web-based ASL-to-speech system that
+                            tracks 543 hand, face, and pose landmarks per frame across a 2,044-sign-class
+                            recognition pipeline, from live signing to spoken language.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>Transformers</span>
+                            <span>MediaPipe</span>
+                            <span>Gemini 2.5</span>
+                            <span>Text-to-Speech</span>
+                            <span>Real-Time Systems</span>
+                        </div>
+                        <div class="project-resource-strip">
+                            <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer"
+                                class="resource-btn resource-btn-primary">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge
+                            </a>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-sail-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-sail-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                SignBridge tracks a signer through a temporal landmark pipeline, classifies the
+                                sign sequence with a Transformer-based recognition model, refines the output into
+                                natural language with Gemini 2.5, and speaks the result back &mdash; all inside a
+                                single low-latency web application.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Real-time tracking of 543 hand, face, and pose landmarks per frame
+                                            across a 2,044-sign-class recognition pipeline.</li>
+                                        <li>Integrated temporal tracking, Transformer-based recognition, Gemini
+                                            2.5 language refinement, and text-to-speech into one pipeline.</li>
+                                        <li>Achieved 11.59 ms average local processing latency toward a 30 FPS
+                                            real-time target.</li>
+                                        <li>Led a four-member team through system design, delegation, and
+                                            end-to-end integration.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="400" height="400" src="assets/images/SAIL.webp" alt="SignBridge ASL-to-speech interface" loading="lazy">
+                                    <figcaption>SignBridge Real-Time ASL Recognition Interface</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Virtual Sensor-Guided Noise Diagnosis Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-noise-diagnosis">
+                    <div class="card-summary-header">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">May 2026 &ndash; Present · Researcher</span>
+                                <h3>Virtual Sensor-Guided Noise Diagnosis <span class="project-title-detail">(Self-Correction Framework)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Research Project / Repository Private">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-wave-square"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Developed a residual-based framework that diagnoses and self-corrects sensor faults,
+                            integrating fault injection, 10-class sensor fault diagnosis, severity estimation, and
+                            signal correction &mdash; winner of the ASME Undergraduate Engineering Student
+                            Competition.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>PyTorch</span>
+                            <span>Signal Processing</span>
+                            <span>Fault Diagnosis</span>
+                            <span>Virtual Sensing</span>
+                        </div>
+                        <div class="achievement-tags">
+                            <span class="tag">ASME Competition Winner</span>
+                        </div>
+                        <div class="project-resource-strip">
+                            <button type="button" class="resource-btn" data-pdf-modal
+                                data-pdf-src="assets/docs/Siqi_Dai_ASME_slide.pdf"
+                                data-pdf-title="Virtual Sensor-Guided Noise Diagnosis and Self-Correction Framework &mdash; ASME Presentation">
+                                <i class="fas fa-file-powerpoint"></i> View Presentation
+                            </button>
+                            <a href="assets/docs/Siqi_Dai_Virtual_Sensor_ASME.pdf" target="_blank" rel="noreferrer"
+                                class="resource-btn">
+                                <i class="fas fa-file-alt"></i> Read Paper
+                            </a>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-noise-diagnosis-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-noise-diagnosis-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Builds on a multi-target virtual sensor for a 12-L heavy-duty diesel engine by
+                                injecting artificial sensor faults, classifying fault type, estimating fault
+                                severity, and correcting the corrupted signal &mdash; establishing a foundation for
+                                virtual sensor-guided sensor health monitoring.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Injected controlled sensor faults (noise, bias, drift, and more) into
+                                            virtual-sensor inputs to study fault propagation.</li>
+                                        <li>Trained a 10-class XGBoost fault-diagnosis classifier, reaching 98.74%
+                                            classification accuracy and 98.56% macro F1.</li>
+                                        <li>Built severity estimation and signal-correction stages that reduced
+                                            error by over 90% in representative bias and drift correction cases.</li>
+                                        <li>Presented the framework at the ASME Undergraduate Engineering Student
+                                            Competition with faculty advisor Saurabh K. Gupta.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Digital Twin Engine Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-digital-twin">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1126" height="750" src="assets/images/Digital_Twin_engineering_image.webp" alt="Automotive engine virtual sensing system" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Oct 2025 &ndash; Feb 2026 · Researcher</span>
+                                <h3>Multi-Parameter Virtual Sensing <span class="project-title-detail">(Automotive Engine ANN)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/digital-twin-engine-virtual-sensor-research" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View Digital Twin Engine source on GitHub"
+                                    aria-label="View Digital Twin Engine source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-microchip"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed and developed a multi-target virtual sensing framework using a single artificial neural network (ANN) to replace multiple expensive physical sensors in a 12L 6-cylinder diesel engine.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>NumPy</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                            <span>Virtual Sensing</span>
+                            <span>Deep Learning</span>
+                            <span>Thermodynamics</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-digital-twin-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-digital-twin-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Built using a shared-representation deep learning architecture, the model learns latent representations to simultaneously predict heterogeneous, non-linear thermodynamic parameters (MF_IA, NOx_EO, SOC) in real time. The framework achieved high test accuracy (R² &gt; 0.98 for all targets) across 217 engine operating points.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Engineered multi-output ANN architectures (ANN-6 and ANN-13) in PyTorch for non-linear thermodynamic engine states.</li>
+                                        <li>Preprocessed and analyzed real-world high-fidelity experimental data across full engine load and speed ranges.</li>
+                                        <li>Achieved predictive R² scores of 0.9945 for intake air mass flow, 0.9891 for NOx emissions, and 0.9841 for start of combustion.</li>
+                                        <li>Validated model generalization using stratified splits against Linear Regression, Random Forest, and SVR baselines.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1126" height="750" src="assets/images/Digital_Twin_engineering_image.webp" alt="Digital Twin Neural Architecture" loading="lazy">
+                                    <figcaption>Multi-target Virtual Sensor ANN Architecture</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1600" height="900" src="assets/images/Future_Work_Digital_Twin_project.webp" alt="Digital Twin Future Work Framework" loading="lazy">
+                                    <figcaption>System Diagnostics &amp; Robustness Roadmap</figcaption>
+                                </figure>
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1600" height="1146" src="assets/images/symposium_present_photo.webp" alt="Undergraduate Research Symposium Presentation" loading="lazy">
+                                    <figcaption>Poster Presentation at UW-Madison Undergraduate Research Symposium</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Industrial Asset Intelligence Project -->
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-ideathon">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1400" height="777" src="assets/images/slide_overview.webp" alt="Industrial Asset Intelligence concept" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">July 18, 2026 · Participant</span>
+                                <h3>Industrial Asset Intelligence <span class="project-title-detail">(Spatial Intelligence Ideathon)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Ideathon Design Proposal / Non-code">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-cubes-stacked"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed a spatial computing solution for industrial manufacturing environments during a one-day interdisciplinary startup ideathon, preserving equipment maintenance knowledge and reducing downtime.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Spatial Computing</span>
+                            <span>Shared AR</span>
+                            <span>Digital Twins</span>
+                            <span>Indoor Positioning</span>
+                            <span>AI Knowledge Management</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-ideathon-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-ideathon-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Collaborated with a multidisciplinary team to commercialize Spatial Grounding and Awareness for Augmented Reality (SGA-AR) in industrial spaces, enabling spatial anchoring of machinery documentation directly onto physical assets.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Formulated product strategy and technical architecture for shared AR spaces in manufacturing environments.</li>
+                                        <li>Conducted rapid customer discovery and developed sustainable B2B SaaS business models.</li>
+                                        <li>Led pitch deck creation and high-fidelity product dashboard demonstrations.</li>
+                                        <li>Designed spatial anchoring logic to ground equipment documentation to physical machinery.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1400" height="777" src="assets/images/slide_overview.webp" alt="Industrial Asset Intelligence concept overview slide" loading="lazy">
+                                    <figcaption>Industrial Asset Intelligence System Architecture</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1400" height="1050" src="assets/images/Ideathon_image.webp" alt="Ideathon team collaboration" loading="lazy">
+                                    <figcaption>UW Tech Exploration Lab Team Collaboration</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AR/VR Accessibility Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-arvr">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR/VR stair detection" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Apr 2026 – Sep 2026 · Researcher</span>
+                                <h3>AR/VR Accessibility &amp; Spatial HCI</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Repository Private / Institutional Research">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-universal-access"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Research project focusing on accessibility in immersive environments, utilizing depth-sensing cameras and spatial computing to assist low-vision users with real-world navigation.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Unity</span>
+                            <span>Meta Quest SDK</span>
+                            <span>C#</span>
+                            <span>Intel RealSense API</span>
+                            <span>Spatial Computing</span>
+                            <span>HCI</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-arvr-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-arvr-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Developed spatial intelligence prototypes that capture 3D environments and translate them into multi-modal cues (audio, haptics) for users. Investigated spatial layout grounding algorithms and user-testing protocols to ensure interfaces degrade gracefully under vision impairments.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Leveraged Intel RealSense D455 depth data to map physical obstacles and estimate distances in real time.</li>
+                                        <li>Formulated 3D spatial audio feedback models to communicate navigation markers and hazard warnings.</li>
+                                        <li>Integrated gesture-based control paths to simplify VR interface navigation for accessibility.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR/VR Staircase and hazard detection" loading="lazy">
+                                    <figcaption>Real-time Obstacle &amp; Stair Detection</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1372" height="764" src="assets/images/AR_VR_point_cloud.webp" alt="AR/VR Point cloud navigation feedback" loading="lazy">
+                                    <figcaption>Spatial Point Cloud Environmental Mapping</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Self-Refining Image Generation Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-diff">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb archive-thumb-corner"><img decoding="async" width="1564" height="1668" src="assets/images/self_improving_editor.webp" alt="Self-improving background editor comparing InstructPix2Pix, compositing, and Qwen-Image-Edit results" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Spring 2026 · Ongoing</span>
+                                <h3>Self-Improving Background Editor <span class="project-title-detail">(Closed-Loop Image Editing)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/self_improving_editor" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View Self-Improving Editor source on GitHub"
+                                    aria-label="View Self-Improving Editor source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Built a closed-loop image editor that replaces the background behind a person or dog while keeping the subject intact: every candidate is scored by a bank of critics, diagnosed, and re-edited.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>Hugging Face Diffusers</span>
+                            <span>Generative AI</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-diff-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-diff-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Built in PyTorch, the system utilizes latent representations and cross-attention maps to identify target editing regions. By integrating a multi-stage feedback loop, users can progressively refine generated images through natural language prompts, resolving typical drift issues in single-step generation.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Implemented local cross-attention control to isolate edits without affecting background pixels.</li>
+                                        <li>Formulated a closed-loop feedback pipeline that scores and refines image details iteratively.</li>
+                                        <li>Optimized diffusion step sequencing, reducing inference times for image-to-image tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MediMenu Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-medimenu">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1158" height="1060" src="assets/images/Medimenu.webp" alt="MediMenu meal planning interface" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">CheeseHacks 2026 · Lead Developer</span>
+                                <h3>MediMenu <span class="project-title-detail">(AI Meal Planner)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/samkwak188/MediMenu" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-utensils"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed and built an AI-assisted meal planner and personalization engine during the CheeseHacks 2026 hackathon, leading a 4-person development team.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>GPT-4o</span>
+                            <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-medimenu-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-medimenu-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Integrated large language models (LLMs) with dietary databases to deliver customized nutritional recommendations based on user health parameters. Built backend using FastAPI and structured responsive frontend in React, creating an interactive portal that auto-generates grocery lists and meal plans.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Integrated GPT-4o API for personalized, context-aware recipe recommendations.</li>
+                                        <li>Developed a FastAPI backend with asynchronous query handling for rapid response times.</li>
+                                        <li>Constructed a React-based frontend dashboard with visual recipe cards and nutritional breakdowns.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1158" height="1060" src="assets/images/Medimenu.webp" alt="MediMenu AI Meal Planner interface" loading="lazy">
+                                    <figcaption>MediMenu AI Meal Personalization &amp; Recipe Portal</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CourseOptimizer Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-courseopt">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1600" height="829" src="assets/images/CourseOptimizer_image.webp" alt="CourseOptimizer schedule interface" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Badger Build Festival</span>
+                                <h3>CourseOptimizer <span class="project-title-detail">(Schedule Optimization Tool)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/CourseOptimizer" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-calendar-check"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Built an interactive schedule optimization application at the Badger Build Festival to help university students build conflict-free course schedules.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Constraint Satisfaction</span>
+                            <span>UI Design</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-courseopt-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-courseopt-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Developed a search and filter system that runs constraint-satisfaction logic client-side in JavaScript. The tool parses course timings, prerequisites, and workload metrics, presenting students with a visual calendar dashboard and alternative schedule configurations.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Built a client-side constraint solver to filter schedules based on user availability and load limits.</li>
+                                        <li>Designed an interactive grid calendar showing overlapping slots and walking times between classes.</li>
+                                        <li>Created a clean, responsive HTML/CSS dashboard with smooth drag-and-drop course selections.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1600" height="829" src="assets/images/CourseOptimizer_image.webp" alt="CourseOptimizer schedule tool dashboard" loading="lazy">
+                                    <figcaption>CourseOptimizer Visual Calendar &amp; Constraint Solver Interface</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Human Survival Probability Analysis Project -->
+                <article class="project-row interactive-card collapsible-card" data-card-id="proj-survival">
+                    <div class="card-summary-header">
+                        <div class="archive-thumb archive-thumb-generated archive-thumb-chart" aria-hidden="true"><i class="fas fa-chart-line"></i><span>10 datasets · survival modeling</span></div>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Fall 2025</span>
+                                <h3>Human Survival Probability Analysis</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Academic Course Project">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-chart-line"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Conducted a statistical and machine learning study analyzing socioeconomic factors and their correlations with human survival outcomes across ten large-scale datasets.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Seaborn</span>
+                            <span>Matplotlib</span>
+                            <span>Artificial Neural Networks (ANNs)</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-survival-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-survival-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Performed rigorous data cleaning, missing value imputation, and exploratory data analysis using Pandas and Seaborn. Trained and evaluated multiple classification models, including Artificial Neural Networks (ANNs) and logistic baselines, comparing performance using area-under-the-curve (AUC) and receiver-operating-characteristic (ROC) metrics.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Processed and merged ten heterogeneous datasets, handling class imbalances and multi-collinearity.</li>
+                                        <li>Trained and optimized multi-layer ANN classifiers in Python.</li>
+                                        <li>Produced publication-ready statistical visualizations of feature importances and correlation matrices.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section capability-section" data-reveal>
+            <svg class="section-flow-lines flow-lines-skills" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
+                <path pathLength="1" d="M-80 400 C180 110 350 505 610 235 S955 40 1280 270" />
+                <path pathLength="1" d="M-90 455 C195 185 395 545 690 300 S1030 115 1270 345" />
+                <path pathLength="1" d="M40 330 C265 95 455 385 735 155 S1030 30 1215 125" />
+            </svg>
+            <div class="section-heading">
+                <span class="section-kicker">Capabilities</span>
+                <h3>Tools become useful when they work together.</h3>
+            </div>
+
+            <div class="capability-grid">
+                <article class="capability-card capability-language interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:-39deg"><i class="devicon-java-plain colored"></i></span><span style="--a:13deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:64deg"><i class="devicon-javascript-plain colored"></i></span><span style="--a:116deg"><i class="devicon-html5-plain colored"></i></span><span style="--a:167deg"><i class="devicon-css3-plain colored"></i></span><span style="--a:219deg"><i class="devicon-mysql-original colored"></i></span></div></div>
+                    <p class="capability-label">Express · reason · implement</p>
+                    <h3>Programming languages</h3>
+                    <p>Choosing the right level of abstraction—from low-level systems work to browser interfaces and data workflows.</p>
+                    <div class="capability-stack"><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML/CSS</span><span>MySQL</span></div>
+                    <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-ml interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-pytorch-original colored"></i></span><span style="--a:-30deg"><i class="devicon-tensorflow-original colored"></i></span><span style="--a:30deg"><i class="devicon-scikitlearn-plain colored"></i></span><span style="--a:90deg"><i class="devicon-keras-plain colored"></i></span><span style="--a:150deg"><i class="devicon-jupyter-plain colored"></i></span><span style="--a:210deg"><i class="devicon-python-plain colored"></i></span></div></div>
+                    <p class="capability-label">Model · diagnose · refine</p>
+                    <h3>Applied ML systems</h3>
+                    <p>Turning noisy real-world data into models that can be evaluated, interpreted, and deployed.</p>
+                    <div class="capability-stack"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Transformers</span><span>XGBoost</span><span>Generative AI</span></div>
+                    <a href="#case-sensor">Evidence: Virtual Sensor <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-data interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-numpy-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-pandas-plain colored"></i></span><span style="--a:30deg"><i class="devicon-matplotlib-plain colored"></i></span><span style="--a:90deg"><i class="devicon-plotly-plain colored"></i></span><span style="--a:150deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:210deg"><i class="devicon-redis-plain colored"></i></span></div></div>
+                    <p class="capability-label">Measure · explain · validate</p>
+                    <h3>Data &amp; scientific computing</h3>
+                    <p>Building reproducible analysis pipelines and translating measurements into defensible engineering evidence.</p>
+                    <div class="capability-stack"><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>Signal processing</span><span>Statistics</span></div>
+                    <a href="#case-sensor">Evidence: research systems <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-vision interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-opencv-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-unity-plain colored"></i></span><span style="--a:30deg"><i class="devicon-csharp-plain colored"></i></span><span style="--a:90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:150deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:210deg"><i class="devicon-tensorflow-original colored"></i></span></div></div>
+                    <p class="capability-label">Sense · interpret · assist</p>
+                    <h3>Vision &amp; accessible interaction</h3>
+                    <p>Combining perception pipelines with interfaces designed around human abilities and constraints.</p>
+                    <div class="capability-stack"><span>MediaPipe</span><span>OpenCV</span><span>Unity</span><span>Intel RealSense</span><span>AR/VR</span><span>Spatial HCI</span><span>Accessibility</span></div>
+                    <a href="#case-signbridge">Evidence: SignBridge <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-product interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-react-original colored"></i></span><span style="--a:-39deg"><i class="devicon-fastapi-plain colored"></i></span><span style="--a:13deg"><i class="devicon-firebase-plain colored"></i></span><span style="--a:64deg"><i class="devicon-redis-plain colored"></i></span><span style="--a:116deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:167deg"><i class="devicon-git-plain colored"></i></span><span style="--a:219deg"><i class="devicon-github-original colored"></i></span></div></div>
+                    <p class="capability-label">Architect · build · ship</p>
+                    <h3>Product engineering</h3>
+                    <p>Connecting frontend, backend, APIs, and team execution into coherent end-to-end products.</p>
+                    <div class="capability-stack"><span>React</span><span>FastAPI</span><span>Firebase</span><span>REST APIs</span><span>Redis</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+                    <a href="#projects">Evidence: project archive <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="capability-card capability-security interactive-card">
+                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-linux-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-bash-plain colored"></i></span><span style="--a:30deg"><i class="devicon-python-plain colored"></i></span><span style="--a:90deg"><i class="devicon-docker-plain colored"></i></span><span style="--a:150deg"><i class="devicon-git-plain colored"></i></span><span style="--a:210deg"><i class="devicon-mysql-original colored"></i></span></div></div>
+                    <p class="capability-label">Observe · investigate · recover</p>
+                    <h3>Security &amp; resilient systems</h3>
+                    <p>Investigating incidents, reasoning across infrastructure, and designing for failure and recovery.</p>
+                    <div class="capability-stack"><span>Cortex XSOAR</span><span>Threat intelligence</span><span>Network forensics</span><span>Incident response</span><span>Computer architecture</span><span>Disaster recovery</span></div>
+                    <a href="#experience">Evidence: SOC &amp; Rec App <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="section" data-reveal>
+            <svg class="section-flow-lines flow-lines-interests" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+                <path pathLength="1" d="M-40 315 C205 70 400 430 665 195 S1010 55 1240 175" />
+                <path pathLength="1" d="M-70 375 C180 170 425 485 720 255 S1055 130 1270 285" />
+            </svg>
+            <div class="section-heading">
+                <span class="section-kicker">Interests</span>
+                <h3>The things I return to off-screen.</h3>
+            </div>
+            <div class="interests-horizontal">
+                <div class="interest-card" data-interest-type="reading" data-reveal data-reveal-delay="0.2s" role="button" tabindex="0" aria-expanded="false" aria-controls="panel-reading">
+                    <div class="interest-icon-cluster" aria-hidden="true"><span><i class="fas fa-book-open"></i></span><i class="fas fa-bookmark"></i><i class="fas fa-newspaper"></i></div>
+                    <h3>Reading</h3>
+                    <p>Exploring technical books, research papers, and fiction</p>
+                    <span class="interest-explore">Open collection <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="interest-card" data-interest-type="cinema" data-reveal data-reveal-delay="0.4s" role="button" tabindex="0" aria-expanded="false" aria-controls="panel-cinema">
+                    <div class="interest-icon-cluster" aria-hidden="true"><span><i class="fas fa-film"></i></span><i class="fas fa-ticket"></i><i class="fas fa-clapperboard"></i></div>
+                    <h3>Cinema</h3>
+                    <p>Watching movies ranging from classics to horror films</p>
+                    <span class="interest-explore">Open collection <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="interest-card" data-interest-type="music" data-reveal data-reveal-delay="0.6s" role="button" tabindex="0" aria-expanded="false" aria-controls="panel-music">
+                    <div class="interest-icon-cluster" aria-hidden="true"><span><i class="fas fa-music"></i></span><i class="fas fa-headphones"></i><i class="fas fa-compact-disc"></i></div>
+                    <h3>Music</h3>
+                    <p>Listening to diverse genres and discovering new artists</p>
+                    <span class="interest-explore">Open collection <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="interest-card" data-interest-type="museums" data-reveal data-reveal-delay="0.8s" role="button" tabindex="0" aria-expanded="false" aria-controls="panel-museums">
+                    <div class="interest-icon-cluster" aria-hidden="true"><span><i class="fas fa-landmark"></i></span><i class="fas fa-palette"></i><i class="fas fa-archway"></i></div>
+                    <h3>Museums</h3>
+                    <p>Visiting art galleries and cultural exhibitions</p>
+                    <span class="interest-explore">Open collection <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Interactive expansion panel below the scrollable cards -->
+            <div id="interests-expansion-panel" class="interest-expansion-panel">
+                <div id="interests-expansion-content" class="interest-expansion-inner">
+                    <!-- Reading Panel -->
+                    <div id="panel-reading" class="interest-panel-content">
+                        <div class="bookshelf-section">
+                            <h4 class="expansion-title"><i class="fas fa-book-open"></i> Favorite Bookshelf</h4>
+                            <p class="expansion-subtitle">Hover over or tap a book spine to reveal insights.</p>
+                            <div class="interest-panel-notes"><span>Systems &amp; society</span><span>Design thinking</span><span>Speculative fiction</span></div>
+                            <div class="bookshelf-container">
+                                <div class="bookshelf-row">
+                                    <div class="book-item" style="--book-color: #1a365d;" data-title="Nexus" data-author="Yuval Noah Harari" data-desc="An insightful exploration of how information networks and communication systems have constructed human societies, leading to the rise of artificial intelligence.">
+                                        <span class="book-spine">Nexus</span>
+                                    </div>
+                                    <div class="book-item tilted" style="--book-color: #9b2c2c;" data-title="1984" data-author="George Orwell" data-desc="The timeless dystopian masterpiece highlighting the psychological horrors of absolute state surveillance, doublethink, and propaganda.">
+                                        <span class="book-spine">1984</span>
+                                    </div>
+                                    <div class="book-item" style="--book-color: #2d3748;" data-title="Wall Street Journal" data-author="Dow Jones & Company" data-desc="Analyses of global market structures, financial systems, corporate updates, and macroeconomic trends.">
+                                        <span class="book-spine">WSJ</span>
+                                    </div>
+                                    <div class="book-item" style="--book-color: #2b6cb0;" data-title="Thinking, Fast and Slow" data-author="Daniel Kahneman" data-desc="A detailed psychological study outlining System 1 (fast, intuitive) and System 2 (slow, analytical) cognitive operations and heuristics.">
+                                        <span class="book-spine">Thinking Fast/Slow</span>
+                                    </div>
+                                    <div class="book-item tilted-left" style="--book-color: #22543d;" data-title="Why Nations Fail" data-author="D. Acemoglu & J. Robinson" data-desc="A historic economic analysis demonstrating how institutional choices—inclusive versus extractive—determine global power and prosperity.">
+                                        <span class="book-spine">Why Nations Fail</span>
+                                    </div>
+                                    <div class="book-item" style="--book-color: #7c4a31;" data-title="The Design of Everyday Things" data-author="Don Norman" data-desc="A foundational guide to affordances, feedback, constraints, and designing systems that match the way people actually think and act.">
+                                        <span class="book-spine">Everyday Things</span>
+                                    </div>
+                                    <div class="book-item tilted" style="--book-color: #4c3d67;" data-title="Exhalation" data-author="Ted Chiang" data-desc="Speculative stories that treat intelligence, memory, agency, and technology as precise philosophical experiments.">
+                                        <span class="book-spine">Exhalation</span>
+                                    </div>
+                                </div>
+                                <div class="bookshelf-shelf"></div>
+                            </div>
+                            <div class="book-details-box" id="book-details">
+                                <p class="default-msg">Hover or tap on a book above to inspect details.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cinema Panel -->
+                    <div id="panel-cinema" class="interest-panel-content">
+                        <div class="cinema-section">
+                            <h4 class="expansion-title"><i class="fas fa-video"></i> Cinematic Film Track</h4>
+                            <p class="expansion-subtitle">Hover or tap a frame to view filmmaker details.</p>
+                            <div class="interest-panel-notes"><span>Visual systems</span><span>Psychological horror</span><span>Global cinema</span></div>
+                            <div class="filmstrip-container">
+                                <div class="filmstrip-sprockets-top"></div>
+                                <div class="filmstrip-track">
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">I</span>
+                                        <div class="frame-content">
+                                            <h5>Parasite</h5>
+                                            <p>Bong Joon-ho (2019)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">II</span>
+                                        <div class="frame-content">
+                                            <h5>The Shining</h5>
+                                            <p>Stanley Kubrick (1980)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">III</span>
+                                        <div class="frame-content">
+                                            <h5>Spirited Away</h5>
+                                            <p>Hayao Miyazaki (2001)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">IV</span>
+                                        <div class="frame-content">
+                                            <h5>The Bad Seed</h5>
+                                            <p>Mervyn LeRoy (1956)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">V</span>
+                                        <div class="frame-content">
+                                            <h5>Arrival</h5>
+                                            <p>Denis Villeneuve (2016)</p>
+                                        </div>
+                                    </div>
+                                    <div class="filmstrip-frame">
+                                        <span class="frame-num">VI</span>
+                                        <div class="frame-content">
+                                            <h5>Get Out</h5>
+                                            <p>Jordan Peele (2017)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filmstrip-sprockets-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music Panel -->
+                    <div id="panel-music" class="interest-panel-content">
+                        <div class="music-section">
+                            <h4 class="expansion-title"><i class="fas fa-music"></i> Sound Waves</h4>
+                            <p class="expansion-subtitle">Hover or tap the translucent bubbles to reveal popular tracks.</p>
+                            <div class="interest-panel-notes"><span>Alt pop</span><span>Classic rock</span><span>Atmospheric playlists</span></div>
+                            <div class="bubbles-container">
+                                <div class="music-bubble" style="--bubble-delay: 0s; --bubble-size: 120px; --bubble-hue: 280;">
+                                    <div class="bubble-content">
+                                        <h5>Starboy</h5>
+                                        <p>The Weeknd</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 1.2s; --bubble-size: 135px; --bubble-hue: 200;">
+                                    <div class="bubble-content">
+                                        <h5>Blinding Lights</h5>
+                                        <p>The Weeknd</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 0.6s; --bubble-size: 150px; --bubble-hue: 340;">
+                                    <div class="bubble-content">
+                                        <h5>Bohemian Rhapsody</h5>
+                                        <p>Queen</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 1.8s; --bubble-size: 110px; --bubble-hue: 150;">
+                                    <div class="bubble-content">
+                                        <h5>Perfect</h5>
+                                        <p>Ed Sheeran</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 0.9s; --bubble-size: 118px; --bubble-hue: 34;">
+                                    <div class="bubble-content">
+                                        <h5>Dreams</h5>
+                                        <p>Fleetwood Mac</p>
+                                    </div>
+                                </div>
+                                <div class="music-bubble" style="--bubble-delay: 1.5s; --bubble-size: 126px; --bubble-hue: 220;">
+                                    <div class="bubble-content">
+                                        <h5>Space Song</h5>
+                                        <p>Beach House</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Museums Panel -->
+                    <div id="panel-museums" class="interest-panel-content">
+                        <div class="museums-section">
+                            <h4 class="expansion-title"><i class="fas fa-landmark"></i> Cultural Exhibits</h4>
+                            <p class="expansion-subtitle">Visiting historical galleries, computing exhibits, and classical museums.</p>
+                            <div class="interest-panel-notes"><span>Material culture</span><span>Interaction design</span><span>Computing history</span></div>
+                            <div class="museums-exhibit-grid">
+                                <div class="museum-exhibit-card">
+                                    <h5>Art &amp; History Galleries</h5>
+                                    <p>Appreciating neoclassical oil paintings, neoclassical sculptures, and historical artifacts.</p>
+                                </div>
+                                <div class="museum-exhibit-card">
+                                    <h5>Science &amp; Tech Exhibits</h5>
+                                    <p>Fascinated by mechanical computation history, structural physics setups, and structural engineering marvels.</p>
+                                </div>
+                                <div class="museum-exhibit-card">
+                                    <h5>Design &amp; Interaction</h5>
+                                    <p>Studying how typography, wayfinding, objects, and spatial layouts guide attention without explicit instruction.</p>
+                                </div>
+                                <div class="museum-exhibit-card">
+                                    <h5>Local Collections &amp; Archives</h5>
+                                    <p>Looking for the small details—annotations, prototypes, and ordinary artifacts—that reveal how people lived and worked.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section contact-section" data-reveal>
+            <div class="contact-stage">
+                <div class="contact-intro">
+                    <span class="section-kicker">Contact</span>
+                    <h2>Have a problem worth solving?</h2>
+                    <p>I’m always interested in thoughtful research, ambitious engineering, and collaborations that turn difficult ideas into useful systems.</p>
+                    <div class="contact-availability"><span aria-hidden="true"></span>Open to conversations</div>
+                </div>
+
+                <div class="contact-phone-shell">
+                    <div class="contact-orbit contact-orbit-one" aria-hidden="true"></div>
+                    <div class="contact-orbit contact-orbit-two" aria-hidden="true"></div>
+                    <div class="contact-phone" tabindex="0" aria-label="Interactive contact phone">
+                        <span class="iphone-side-button iphone-action-button" aria-hidden="true"></span>
+                        <span class="iphone-side-button iphone-volume-up" aria-hidden="true"></span>
+                        <span class="iphone-side-button iphone-volume-down" aria-hidden="true"></span>
+                        <span class="iphone-side-button iphone-power-button" aria-hidden="true"></span>
+                        <span class="iphone-side-button iphone-camera-control" aria-hidden="true"></span>
+                        <button class="iphone-dynamic-island" type="button" aria-expanded="false" aria-label="Show availability">
+                            <span class="island-pulse" aria-hidden="true"></span>
+                            <span class="island-copy">Available to connect</span>
+                        </button>
+                        <div class="contact-screen">
+                    <div class="iphone-status-bar">
+                        <span class="iphone-time">9:41</span>
+                        <div class="iphone-icons">
+                            <i class="fas fa-signal"></i>
+                            <i class="fas fa-wifi"></i>
+                            <i class="fas fa-battery-three-quarters"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="phone-ambient" aria-hidden="true">
+                        <span class="phone-particle particle-one"></span>
+                        <span class="phone-particle particle-two"></span>
+                        <span class="phone-particle particle-three"></span>
+                    </div>
+
+                    <div class="phone-contact-avatar" aria-hidden="true"><span>SD</span></div>
+                    <div class="contact-copy">
+                        <span class="section-kicker">Siqi Dai</span>
+                        <h3>Let’s connect.</h3>
+                        <p>
+                            For research, engineering, internships, or collaboration, you can reach me here.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:sdai66@wisc.edu" class="contact-link-item email">
+                            <span class="icon-wrap"><i class="fas fa-envelope"></i></span>
+                            <span class="link-text">sdai66@wisc.edu</span>
+                            <i class="fas fa-chevron-right chevron-icon"></i>
+                        </a>
+                        <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" class="contact-link-item github">
+                            <span class="icon-wrap"><i class="fab fa-github"></i></span>
+                            <span class="link-text">github.com/Sherry1247</span>
+                            <i class="fas fa-chevron-right chevron-icon"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer" class="contact-link-item linkedin">
+                            <span class="icon-wrap"><i class="fab fa-linkedin"></i></span>
+                            <span class="link-text">linkedin.com/in/siqi-dai-20b512296</span>
+                            <i class="fas fa-chevron-right chevron-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="phone-swipe-hint" aria-hidden="true"><span></span> Move to explore</div>
+                    
+                            <div class="iphone-home-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">Siqi Dai</p>
+                <p class="footer-meta">Siqi Dai · Last updated: October 17, 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
+        <div class="pdf-modal-backdrop" data-pdf-modal-close></div>
+        <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+            <div class="pdf-modal-header">
+                <h4 id="pdf-modal-title">Presentation</h4>
+                <div class="pdf-modal-actions">
+                    <a id="pdf-modal-open" href="#" target="_blank" rel="noreferrer" class="pdf-modal-link">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open in new tab
+                    </a>
+                    <button type="button" class="pdf-modal-close" data-pdf-modal-close aria-label="Close presentation">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-modal-frame" title="Presentation viewer" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js?v=20261018"></script>
 </body>
+
 </html>
