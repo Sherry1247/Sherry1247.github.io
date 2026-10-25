@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/tokens.css?v=20261018">
-    <link rel="stylesheet" href="css/style.css?v=20261018">
-    <link rel="stylesheet" href="css/refactor.css?v=20261018">
+    <link rel="stylesheet" href="css/tokens.css?v=20261025">
+    <link rel="stylesheet" href="css/style.css?v=20261025">
+    <link rel="stylesheet" href="css/refactor.css?v=20261025">
+    <link rel="stylesheet" href="css/system.css?v=20261025">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -22,8 +23,10 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo" aria-label="Go to homepage">SD</a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
-            <div class="nav-links" id="primary-navigation">
-                <a href="index.html#work">Selected Work</a><a href="index.html#experience">Experience</a><a href="courses.html" aria-current="page">Course Guide</a><a href="index.html#projects">Archive</a><a href="index.html#contact">Contact</a>
+            <div class="nav-menu" id="primary-navigation">
+                <div class="nav-item" data-page="about"><a class="nav-link" href="index.html#about">About</a></div>
+                <div class="nav-item has-dropdown" data-page="education"><a class="nav-link" href="education.html" aria-haspopup="true">Education <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="education.html#uw-madison"><strong>UW–Madison</strong><small>Data Science + Computer Science</small></a><a href="courses.html"><strong>Course Guide</strong><small>Connected map of 17 courses</small></a><a href="education.html#coursework"><strong>Coursework themes</strong><small>Systems, modeling, human context</small></a></div></div></div><div class="nav-item has-dropdown" data-page="experience"><a class="nav-link" href="experience.html" aria-haspopup="true">Experience <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><span class="nav-dropdown-label">Research</span><a href="experience.html#exp-diego"><strong>Diego Hernando Group (QIML)</strong><small>Quantitative imaging · 2026–now</small></a><a href="experience.html#exp-madability"><strong>MadAbility Lab</strong><small>AR/VR accessibility research</small></a><a href="experience.html#exp-urs"><strong>Undergraduate Research Scholars</strong><small>Virtual sensing research</small></a><a href="experience.html#exp-sail"><strong>Summer of AI Lab (SAIL)</strong><small>SignBridge team lead</small></a><span class="nav-dropdown-label">Engineering &amp; IT</span><a href="experience.html#exp-rec"><strong>Rec App</strong><small>Full-stack engineering intern</small></a><a href="experience.html#exp-cyber"><strong>Security Operations Center</strong><small>Student analyst</small></a><a href="experience.html#exp-lsit"><strong>L&amp;S IT Service Desk</strong><small>Technician</small></a></div></div></div><div class="nav-item has-dropdown" data-page="projects"><a class="nav-link" href="projects.html" aria-haspopup="true">Projects <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><span class="nav-dropdown-label">Featured</span><a href="projects.html#case-sensor"><strong>Sensor fault diagnosis</strong><small>Self-correcting virtual sensor</small></a><a href="projects.html#case-signbridge"><strong>SignBridge</strong><small>ASL-to-speech system</small></a><a href="projects.html#case-spatial"><strong>Spatial accessibility</strong><small>Low-vision stair navigation</small></a><span class="nav-dropdown-label">More</span><a href="projects.html#archive"><strong>Project archive</strong><small>All other projects</small></a></div></div></div><div class="nav-item has-dropdown" data-page="interests"><a class="nav-link" href="interests.html" aria-haspopup="true">Interests <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="interests.html?open=reading"><strong>Reading</strong></a><a href="interests.html?open=cinema"><strong>Cinema</strong></a><a href="interests.html?open=music"><strong>Music</strong></a><a href="interests.html?open=museums"><strong>Museums</strong></a></div></div></div>
+                <div class="nav-item" data-page="contact"><a class="nav-link" href="index.html#contact">Contact</a></div>
             </div>
         </div>
     </nav>
@@ -126,9 +129,24 @@
         </div>
     </main>
 
-    <footer class="site-footer"><div class="container footer-inner"><div class="footer-info"><p class="footer-title">Siqi Dai</p><p class="footer-meta">Siqi Dai · Last updated: September 29, 2026</p></div><div class="footer-links"><a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a><a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div></footer>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">Siqi Dai</p>
+                <p class="footer-meta">Siqi Dai · Last updated: October 25, 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
     <button id="back-to-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-    <script src="js/main.js?v=20261018"></script>
-    <script src="js/courses.js?v=20261018"></script>
+    <script src="js/main.js?v=20261025"></script>
+    <script src="js/nav.js?v=20261025"></script>
+    <script src="js/courses.js?v=20261025"></script>
 </body>
 </html>
