@@ -50,10 +50,9 @@ main .sec-title,
 }
 
 .sec-head {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
-  justify-content: space-between;
   gap: 8px 24px;
   margin-bottom: 28px;
   padding-bottom: 14px;
@@ -61,11 +60,22 @@ main .sec-title,
 }
 
 .sec-lede {
-  flex-basis: 100%;
+  grid-column: 1 / -1;
   max-width: 62ch;
   margin: 0;
   color: var(--text-soft);
   font-size: var(--fs-body);
+}
+
+/* featured-project titles: same scale as every other title */
+main .case-copy h3,
+main .flagship-case h3 {
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 .sec-more {
@@ -209,6 +219,8 @@ main .sec-title,
   .nav-dropdown-panel { padding: 0; border: 0; background: transparent; box-shadow: none; }
   .nav-dropdown-panel a { padding: 7px 12px; }
   .nav-dropdown-panel a small { display: none; }
+  .nav-item > .nav-link { color: var(--text); }
+  .nav-dropdown-panel a strong { font-weight: 500; color: var(--text-soft); }
 }
 
 /* ---------- home preview blocks ---------- */
@@ -268,7 +280,28 @@ main .sec-title,
   .preview-date { grid-column: 1 / -1; }
 }
 
-/* ---------- experience filters ---------- */
+/* ---------- category cards, tags, sub-navigation ---------- */
+.preview-links { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.preview-links li { color: var(--text-soft); font-size: var(--fs-sm); line-height: 1.45; padding-left: 14px; position: relative; }
+.preview-links li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.preview-tag {
+  padding: 4px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.preview-row { grid-template-columns: 190px minmax(0, 1fr) auto auto; }
+.subnav { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+a.chip { display: inline-block; text-decoration: none; }
+@media (max-width: 640px) {
+  .preview-row { grid-template-columns: 1fr auto; }
+  .preview-tag { grid-column: 1 / -1; justify-self: start; }
+}
+
+/* ---------- experience filters (legacy) ---------- */
 .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
 .chip {
   padding: 8px 16px;
@@ -284,6 +317,7 @@ main .sec-title,
 }
 .chip:hover { color: var(--text); border-color: var(--accent); }
 .chip.is-active { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+.timeline-order-note { margin: 0 0 26px !important; }
 .timeline-item[hidden] { display: none !important; }
 .timeline-item { scroll-margin-top: 100px; }
 .flagship-case { scroll-margin-top: 100px; }

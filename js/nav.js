@@ -61,8 +61,10 @@
   const setCurrent = (key) => {
     items.forEach((i) => i.classList.toggle("is-current", i.dataset.page === key));
   };
-  if (pageToKey[file]) {
-    setCurrent(pageToKey[file]);
+  const key = pageToKey[file] ||
+    (file.startsWith("experience") ? "experience" : file.startsWith("projects") ? "projects" : null);
+  if (key) {
+    setCurrent(key);
   } else {
     // home: follow the section in view
     const map = { about: "about", skills: "about", education: "education", experience: "experience",
