@@ -471,3 +471,7 @@ main .case-copy h3, main .flagship-case h3, .h-stats strong, .h-num, .h-portrait
 [data-theme="light"] .contact-phone .phone-contact-avatar { color: #fff; border-color: rgba(10, 20, 38, 0.12); }
 [data-theme="light"] .contact-phone .contact-link-item:hover { background: rgba(42, 88, 176, 0.08); }
 [data-theme="light"] .contact-phone .chevron-icon { color: #55668a; }
+
+/* About Me: centered single column right under the hero */
+.y-about > * { max-width: 760px; margin-left: auto; margin-right: auto; }
+.y-about h2 { text-align: center; }
