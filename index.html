@@ -7,7 +7,7 @@
     <title>Siqi Dai | Data Science &amp; Computer Science at UW-Madison</title>
     <meta name="author" content="Siqi Dai">
     <meta name="description"
-        content="Personal website of Siqi Dai, a UW-Madison Data Science and Computer Science student working across machine learning, HCI, cybersecurity, and applied systems.">
+        content="Personal website of Siqi Dai, a UW-Madison Data Science and Computer Science student building machine-learning systems that notice what is easy to miss.">
     <meta property="og:title" content="Siqi Dai | Data Science &amp; Computer Science at UW-Madison">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css?v=20261025b">
     <link rel="stylesheet" href="css/refactor.css?v=20261025b">
     <link rel="stylesheet" href="css/system.css?v=20261025b">
+    <link rel="stylesheet" href="css/home.css?v=20261025b">
 </head>
 
 <body>
@@ -43,123 +44,70 @@
     </nav>
 
     <main id="main-content" class="container">
-        <header id="home" class="hero" data-reveal="hero">
-            <div class="hero-shell">
-                <div class="hero-content">
-                    <p class="eyebrow">Data Science &amp; Computer Science · UW-Madison</p>
-                    <h1>Hi, I’m Siqi.</h1>
-                    <p class="hero-role"><span id="typed-role">I build intelligent systems that sense, adapt, and help
-                            people act.</span></p>
-                    <p class="hero-copy">
-                        Research engineer and Data Science + Computer Science student working across machine learning, accessible
-                        interaction, and resilient software—from sensor health to real-time sign language systems.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="projects.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> View projects</a>
-                        <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" rel="noreferrer"
-                            class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Resume</a>
-                    </div>
-
-                    <div class="hero-proof-grid" aria-label="Selected highlights">
-                        <div><strong>01</strong><span>ASME competition winner</span></div>
-                        <div><strong>4</strong><span>Engineers led on SignBridge</span></div>
-                        <div><strong>3.9</strong><span>UW–Madison GPA</span></div>
+        <header id="home" class="h-hero">
+            <div class="h-hero-copy">
+                <p class="h-eyebrow">Siqi Dai · Data Science + Computer Science · UW–Madison</p>
+                <h1>Some things are hard to see. I build systems that notice.</h1>
+                <p class="h-lede">A failing engine sensor. A sentence signed in the air. A staircase you can’t see. I’m Siqi—I build machine-learning systems that pick up what’s easy to miss and turn it into something a person can act on.</p>
+                <div class="h-actions">
+                    <a href="#stories" class="btn btn-primary">Follow the thread <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="projects.html" class="btn btn-secondary">Projects</a>
+                    <a href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" rel="noreferrer" class="btn btn-secondary"><i class="fas fa-file-pdf" aria-hidden="true"></i> Resume</a>
+                </div>
+                <ul class="h-stats" aria-label="Highlights">
+                    <li><strong>ASME</strong><span>competition winner</span></li>
+                    <li><strong>4</strong><span>engineers led on SignBridge</span></li>
+                    <li><strong>3.9</strong><span>GPA at UW–Madison</span></li>
+                </ul>
+            </div>
+            <aside class="h-portrait">
+                <img decoding="async" src="assets/images/photo.webp" alt="Portrait of Siqi Dai" width="1189" height="1737" fetchpriority="high">
+                <div class="h-portrait-body">
+                    <h2>Siqi Dai</h2>
+                    <p>Applied machine learning, accessibility research, and security operations.</p>
+                    <div class="h-portrait-links">
+                        <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                        <a href="mailto:sdai66@wisc.edu"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
                     </div>
                 </div>
-
-                <aside class="profile-card profile-float">
-                    <div class="profile-photo-wrap">
-                        <img decoding="async" src="assets/images/photo.webp" alt="Portrait of Siqi Dai" class="profile-photo" width="940"
-                            height="300" fetchpriority="high">
-                    </div>
-                    <div class="profile-card-body">
-                        <h2>Siqi Dai</h2>
-                        <p>CS student at UW-Madison focused on applied machine learning, research systems,
-                            accessibility, and security operations.</p>
-                        <div class="profile-links">
-                            <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer"><i
-                                    class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"><i
-                                    class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="projects.html"><i class="fas fa-arrow-right"></i> Projects</a>
-                        </div>
-                    </div>
-                </aside>
-            </div>
+            </aside>
         </header>
 
-        <section id="about" class="section about-section" data-reveal>
-            <div class="about-editorial">
-                <span class="section-kicker about-marker">About</span>
-                <div class="about-intro">
-                    <h2 class="sec-title">About me</h2>
-                </div>
-                <div class="about-copy">
-                    <p class="about-lede">
-                        I’m a Data Science and Computer Science student at UW–Madison, with a Mathematics minor, working across applied machine learning,
-                        accessibility research, and security operations.
-                    </p>
-                    <p>
-                        My work usually sits between a technical question and a real person who needs the answer to
-                        work. I enjoy building models, studying interaction, and turning messy system constraints into
-                        something clear, testable, and useful.
-                    </p>
-                    <div class="about-facts" aria-label="Quick facts">
-                        <div class="about-fact"><span>Studying</span><strong>DS + CS · Math minor</strong></div>
-                        <div class="about-fact"><span>At</span><strong>UW–Madison</strong></div>
-                        <div class="about-fact"><span>GPA</span><strong>3.9 / 4.0</strong></div>
-                        <div class="about-fact"><span>Graduating</span><strong>May 2028</strong></div>
-                    </div>
-                </div>
-            </div>
-
+        <section id="stories" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">The thread</p><h2>Notice. Translate. Guide.</h2><p class="h-sub">Three projects, one habit: find the signal people miss, make sense of it, and hand it to someone who can use it.</p></div>
+            <div class="h-chapters"><article class="h-chapter"><span class="h-num">01</span><p class="h-verb">Notice</p><h3>A sensor that diagnoses—and repairs—itself.</h3><p>Engine sensors fail quietly and corrupt everything downstream. I built a residual-based framework that identifies ten kinds of sensor faults, estimates severity, and reconstructs the damaged signal instead of just raising an alarm.</p><p class="h-metric"><strong>98.74%</strong> fault classification accuracy · ASME winner</p><a class="h-link" href="projects-research.html#case-sensor">Read the case <i class="fas fa-arrow-right" aria-hidden="true"></i></a></article><article class="h-chapter"><span class="h-num">02</span><p class="h-verb">Translate</p><h3>Sign language into speech, frame by frame.</h3><p>As team lead, I guided four engineers through a browser-based ASL-to-speech pipeline: landmark tracking, Transformer recognition, language refinement, and spoken output.</p><p class="h-metric"><strong>2,044</strong> sign classes · 11.59 ms average latency</p><a class="h-link" href="projects-accessibility.html#case-signbridge">Read the case <i class="fas fa-arrow-right" aria-hidden="true"></i></a></article><article class="h-chapter"><span class="h-num">03</span><p class="h-verb">Guide</p><h3>Making physical space legible without sight.</h3><p>At MadAbility Lab, I explored how depth sensing, segmentation, and spatial feedback can help low-vision users understand stairs and obstacles.</p><p class="h-metric"><strong>D455</strong> depth capture · stair detection prototype</p><a class="h-link" href="projects-accessibility.html#case-spatial">Read the case <i class="fas fa-arrow-right" aria-hidden="true"></i></a></article></div>
+            <p class="h-more"><a class="sec-more" href="projects.html">See all projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
         </section>
 
-        <section id="skills" class="section capability-section" data-reveal>
-            <svg class="section-flow-lines flow-lines-skills" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
-                <path pathLength="1" d="M-80 400 C180 110 350 505 610 235 S955 40 1280 270" />
-                <path pathLength="1" d="M-90 455 C195 185 395 545 690 300 S1030 115 1270 345" />
-                <path pathLength="1" d="M40 330 C265 95 455 385 735 155 S1030 30 1215 125" />
-            </svg>
-            <div class="sec-head"><h2 class="sec-title">Skills</h2></div>
+        <section id="experience" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">Where it comes from</p><h2>Experience</h2><p class="h-sub">Research labs for measuring carefully, internships for shipping with a team, campus roles for keeping real systems running.</p></div>
+            <div class="preview-grid"><a class="preview-card" href="experience-research.html"><span class="preview-meta">3 roles</span><h3>Research</h3><p>Where I learn to measure carefully: imaging, accessibility, and virtual-sensing research at UW–Madison.</p><ul class="preview-links"><li>Undergraduate Research Assistant</li><li>Student Research Assistant, AR/VR Accessibility Systems</li><li>Undergraduate Research Scholar</li></ul><span class="preview-foot">Open Research <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a><a class="preview-card" href="experience-internships.html"><span class="preview-meta">2 roles</span><h3>Internships</h3><p>Where I learn to ship with a team: ASL-to-speech and full-stack engineering.</p><ul class="preview-links"><li>Summer Intern &amp; Team Leader</li><li>Full Stack Software Engineer Intern</li></ul><span class="preview-foot">Open Internships <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a><a class="preview-card" href="experience-campus.html"><span class="preview-meta">2 roles</span><h3>Campus roles</h3><p>Where real systems break: security operations and IT support on campus.</p><ul class="preview-links"><li>Cybersecurity Operations Center Student Analyst</li><li>L&amp;S IT Service Desk Technician</li></ul><span class="preview-foot">Open Campus roles <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a></div>
+        </section>
 
-            <div class="capability-grid">
-                <article class="capability-card capability-language interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:-39deg"><i class="devicon-java-plain colored"></i></span><span style="--a:13deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:64deg"><i class="devicon-javascript-plain colored"></i></span><span style="--a:116deg"><i class="devicon-html5-plain colored"></i></span><span style="--a:167deg"><i class="devicon-css3-plain colored"></i></span><span style="--a:219deg"><i class="devicon-mysql-original colored"></i></span></div></div>
-                    <h3>Programming languages</h3>
-                    <div class="capability-stack"><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML/CSS</span><span>MySQL</span></div>
-                </article>
-                <article class="capability-card capability-ml interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-pytorch-original colored"></i></span><span style="--a:-30deg"><i class="devicon-tensorflow-original colored"></i></span><span style="--a:30deg"><i class="devicon-scikitlearn-plain colored"></i></span><span style="--a:90deg"><i class="devicon-keras-plain colored"></i></span><span style="--a:150deg"><i class="devicon-jupyter-plain colored"></i></span><span style="--a:210deg"><i class="devicon-python-plain colored"></i></span></div></div>
-                    <h3>Applied ML systems</h3>
-                    <div class="capability-stack"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Transformers</span><span>XGBoost</span><span>Generative AI</span></div>
-                </article>
-                <article class="capability-card capability-data interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-numpy-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-pandas-plain colored"></i></span><span style="--a:30deg"><i class="devicon-matplotlib-plain colored"></i></span><span style="--a:90deg"><i class="devicon-plotly-plain colored"></i></span><span style="--a:150deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:210deg"><i class="devicon-redis-plain colored"></i></span></div></div>
-                    <h3>Data &amp; scientific computing</h3>
-                    <div class="capability-stack"><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>Signal processing</span><span>Statistics</span></div>
-                </article>
-                <article class="capability-card capability-vision interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-opencv-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-unity-plain colored"></i></span><span style="--a:30deg"><i class="devicon-csharp-plain colored"></i></span><span style="--a:90deg"><i class="devicon-python-plain colored"></i></span><span style="--a:150deg"><i class="devicon-cplusplus-plain colored"></i></span><span style="--a:210deg"><i class="devicon-tensorflow-original colored"></i></span></div></div>
-                    <h3>Vision &amp; accessible interaction</h3>
-                    <div class="capability-stack"><span>MediaPipe</span><span>OpenCV</span><span>Unity</span><span>Intel RealSense</span><span>AR/VR</span><span>Spatial HCI</span><span>Accessibility</span></div>
-                </article>
-                <article class="capability-card capability-product interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-react-original colored"></i></span><span style="--a:-39deg"><i class="devicon-fastapi-plain colored"></i></span><span style="--a:13deg"><i class="devicon-firebase-plain colored"></i></span><span style="--a:64deg"><i class="devicon-redis-plain colored"></i></span><span style="--a:116deg"><i class="devicon-mysql-original colored"></i></span><span style="--a:167deg"><i class="devicon-git-plain colored"></i></span><span style="--a:219deg"><i class="devicon-github-original colored"></i></span></div></div>
-                    <h3>Product engineering</h3>
-                    <div class="capability-stack"><span>React</span><span>FastAPI</span><span>Firebase</span><span>REST APIs</span><span>Redis</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>VS Code</span></div>
-                </article>
-                <article class="capability-card capability-security interactive-card">
-                    <div class="skill-orbit" aria-hidden="true"><div class="skill-orbit-ring"><span style="--a:-90deg"><i class="devicon-linux-plain colored"></i></span><span style="--a:-30deg"><i class="devicon-bash-plain colored"></i></span><span style="--a:30deg"><i class="devicon-python-plain colored"></i></span><span style="--a:90deg"><i class="devicon-docker-plain colored"></i></span><span style="--a:150deg"><i class="devicon-git-plain colored"></i></span><span style="--a:210deg"><i class="devicon-mysql-original colored"></i></span></div></div>
-                    <h3>Security &amp; resilient systems</h3>
-                    <div class="capability-stack"><span>Cortex XSOAR</span><span>Threat intelligence</span><span>Network forensics</span><span>Incident response</span><span>Computer architecture</span><span>Disaster recovery</span></div>
-                </article>
+        <section id="about" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">Behind the work</p><h2>About me</h2></div>
+            <div class="h-about">
+                <div class="h-about-text">
+                    <p class="h-lead">I’m a Data Science and Computer Science student at UW–Madison, with a Mathematics minor, working across applied machine learning, accessibility research, and security operations.</p>
+                    <p>My work usually sits between a technical question and a real person who needs the answer to work. I enjoy building models, studying interaction, and turning messy system constraints into something clear, testable, and useful.</p>
+                </div>
+                <dl class="h-facts">
+                    <div><dt>Studying</dt><dd>DS + CS · Math minor</dd></div>
+                    <div><dt>At</dt><dd>UW–Madison</dd></div>
+                    <div><dt>GPA</dt><dd>3.9 / 4.0</dd></div>
+                    <div><dt>Graduating</dt><dd>May 2028</dd></div>
+                </dl>
             </div>
         </section>
 
-        <section id="education" class="section" data-reveal>
-            <div class="sec-head"><h2 class="sec-title">Education</h2><a class="sec-more" href="education.html">All education <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+        <section id="skills" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">What I reach for</p><h2>Skills</h2></div>
+            <div class="h-skills"><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-python-plain colored"></i><i class="devicon-java-plain colored"></i><i class="devicon-cplusplus-plain colored"></i><i class="devicon-javascript-plain colored"></i><i class="devicon-html5-plain colored"></i></div><h3>Programming languages</h3><ul class="h-chips"><li>Python</li><li>Java</li><li>C++</li><li>JavaScript</li><li>HTML/CSS</li><li>MySQL</li></ul></article><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-pytorch-original colored"></i><i class="devicon-tensorflow-original colored"></i><i class="devicon-scikitlearn-plain colored"></i><i class="devicon-keras-plain colored"></i><i class="devicon-jupyter-plain colored"></i></div><h3>Applied ML systems</h3><ul class="h-chips"><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Transformers</li><li>XGBoost</li><li>Generative AI</li></ul></article><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-numpy-plain colored"></i><i class="devicon-pandas-plain colored"></i><i class="devicon-matplotlib-plain colored"></i><i class="devicon-plotly-plain colored"></i><i class="devicon-mysql-original colored"></i></div><h3>Data &amp; scientific computing</h3><ul class="h-chips"><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Signal processing</li><li>Statistics</li></ul></article><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-opencv-plain colored"></i><i class="devicon-unity-plain colored"></i><i class="devicon-csharp-plain colored"></i><i class="devicon-python-plain colored"></i><i class="devicon-cplusplus-plain colored"></i></div><h3>Vision &amp; accessible interaction</h3><ul class="h-chips"><li>MediaPipe</li><li>OpenCV</li><li>Unity</li><li>Intel RealSense</li><li>AR/VR</li><li>Spatial HCI</li><li>Accessibility</li></ul></article><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-react-original colored"></i><i class="devicon-fastapi-plain colored"></i><i class="devicon-firebase-plain colored"></i><i class="devicon-redis-plain colored"></i><i class="devicon-mysql-original colored"></i></div><h3>Product engineering</h3><ul class="h-chips"><li>React</li><li>FastAPI</li><li>Firebase</li><li>REST APIs</li><li>Redis</li><li>MySQL</li><li>Git</li><li>GitHub</li><li>VS Code</li></ul></article><article class="h-skill"><div class="h-skill-icons" aria-hidden="true"><i class="devicon-linux-plain colored"></i><i class="devicon-bash-plain colored"></i><i class="devicon-python-plain colored"></i><i class="devicon-docker-plain colored"></i><i class="devicon-git-plain colored"></i></div><h3>Security &amp; resilient systems</h3><ul class="h-chips"><li>Cortex XSOAR</li><li>Threat intelligence</li><li>Network forensics</li><li>Incident response</li><li>Computer architecture</li><li>Disaster recovery</li></ul></article></div>
+        </section>
+
+        <section id="education" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">The foundation</p><h2>Education</h2></div>
             <div class="preview-grid preview-grid-2">
                 <a class="preview-card" href="education.html">
                     <span class="preview-meta">Expected May 2028</span>
@@ -176,92 +124,14 @@
             </div>
         </section>
 
-        <section id="experience" class="section" data-reveal>
-            <div class="sec-head"><h2 class="sec-title">Experience</h2><a class="sec-more" href="experience.html">All experience <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
-            <div class="preview-grid"><a class="preview-card" href="experience-research.html"><span class="preview-meta">3 roles</span><h3>Research</h3><p>Labs and research programs at UW–Madison.</p><ul class="preview-links"><li>Undergraduate Research Assistant</li><li>Student Research Assistant, AR/VR Accessibility Systems</li><li>Undergraduate Research Scholar</li></ul><span class="preview-foot">Open Research <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a><a class="preview-card" href="experience-internships.html"><span class="preview-meta">2 roles</span><h3>Internships</h3><p>Team-based engineering and research internships.</p><ul class="preview-links"><li>Summer Intern &amp; Team Leader</li><li>Full Stack Software Engineer Intern</li></ul><span class="preview-foot">Open Internships <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a><a class="preview-card" href="experience-campus.html"><span class="preview-meta">2 roles</span><h3>Campus roles</h3><p>Security operations and IT support on campus.</p><ul class="preview-links"><li>Cybersecurity Operations Center Student Analyst</li><li>L&amp;S IT Service Desk Technician</li></ul><span class="preview-foot">Open Campus roles <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a></div>
-        </section>
-
-        <section id="projects" class="section" data-reveal>
-            <div class="sec-head"><h2 class="sec-title">Projects</h2><a class="sec-more" href="projects.html">All projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
-            <div class="preview-grid"><a class="preview-card" href="projects-research.html#case-sensor"><span class="preview-meta">Research · ASME</span><h3>Sensor fault diagnosis</h3><p>A residual-based framework that identifies ten classes of sensor faults and reconstructs the damaged signal.</p><span class="preview-foot">98.74% fault classification accuracy</span></a><a class="preview-card" href="projects-accessibility.html#case-signbridge"><span class="preview-meta">Team lead · SAIL</span><h3>SignBridge</h3><p>A browser-based ASL-to-speech pipeline built with a team of four engineers.</p><span class="preview-foot">2,044 recognized sign classes</span></a><a class="preview-card" href="projects-web.html#proj-badgerplan"><span class="preview-meta">Web app · 2026</span><h3>BadgerPlan</h3><p>A degree-planning tool for UW–Madison students, checked against prerequisites, grades, and offering history.</p><span class="preview-foot">8,982 courses · 262 majors</span></a></div>
-        </section>
-
-        <section id="interests" class="section" data-reveal>
-            <div class="sec-head"><h2 class="sec-title">Interests</h2><a class="sec-more" href="interests.html">All interests <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+        <section id="interests" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">Outside the lab</p><h2>Interests</h2></div>
             <div class="preview-grid preview-grid-4"><a class="preview-card preview-card-compact" href="interests.html?open=reading"><i class="fas fa-book-open preview-icon" aria-hidden="true"></i><h3>Reading</h3><p>Technical books, research papers, and fiction</p></a><a class="preview-card preview-card-compact" href="interests.html?open=cinema"><i class="fas fa-film preview-icon" aria-hidden="true"></i><h3>Cinema</h3><p>Classics to horror films</p></a><a class="preview-card preview-card-compact" href="interests.html?open=music"><i class="fas fa-music preview-icon" aria-hidden="true"></i><h3>Music</h3><p>Diverse genres and new artists</p></a><a class="preview-card preview-card-compact" href="interests.html?open=museums"><i class="fas fa-landmark preview-icon" aria-hidden="true"></i><h3>Museums</h3><p>Art galleries and cultural exhibitions</p></a></div>
         </section>
 
-        <section id="contact" class="section contact-section" data-reveal>
-            <div class="contact-stage">
-                <div class="contact-intro">
-                    <h2 class="sec-title">Contact</h2>
-                    <p>Open to research, internships, and engineering collaborations. Reach me through any of these.</p>
-                    <div class="contact-availability"><span aria-hidden="true"></span>Open to conversations</div>
-                </div>
-
-                <div class="contact-phone-shell">
-                    <div class="contact-orbit contact-orbit-one" aria-hidden="true"></div>
-                    <div class="contact-orbit contact-orbit-two" aria-hidden="true"></div>
-                    <div class="contact-phone" tabindex="0" aria-label="Interactive contact phone">
-                        <span class="iphone-side-button iphone-action-button" aria-hidden="true"></span>
-                        <span class="iphone-side-button iphone-volume-up" aria-hidden="true"></span>
-                        <span class="iphone-side-button iphone-volume-down" aria-hidden="true"></span>
-                        <span class="iphone-side-button iphone-power-button" aria-hidden="true"></span>
-                        <span class="iphone-side-button iphone-camera-control" aria-hidden="true"></span>
-                        <button class="iphone-dynamic-island" type="button" aria-expanded="false" aria-label="Show availability">
-                            <span class="island-pulse" aria-hidden="true"></span>
-                            <span class="island-copy">Available to connect</span>
-                        </button>
-                        <div class="contact-screen">
-                    <div class="iphone-status-bar">
-                        <span class="iphone-time">9:41</span>
-                        <div class="iphone-icons">
-                            <i class="fas fa-signal"></i>
-                            <i class="fas fa-wifi"></i>
-                            <i class="fas fa-battery-three-quarters"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="phone-ambient" aria-hidden="true">
-                        <span class="phone-particle particle-one"></span>
-                        <span class="phone-particle particle-two"></span>
-                        <span class="phone-particle particle-three"></span>
-                    </div>
-
-                    <div class="phone-contact-avatar" aria-hidden="true"><span>SD</span></div>
-                    <div class="contact-copy">
-                        <span class="section-kicker">Siqi Dai</span>
-                        <h3>Let’s connect.</h3>
-                        <p>
-                            For research, engineering, internships, or collaboration, you can reach me here.
-                        </p>
-                    </div>
-                    
-                    <div class="contact-links">
-                        <a href="mailto:sdai66@wisc.edu" class="contact-link-item email">
-                            <span class="icon-wrap"><i class="fas fa-envelope"></i></span>
-                            <span class="link-text">sdai66@wisc.edu</span>
-                            <i class="fas fa-chevron-right chevron-icon"></i>
-                        </a>
-                        <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" class="contact-link-item github">
-                            <span class="icon-wrap"><i class="fab fa-github"></i></span>
-                            <span class="link-text">github.com/Sherry1247</span>
-                            <i class="fas fa-chevron-right chevron-icon"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer" class="contact-link-item linkedin">
-                            <span class="icon-wrap"><i class="fab fa-linkedin"></i></span>
-                            <span class="link-text">linkedin.com/in/siqi-dai-20b512296</span>
-                            <i class="fas fa-chevron-right chevron-icon"></i>
-                        </a>
-                    </div>
-
-                    <div class="phone-swipe-hint" aria-hidden="true"><span></span> Move to explore</div>
-                    
-                            <div class="iphone-home-indicator"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="contact" class="h-section" data-reveal>
+            <div class="h-head"><p class="h-kicker">Say hello</p><h2>Contact</h2><p class="h-sub">Open to summer 2027 internships in software engineering, ML engineering, and AI agents—and to research collaborations.</p></div>
+            <div class="h-contact-links"><a class="h-contact-link" href="mailto:sdai66@wisc.edu"><i class="fas fa-envelope" aria-hidden="true"></i><span><small>Email</small>sdai66@wisc.edu</span><i class="fas fa-arrow-up-right-from-square h-out" aria-hidden="true"></i></a><a class="h-contact-link" href="https://github.com/Sherry1247" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i><span><small>GitHub</small>github.com/Sherry1247</span><i class="fas fa-arrow-up-right-from-square h-out" aria-hidden="true"></i></a><a class="h-contact-link" href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i><span><small>LinkedIn</small>Connect on LinkedIn</span><i class="fas fa-arrow-up-right-from-square h-out" aria-hidden="true"></i></a><a class="h-contact-link" href="assets/docs/Siqi_Dai_resume_updated.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i><span><small>Resume</small>Download PDF</span><i class="fas fa-arrow-up-right-from-square h-out" aria-hidden="true"></i></a></div>
         </section>
     </main>
 

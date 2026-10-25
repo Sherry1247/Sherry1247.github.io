@@ -68,7 +68,7 @@
   } else {
     // home: follow the section in view
     const map = { about: "about", skills: "about", education: "education", experience: "experience",
-      projects: "projects", interests: "interests", contact: "contact" };
+      stories: "projects", projects: "projects", interests: "interests", contact: "contact" };
     const io = new IntersectionObserver(
       (entries) => entries.forEach((en) => {
         if (en.isIntersecting && map[en.target.id]) setCurrent(map[en.target.id]);
