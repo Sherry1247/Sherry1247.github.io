@@ -45,6 +45,14 @@
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
 
+  /* type scale — the only font sizes used on the site */
+  --fs-xs: 0.8125rem;   /* labels, dates, tags */
+  --fs-sm: 0.9375rem;   /* secondary text, nav */
+  --fs-body: 1rem;      /* body copy */
+  --fs-h3: 1.25rem;     /* card / item titles */
+  --fs-h2: 1.875rem;    /* section titles */
+  --fs-display: clamp(2.5rem, 5vw, 3.5rem); /* page title / hero name */
+
   interpolate-size: allow-keywords;
 }
 

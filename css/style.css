@@ -250,7 +250,7 @@ main.container {
 .timeline-date,
 .card-label {
   color: var(--accent);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -260,14 +260,14 @@ main.container {
 .section-heading h3,
 .contact-card h2,
 .contact-card h3 {
-  font-size: clamp(1.85rem, 2.4vw, 2.2rem);
+  font-size: var(--fs-h2);
   line-height: 1.15;
   font-weight: 600;
   max-width: 16ch;
 }
 
 .section-title {
-  font-size: clamp(2rem, 2.8vw, 2.4rem);
+  font-size: var(--fs-h2);
   line-height: 1.05;
   font-weight: 700;
   margin-bottom: 16px;
@@ -301,7 +301,7 @@ main.container {
 .feature-card h3,
 .project-row h3,
 .skill-card h3 {
-  font-size: 1.18rem;
+  font-size: var(--fs-h3);
   margin-bottom: 10px;
 }
 
@@ -364,7 +364,7 @@ main.container {
   border: 1px solid var(--line);
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
 }
 
@@ -409,7 +409,7 @@ main.container {
   align-items: center;
   min-height: 52px;
   color: var(--text-soft);
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -449,7 +449,7 @@ main.container {
   position: absolute;
   right: 6px;
   top: 36px;
-  font-size: 1.1rem;
+  font-size: var(--fs-body);
   color: var(--accent);
   opacity: 0;
   transform: translateX(-8px);
@@ -503,7 +503,7 @@ main.container {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: var(--fs-h3);
   transition: transform var(--transition), border-color var(--transition), color var(--transition), background var(--transition);
   z-index: 10;
 }
@@ -550,7 +550,7 @@ main.container {
 .skill-icon-group .fa-vr-cardboard,
 .skill-icon-group .fa-universal-access,
 .skill-icon-group .fa-microchip {
-  font-size: 1.2rem;
+  font-size: var(--fs-h3);
   width: 34px;
   height: 34px;
   display: inline-flex;
@@ -609,18 +609,18 @@ main.container {
 }
 
 .iphone-icons i {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 .contact-phone .contact-copy h3 {
   margin-top: 4px;
-  font-size: 1.95rem;
+  font-size: var(--fs-h2);
   color: #fff;
 }
 
 .contact-phone .contact-copy p {
   color: rgba(255, 255, 255, 0.65);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
   margin-top: 8px;
   line-height: 1.5;
 }
@@ -643,7 +643,7 @@ main.container {
   align-items: center;
   justify-content: center;
   margin-right: 14px;
-  font-size: 1.2rem;
+  font-size: var(--fs-h3);
   flex-shrink: 0;
   transition: transform var(--transition);
 }
@@ -666,7 +666,7 @@ main.container {
 
 .contact-link-item .link-text {
   font-weight: 500;
-  font-size: 0.94rem;
+  font-size: var(--fs-sm);
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -675,7 +675,7 @@ main.container {
 }
 
 .contact-link-item .chevron-icon {
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   color: rgba(255, 255, 255, 0.3);
   margin-left: 8px;
   transition: transform var(--transition), color var(--transition);
@@ -705,7 +705,7 @@ main.container {
 
 .footer-title {
   font-family: var(--font-body);
-  font-size: 1.9rem;
+  font-size: var(--fs-h2);
 }
 
 .footer-info {
@@ -715,7 +715,7 @@ main.container {
 }
 
 .footer-meta {
-  font-size: 0.88rem;
+  font-size: var(--fs-sm);
 }
 
 .footer-links {
@@ -922,7 +922,7 @@ main.container {
 }
 
 .section-title {
-  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-size: var(--fs-display);
   line-height: 0.94;
   font-weight: 600;
   max-width: 12ch;
@@ -951,7 +951,7 @@ main.container {
 }
 
 .interest-card i {
-  font-size: 42px;
+  font-size: var(--fs-h2);
   color: var(--accent);
   margin-bottom: 20px;
   display: block;
@@ -1052,7 +1052,7 @@ a {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 3.4rem;
+    font-size: var(--fs-display);
   }
   .interest-card {
     width: 240px;
@@ -1074,7 +1074,7 @@ a {
   background: linear-gradient(135deg, var(--accent) 0%, rgba(var(--accent-rgb), 0.8) 100%);
   color: var(--surface);
   border-radius: 20px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.2);
@@ -1140,14 +1140,14 @@ a {
 }
 
 .doc-link i {
-  font-size: 18px;
+  font-size: var(--fs-h3);
 }
 
 .binary-particle {
   position: fixed;
   pointer-events: none;
   z-index: 1500;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.16em;
@@ -1176,7 +1176,7 @@ a {
 
 .course-guide-tag {
   color: var(--accent);
-  font-size: 0.82rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1190,7 +1190,7 @@ a {
 }
 
 .course-guide-desc {
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
   margin-bottom: 24px;
   line-height: 1.6;
 }
@@ -1217,7 +1217,7 @@ a {
   border-radius: 50%;
   border: 1px solid var(--line);
   color: var(--accent);
-  font-size: 4rem;
+  font-size: var(--fs-display);
   box-shadow: 0 15px 35px rgba(var(--accent-rgb), 0.08);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -1261,7 +1261,7 @@ a {
 /* Expansion Header */
 
 .expansion-title {
-  font-size: 1.35rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   margin-bottom: 4px;
   display: flex;
@@ -1275,7 +1275,7 @@ a {
 }
 
 .expansion-subtitle {
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -1337,7 +1337,7 @@ a {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -1373,21 +1373,21 @@ a {
 }
 
 .book-details-box h5 {
-  font-size: 1.05rem;
+  font-size: var(--fs-body);
   font-weight: 700;
   margin-bottom: 2px;
   color: var(--accent);
 }
 
 .book-author {
-  font-size: 0.84rem;
+  font-size: var(--fs-sm);
   color: var(--muted);
   font-weight: 500;
   margin-bottom: 6px;
 }
 
 .book-desc {
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   color: var(--text-soft);
   line-height: 1.45;
 }
@@ -1395,7 +1395,7 @@ a {
 .book-details-box .default-msg {
   color: var(--muted);
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 
 /* 2. Cinema Tape Styles */
@@ -1470,20 +1470,20 @@ a {
 
 .frame-num {
   font-family: monospace;
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   color: var(--accent);
   opacity: 0.7;
 }
 
 .frame-content h5 {
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 700;
   color: #fff;
   margin-bottom: 2px;
 }
 
 .frame-content p {
-  font-size: 0.76rem;
+  font-size: var(--fs-xs);
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1529,7 +1529,7 @@ a {
 }
 
 .bubble-content h5 {
-  font-size: 0.86rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
@@ -1537,7 +1537,7 @@ a {
 }
 
 .bubble-content p {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -1573,14 +1573,14 @@ a {
 }
 
 .museum-exhibit-card h5 {
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 6px;
 }
 
 .museum-exhibit-card p {
-  font-size: 0.86rem;
+  font-size: var(--fs-sm);
   color: var(--text-soft);
   line-height: 1.45;
 }
@@ -1732,7 +1732,7 @@ a {
   justify-content: flex-end;
   padding-right: 14px;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
 }
 
 .timeline-panel {
@@ -1774,7 +1774,7 @@ a {
   display: inline-flex;
   margin-bottom: 8px;
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1804,7 +1804,7 @@ a {
 .experience-detail-grid h4,
 .project-detail-grid h4 {
   margin-bottom: 10px;
-  font-size: 0.86rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1834,7 +1834,7 @@ a {
   align-self: flex-start;
   margin-top: 14px;
   padding: 8px 16px;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   border: 1px solid var(--line-strong);
   cursor: pointer;
@@ -1854,7 +1854,7 @@ a {
 }
 
 .card-toggle-btn .toggle-icon {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1897,7 +1897,7 @@ a {
 .timeline-date,
 .timeline-meta,
 .project-period {
-  font-size: 0.84rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
 }
 
@@ -1950,7 +1950,7 @@ a {
 .gallery-item figcaption {
   padding: 10px 14px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   font-weight: 500;
   border-top: 1px solid var(--line);
   background: var(--surface);
@@ -2000,7 +2000,7 @@ a {
 
 .project-summary {
   margin-top: 2px;
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
 }
 
 .project-row > p + p {
@@ -2067,7 +2067,7 @@ a {
   .nav-links a {
     padding: 7px 9px;
     border-radius: 8px;
-    font-size: 0.86rem;
+    font-size: var(--fs-sm);
   }
   .nav-links a::after {
     display: none;
@@ -2144,7 +2144,7 @@ a {
   border-radius: 999px;
   border: 1.5px solid var(--accent);
   font-weight: 600;
-  font-size: 0.86rem;
+  font-size: var(--fs-sm);
   font-family: inherit;
   cursor: pointer;
   transition: transform var(--transition), background var(--transition), color var(--transition), box-shadow var(--transition);
@@ -2218,7 +2218,7 @@ body.pdf-modal-open {
 
 .pdf-modal-header h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2239,7 +2239,7 @@ body.pdf-modal-open {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   white-space: nowrap;
 }
 

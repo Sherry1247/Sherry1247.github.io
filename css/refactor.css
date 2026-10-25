@@ -8,7 +8,7 @@
 
 html {
   background: var(--bg);
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 
 .sr-only {
@@ -75,7 +75,7 @@ body {
 }
 
 .nav-logo {
-  font-size: 2.1rem;
+  font-size: var(--fs-h2);
   letter-spacing: -0.06em;
 }
 
@@ -85,7 +85,7 @@ body {
 
 .nav-links a {
   color: var(--text-soft);
-  font-size: 0.82rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -123,7 +123,7 @@ body {
 .timeline-date,
 .card-label {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.2em;
 }
 
@@ -131,7 +131,7 @@ body {
   max-width: none;
   margin-top: 18px;
   color: var(--text);
-  font-size: clamp(4rem, 7.2vw, 6.45rem);
+  font-size: var(--fs-display);
   line-height: 0.84;
   letter-spacing: -0.065em;
 }
@@ -140,7 +140,7 @@ body {
   max-width: 30rem;
   margin-top: 30px;
   color: var(--text);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: var(--fs-h3);
   line-height: 1.45;
 }
 
@@ -148,7 +148,7 @@ body {
   max-width: 34rem;
   margin-top: 20px;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
 }
 
 .hero-actions {
@@ -186,7 +186,7 @@ body {
   border-color: var(--line);
   border-radius: 999px;
   color: var(--text-soft);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
 }
 
 .profile-float {
@@ -210,12 +210,12 @@ body {
 
 .profile-card-body h2 {
   color: var(--text);
-  font-size: 1.7rem;
+  font-size: var(--fs-h2);
 }
 
 .profile-card-body p {
   color: var(--text-soft);
-  font-size: 0.88rem;
+  font-size: var(--fs-sm);
 }
 
 .profile-links {
@@ -250,7 +250,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(2.65rem, 4.35vw, 4.2rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.055em;
@@ -296,7 +296,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(3.4rem, 5.35vw, 5.7rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.055em;
@@ -311,12 +311,12 @@ body {
 .about-copy p {
   max-width: 54ch;
   color: var(--text-soft);
-  font-size: 1rem;
+  font-size: var(--fs-body);
 }
 
 .about-copy .about-lede {
   color: var(--text);
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-size: var(--fs-h2);
   line-height: 1.25;
   letter-spacing: -0.025em;
 }
@@ -339,7 +339,7 @@ body {
 
 .about-fact span {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -347,7 +347,7 @@ body {
 
 .about-fact strong {
   color: var(--text);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
 }
 
 /* Selected project history: a compact shared time matrix. */
@@ -371,7 +371,7 @@ body {
 .timeline-section .section-heading .section-title {
   max-width: none;
   margin-top: 0;
-  font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+  font-size: var(--fs-h2);
 }
 
 .timeline-section .section-heading::after {
@@ -391,7 +391,7 @@ body {
 .timeline-toolbar-label {
   margin-right: 6px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -399,7 +399,7 @@ body {
 
 .timeline-toolbar-note {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
 }
 
 .portfolio-timeline {
@@ -417,7 +417,7 @@ body {
 .portfolio-timeline-axis {
   padding: 8px 0 7px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -458,7 +458,7 @@ body {
 
 .portfolio-timeline-label strong {
   color: var(--text);
-  font-size: 0.82rem;
+  font-size: var(--fs-sm);
   line-height: 1.25;
 }
 
@@ -466,13 +466,13 @@ body {
 .portfolio-timeline-label small,
 .portfolio-timeline-note {
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: var(--fs-xs);
   line-height: 1.4;
 }
 
 .portfolio-timeline-label small {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
 }
 
@@ -548,13 +548,13 @@ body {
 .content-card h3,
 .skill-card h3 {
   color: var(--text);
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
 }
 
 .content-card p,
 .skill-card p {
   color: var(--text-soft);
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
 }
 
 .timeline {
@@ -590,7 +590,7 @@ body {
 .experience-heading h3,
 .project-header h3 {
   color: var(--text);
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: var(--fs-h3);
   letter-spacing: -0.02em;
 }
 
@@ -606,7 +606,7 @@ body {
   border-radius: 999px;
   color: var(--muted);
   background: var(--surface-soft);
-  font-size: 0.74rem;
+  font-size: var(--fs-xs);
 }
 
 .card-toggle-btn {
@@ -635,7 +635,7 @@ body {
 
 .course-guide-content h4 {
   color: var(--text);
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: var(--fs-h2);
   letter-spacing: -0.04em;
 }
 
@@ -681,7 +681,7 @@ body {
   border-radius: 999px;
   color: var(--text);
   background: var(--bg);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -765,7 +765,7 @@ body {
   top: 25px;
   left: 0;
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.13em;
 }
@@ -778,7 +778,7 @@ body {
   min-height: 0;
   margin-bottom: 12px;
   color: var(--accent);
-  font-size: 1.35rem;
+  font-size: var(--fs-h3);
 }
 
 .skill-icon-group i {
@@ -870,7 +870,7 @@ body {
 }
 
 .interest-icon-cluster > i {
-  font-size: 0.86rem;
+  font-size: var(--fs-sm);
   margin: 0;
   opacity: 0.62;
 }
@@ -885,13 +885,13 @@ body {
   margin-top: 24px;
   margin-bottom: 9px;
   color: var(--text);
-  font-size: 1.18rem;
+  font-size: var(--fs-h3);
 }
 
 .interest-card p {
   margin: 0;
   color: var(--text-soft);
-  font-size: 0.84rem;
+  font-size: var(--fs-sm);
 }
 
 .interest-explore {
@@ -901,7 +901,7 @@ body {
   padding-top: 19px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -911,7 +911,7 @@ body {
   color: var(--accent);
   display: inline-block;
   margin: 0;
-  font-size: .78rem;
+  font-size: var(--fs-xs);
   transition: transform var(--transition);
 }
 
@@ -939,7 +939,7 @@ body {
   border-radius: 999px;
   color: var(--text-soft);
   background: var(--surface-soft);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 .interest-expansion-panel.expanded {
@@ -985,7 +985,7 @@ body {
   margin-top: 22px;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.86;
   letter-spacing: -0.065em;
@@ -995,7 +995,7 @@ body {
   max-width: 45ch;
   margin-top: 28px;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
 }
 
@@ -1005,7 +1005,7 @@ body {
   align-items: center;
   margin-top: 28px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1205,7 +1205,7 @@ body {
 .island-copy {
   max-width: 0;
   overflow: hidden;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   opacity: 0;
   white-space: nowrap;
@@ -1244,7 +1244,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: rgba(226, 234, 247, 0.82);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
 }
 
@@ -1307,7 +1307,7 @@ body {
     var(--accent);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26), 0 0 28px rgba(var(--accent-rgb), 0.16);
   font-family: var(--font-body);
-  font-size: 1.35rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
 }
 
@@ -1322,7 +1322,7 @@ body {
 .contact-copy h3 {
   margin-top: 10px;
   color: var(--text);
-  font-size: clamp(2.2rem, 6vw, 3.1rem);
+  font-size: var(--fs-h2);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
@@ -1331,7 +1331,7 @@ body {
   max-width: 30ch;
   margin: 14px auto 0;
   color: var(--text-soft);
-  font-size: 0.79rem;
+  font-size: var(--fs-xs);
   line-height: 1.55;
 }
 
@@ -1401,7 +1401,7 @@ body {
 .link-text {
   overflow: hidden;
   color: inherit;
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1409,7 +1409,7 @@ body {
 
 .chevron-icon {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
 }
 
 .phone-swipe-hint {
@@ -1422,7 +1422,7 @@ body {
   align-items: center;
   gap: 8px;
   color: rgba(226, 234, 247, 0.38);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1512,7 +1512,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(3.6rem, 6.1vw, 5.8rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.88;
   letter-spacing: -0.06em;
@@ -1529,7 +1529,7 @@ body {
 
 .courses-count {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1539,7 +1539,7 @@ body {
   max-width: 50ch;
   margin: 30px 0 0;
   color: var(--text-soft);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.7;
 }
 
@@ -1567,7 +1567,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.05em;
@@ -1577,7 +1577,7 @@ body {
   max-width: 42ch;
   margin: 0 0 3px;
   color: var(--text-soft);
-  font-size: 0.88rem;
+  font-size: var(--fs-sm);
   line-height: 1.7;
 }
 
@@ -1595,7 +1595,7 @@ body {
   color: var(--muted);
   background: transparent;
   font: inherit;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   cursor: pointer;
   transition: color var(--transition), border-color var(--transition), background var(--transition);
@@ -1658,7 +1658,7 @@ body {
 .course-node text {
   fill: var(--text);
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-weight: 800;
   letter-spacing: 0.03em;
   pointer-events: none;
@@ -1682,7 +1682,7 @@ body {
   padding: 8px 11px;
   color: var(--muted);
   background: color-mix(in srgb, var(--bg) 90%, transparent);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   backdrop-filter: blur(10px);
 }
 
@@ -1717,7 +1717,7 @@ body {
   background: var(--surface);
   color: var(--text);
   font: inherit;
-  font-size: 0.88rem;
+  font-size: var(--fs-sm);
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
@@ -1755,7 +1755,7 @@ body {
   border-bottom: 1px solid var(--line-strong);
   color: var(--text);
   background: transparent;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1797,7 +1797,7 @@ body {
   border-radius: 999px;
   color: var(--text-soft);
   background: var(--surface-soft);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   white-space: nowrap;
 }
 
@@ -1807,7 +1807,7 @@ body {
   border-radius: 999px;
   color: var(--accent);
   background: var(--accent-soft);
-  font-size: 0.76rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
 }
 
@@ -1864,7 +1864,7 @@ body {
   }
 
   .contact-intro h2 {
-    font-size: clamp(3.5rem, 8vw, 5.4rem);
+    font-size: var(--fs-display);
   }
 
   .course-guide-banner {
@@ -1932,7 +1932,7 @@ body {
 
   .about-intro h2 {
     max-width: 11.5ch;
-    font-size: clamp(2.75rem, 11vw, 4rem);
+    font-size: var(--fs-display);
   }
 
   .about-facts {
@@ -1969,7 +1969,7 @@ body {
   }
 
   .hero h1 {
-    font-size: clamp(3.9rem, 17vw, 5.2rem);
+    font-size: var(--fs-display);
   }
 
   .profile-float {
@@ -1990,7 +1990,7 @@ body {
   .section-heading h3,
   .section-title {
     grid-column: 1;
-    font-size: clamp(2.45rem, 11vw, 3.5rem);
+    font-size: var(--fs-display);
   }
 
   .section-heading::after {
@@ -2022,7 +2022,7 @@ body {
 
   .contact-intro h2 {
     max-width: 9ch;
-    font-size: clamp(3.8rem, 17vw, 5.8rem);
+    font-size: var(--fs-display);
   }
 
   .contact-phone-shell {
@@ -2050,7 +2050,7 @@ body {
   }
 
   .courses-header h1 {
-    font-size: clamp(3.7rem, 17vw, 5.7rem);
+    font-size: var(--fs-display);
   }
 
   .courses-header-rail {
@@ -2141,7 +2141,7 @@ body {
   top: -34px;
   right: 0;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.18em;
   opacity: 0.66;
@@ -2170,13 +2170,13 @@ body {
 .hero-proof-grid strong {
   color: var(--accent);
   font-family: var(--font-body);
-  font-size: 1.8rem;
+  font-size: var(--fs-h2);
   line-height: 1;
 }
 
 .hero-proof-grid span {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.35;
@@ -2212,7 +2212,7 @@ body {
   max-width: none;
   margin: 0;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   line-height: 1.6;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2224,7 +2224,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(3.05rem, 4.75vw, 4.45rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.055em;
@@ -2234,7 +2234,7 @@ body {
   grid-column: 2;
   margin: 0;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
   line-height: 1.75;
 }
 
@@ -2272,16 +2272,16 @@ body {
   grid-row: 1 / 3;
   color: var(--accent);
   font-family: var(--font-body);
-  font-size: 1.7rem;
+  font-size: var(--fs-h2);
 }
 
 .work-index strong {
-  font-size: 0.82rem;
+  font-size: var(--fs-sm);
 }
 
 .work-index small {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -2300,7 +2300,7 @@ body {
 .case-bridge span {
   color: var(--accent);
   font-family: var(--font-body);
-  font-size: 1.35rem;
+  font-size: var(--fs-h3);
 }
 
 .case-bridge i {
@@ -2311,7 +2311,7 @@ body {
 
 .case-bridge strong {
   color: var(--text-soft);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: .12em;
   text-align: center;
@@ -2366,7 +2366,7 @@ body {
 .case-number {
   margin-bottom: 18px;
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -2377,7 +2377,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(2.55rem, 3.55vw, 3.8rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -0.055em;
@@ -2387,7 +2387,7 @@ body {
   max-width: 55ch;
   margin-top: 21px;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: var(--fs-body);
   line-height: 1.72;
 }
 
@@ -2414,13 +2414,13 @@ body {
 .case-metrics strong {
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(1.5rem, 2.3vw, 2.15rem);
+  font-size: var(--fs-h2);
   line-height: 1;
 }
 
 .case-metrics span {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   line-height: 1.4;
 }
 
@@ -2438,7 +2438,7 @@ body {
 
 .case-text-link {
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   text-decoration: none;
 }
@@ -2466,7 +2466,7 @@ body {
   padding: 0 18px;
   border-bottom: 1px solid rgba(245,238,230,.1);
   color: rgba(245,238,230,.7);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   letter-spacing: .06em;
 }
 
@@ -2504,7 +2504,7 @@ body {
   justify-content: space-between;
   padding: 24px 24px 2px;
   color: rgba(245,238,230,.55);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .12em;
 }
@@ -2572,20 +2572,20 @@ body {
 .diagnostic-grid span,
 .diagnostic-grid small {
   color: rgba(245,238,230,.44);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   letter-spacing: .08em;
   text-transform: uppercase;
 }
 
 .diagnostic-grid strong {
   color: rgba(245,238,230,.9);
-  font-size: .78rem;
+  font-size: var(--fs-xs);
 }
 
 .diagnostic-score strong {
   color: var(--accent);
   font-family: var(--font-body);
-  font-size: 2.5rem;
+  font-size: var(--fs-h2);
   line-height: .85;
 }
 
@@ -2624,12 +2624,12 @@ body {
   left: 18px;
   gap: 3px;
   color: rgba(245,238,230,.72);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 .vision-label span {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .14em;
 }
@@ -2702,7 +2702,7 @@ body {
   color: #8fe0b4;
   background: rgba(8,9,11,.72);
   backdrop-filter: blur(12px);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
 }
 
@@ -2725,14 +2725,14 @@ body {
 .translation-output span,
 .translation-output small {
   color: rgba(245,238,230,.42);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .1em;
 }
 
 .translation-output strong {
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
 }
 
 .translation-output small {
@@ -2757,7 +2757,7 @@ body {
   border: 1px solid rgba(245,238,230,.1);
   border-radius: 12px;
   color: rgba(245,238,230,.74);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
 }
 
@@ -2787,7 +2787,7 @@ body {
 
 .case-principles span {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2795,7 +2795,7 @@ body {
 
 .case-principles strong {
   color: var(--text-soft);
-  font-size: .75rem;
+  font-size: var(--fs-xs);
 }
 
 .spatial-console {
@@ -2841,12 +2841,12 @@ body {
   color: rgba(245,238,230,.86);
   background: rgba(8,10,11,.74);
   backdrop-filter: blur(12px);
-  font-size: .7rem;
+  font-size: var(--fs-xs);
 }
 
 .spatial-main figcaption span {
   color: #72c69a;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   letter-spacing: .14em;
 }
 
@@ -2875,7 +2875,7 @@ body {
 .spatial-inset figcaption {
   padding: 10px 12px;
   color: #8fe0b4;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -2888,7 +2888,7 @@ body {
   top: 40%;
   left: 52%;
   color: #8fe0b4;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .12em;
 }
@@ -2918,7 +2918,7 @@ body {
 .timeline-order-note {
   margin: -18px 0 24px 206px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2972,7 +2972,7 @@ body {
 }
 
 .experience-index .timeline-panel h3 {
-  font-size: 1.42rem;
+  font-size: var(--fs-h3);
 }
 
 .experience-index .timeline-panel:hover {
@@ -3020,7 +3020,7 @@ body {
 }
 
 .project-archive .project-header h3 {
-  font-size: 1.22rem;
+  font-size: var(--fs-h3);
 }
 
 .archive-thumb {
@@ -3071,7 +3071,7 @@ body {
 .archive-thumb-generated i {
   position: relative;
   z-index: 1;
-  font-size: 2rem;
+  font-size: var(--fs-h2);
   filter: drop-shadow(0 0 14px rgba(169,184,216,.35));
 }
 
@@ -3079,7 +3079,7 @@ body {
   position: relative;
   z-index: 1;
   color: var(--text-soft);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -3117,7 +3117,7 @@ body {
   right: 17px;
   color: var(--muted);
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: var(--fs-body);
 }
 
 .learning-icon {
@@ -3135,14 +3135,14 @@ body {
 .course-learning-grid h4 {
   margin: 1px 28px 0 0;
   color: var(--text);
-  font-size: .96rem;
+  font-size: var(--fs-body);
 }
 
 .course-learning-grid p {
   grid-column: 2;
   margin: 0;
   color: var(--text-soft);
-  font-size: .72rem;
+  font-size: var(--fs-xs);
   line-height: 1.6;
 }
 
@@ -3151,7 +3151,7 @@ body {
   padding-top: 11px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: .05em;
 }
@@ -3301,7 +3301,7 @@ body {
 .capability-label {
   margin: 0;
   color: var(--capability-color);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -3311,14 +3311,14 @@ body {
   margin: 4px 0 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 1.9rem;
+  font-size: var(--fs-h2);
   line-height: 1;
 }
 
 .capability-card > p:not(.capability-label) {
   margin: 8px 0 0;
   color: var(--text-soft);
-  font-size: .76rem;
+  font-size: var(--fs-xs);
   line-height: 1.58;
 }
 
@@ -3334,14 +3334,14 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 .capability-card > a {
   align-self: end;
   margin-top: 16px;
   color: var(--text);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .06em;
   text-decoration: none;
@@ -3370,7 +3370,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(2.6rem, 4.3vw, 4.2rem);
+  font-size: var(--fs-display);
   font-weight: 600;
   line-height: .94;
   letter-spacing: -.045em;
@@ -3379,7 +3379,7 @@ body {
 .learning-outcomes-heading p {
   margin: 0;
   color: var(--text-soft);
-  font-size: .82rem;
+  font-size: var(--fs-sm);
   line-height: 1.65;
 }
 
@@ -3399,7 +3399,7 @@ body {
 
 .learning-outcomes-grid article > span {
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -3410,14 +3410,14 @@ body {
   margin: 14px 0 10px;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 1.65rem;
+  font-size: var(--fs-h2);
   line-height: 1.05;
 }
 
 .learning-outcomes-grid p {
   max-width: 58ch;
   color: var(--text-soft);
-  font-size: .76rem;
+  font-size: var(--fs-xs);
   line-height: 1.62;
 }
 
@@ -3433,7 +3433,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 [data-theme="light"] .flagship-case {
@@ -3527,7 +3527,7 @@ body {
   }
 
   .flagship-heading h2 {
-    font-size: clamp(3.25rem, 14vw, 4.4rem);
+    font-size: var(--fs-display);
   }
 
   .work-index {
@@ -3547,7 +3547,7 @@ body {
   }
 
   .case-copy h3 {
-    font-size: clamp(2.7rem, 12vw, 3.7rem);
+    font-size: var(--fs-display);
   }
 
   .case-metrics {
@@ -3612,14 +3612,14 @@ body {
   }
 
   .translation-output strong {
-    font-size: .94rem;
+    font-size: var(--fs-sm);
   }
 
   .recognition-chip {
     bottom: 9px;
     left: 9px;
     padding: 7px 9px;
-    font-size: 0.7rem;
+    font-size: var(--fs-xs);
   }
 
   .spatial-console {
@@ -3907,7 +3907,7 @@ h1, h2, h3, .nav-logo { letter-spacing: -0.025em; }
 }
 
 .skill-orbit-ring span > * {
-  font-size: 22px;
+  font-size: var(--fs-h3);
 }
 
 .skill-orbit-ring img { width: 22px; height: 22px; }
@@ -3920,7 +3920,7 @@ h1, h2, h3, .nav-logo { letter-spacing: -0.025em; }
 @media (max-width: 760px) {
   .skill-orbit { --r: 50px; width: 130px; height: 130px; }
   .skill-orbit-ring span { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
-  .skill-orbit-ring span > * { font-size: 18px; }
+  .skill-orbit-ring span > * { font-size: var(--fs-h3); }
   .skill-orbit-ring img { width: 18px; height: 18px; }
   .experience-card .card-summary-header { grid-template-columns: 1fr; }
   .exp-cover { grid-column: 1 !important; grid-row: auto; width: 100%; height: 170px; order: -1; margin-bottom: 16px; }
@@ -3952,7 +3952,7 @@ h1, h2, h3, .nav-logo, .profile-card-body h2, .contact-intro h2 {
   letter-spacing: -0.015em;
 }
 h1 { font-weight: 500; letter-spacing: -0.025em; }
-h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+h2 { font-size: var(--fs-h2); line-height: 1.1; }
 .experience-heading h3, .project-header h3 { font-weight: 500; letter-spacing: -0.01em; }
 
 /* ---------- Fewer cards: flat, divider-based layout ---------- */
@@ -4064,7 +4064,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
   border-radius: 8px;
   background: var(--surface-soft);
   color: var(--text);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
@@ -4078,7 +4078,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
 
 /* chips: slightly larger text for legibility, staggered light-up on card hover */
 .capability-stack span {
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   transition: color 200ms ease, border-color 200ms ease, background 200ms ease, translate 200ms ease;
 }
 .capability-stack span:hover {

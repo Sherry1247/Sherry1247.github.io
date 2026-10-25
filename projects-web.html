@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web apps & tools | Projects | Siqi Dai</title>
+    <meta name="author" content="Siqi Dai">
+    <meta name="description"
+        content="Web apps & tools: Tools and stories on the web: planning, storytelling, and AI-assisted apps.">
+    <meta property="og:title" content="Web apps & tools | Projects | Siqi Dai">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="css/tokens.css?v=202610252038">
+    <link rel="stylesheet" href="css/style.css?v=202610252038">
+    <link rel="stylesheet" href="css/refactor.css?v=202610252038">
+    <link rel="stylesheet" href="css/system.css?v=202610252038">
+    <link rel="stylesheet" href="css/home.css?v=202610252038">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="progress-bar" aria-hidden="true"></div>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">SD</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <div class="nav-menu" id="primary-navigation">
+                <div class="nav-item" data-page="about"><a class="nav-link" href="index.html#about">About</a></div>
+                <div class="nav-item has-dropdown" data-page="education"><a class="nav-link" href="education.html" aria-haspopup="true">Education <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="education.html"><strong>UW–Madison</strong><small>Degree and coursework themes</small></a><a href="courses.html"><strong>Course Guide</strong><small>Connected map of 17 courses</small></a></div></div></div><div class="nav-item has-dropdown" data-page="experience"><a class="nav-link" href="experience.html" aria-haspopup="true">Experience <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="experience-research.html"><strong>Research</strong><small>3 roles</small></a><a href="experience-internships.html"><strong>Internships</strong><small>2 roles</small></a><a href="experience-campus.html"><strong>Campus roles</strong><small>2 roles</small></a><a href="experience-awards.html"><strong>Awards & talks</strong><small>3 roles</small></a></div></div></div><div class="nav-item has-dropdown" data-page="projects"><a class="nav-link" href="projects.html" aria-haspopup="true">Projects <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="projects-research.html"><strong>Research & ML systems</strong><small>5 projects</small></a><a href="projects-accessibility.html"><strong>Accessibility & spatial</strong><small>5 projects</small></a><a href="projects-web.html"><strong>Web apps & tools</strong><small>3 projects</small></a></div></div></div><div class="nav-item has-dropdown" data-page="interests"><a class="nav-link" href="interests.html" aria-haspopup="true">Interests <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="interests.html?open=reading"><strong>Reading</strong></a><a href="interests.html?open=cinema"><strong>Cinema</strong></a><a href="interests.html?open=music"><strong>Music</strong></a><a href="interests.html?open=museums"><strong>Museums</strong></a></div></div></div>
+                <div class="nav-item" data-page="contact"><a class="nav-link" href="index.html#contact">Contact</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <header class="page-header" data-reveal><p class="page-crumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / Web apps & tools</p><h1>Web apps & tools</h1><p class="page-lede">Tools and stories on the web: planning, storytelling, and AI-assisted apps.</p></header>
+
+        <nav class="subnav" aria-label="Sections"><a class="chip" href="projects.html">Overview</a><a class="chip" href="projects-research.html">Research & ML systems</a><a class="chip" href="projects-accessibility.html">Accessibility & spatial</a><a class="chip is-active" href="projects-web.html" aria-current="page">Web apps & tools</a></nav>
+
+        <section class="section project-archive" data-reveal>
+            <div class="sec-head"><h2 class="sec-title">Projects</h2></div>
+            <div class="project-list">
+                <article id="proj-badgerplan" class="project-row interactive-card collapsible-card" data-card-id="proj-badgerplan">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="800" height="500" src="assets/images/badgerplan.webp" alt="BadgerPlan home page with degree-planning search and key dates" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">2026 · Web app</span>
+                                <h3>BadgerPlan <span class="project-title-detail">(UW–Madison Academic Planning)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/BadgerPlan" target="_blank" rel="noreferrer" class="project-github-link" title="BadgerPlan source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://badgerplan.onrender.com" target="_blank" rel="noreferrer" class="project-github-link" title="Open the live site">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-route"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            A degree-planning web app for UW–Madison students: build a semester-by-semester plan, see which courses count twice for a double major, and check every choice against prerequisites, grades, and offering history.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Degree planning</span><span>Prerequisite checks</span><span>Course data</span><span>Web app</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-badgerplan-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-badgerplan-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Covers the 2026–27 UW–Madison catalog: 8,982 courses and 262 majors and named options, with grade history for 8,536 courses and instructor ratings for 2,195 instructors.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Fills each term with required courses, prerequisites, and Gen Ed, schedules shared courses first, and keeps terms under a credit limit.</li><li>Drag courses between terms; every move is re-checked for prerequisites, usual offering season, and credit load.</li><li>DARS-style requirements check and double-major comparison; plans can be saved, exported, or printed for an advisor.</li><li>Campus map showing where scheduled classes meet, by building and time of day.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="document-links">
+                                <a href="https://github.com/Sherry1247/BadgerPlan" target="_blank" rel="noreferrer" class="doc-link">
+                                    <i class="fab fa-github"></i> Source code
+                                </a>
+                                <a href="https://badgerplan.onrender.com" target="_blank" rel="noreferrer" class="doc-link">
+                                    <i class="fas fa-arrow-up-right-from-square"></i> Open BadgerPlan
+                                </a>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="800" height="500" src="assets/images/badgerplan.webp" alt="BadgerPlan home page with degree-planning search and key dates" loading="lazy">
+                                    <figcaption>BadgerPlan home page</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="proj-titanic" class="project-row interactive-card collapsible-card" data-card-id="proj-titanic">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="800" height="500" src="assets/images/titanic.webp" alt="The Last Crossing: world map zooming toward the Titanic wreck site" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">2026 · Interactive story</span>
+                                <h3>Titanic Time Travel <span class="project-title-detail">(The Last Crossing)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/Sherry1247/Titanic-Time-Travel" target="_blank" rel="noreferrer" class="project-github-link" title="Titanic Time Travel source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://titanic-time-travel.vercel.app" target="_blank" rel="noreferrer" class="project-github-link" title="Open the live site">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-ship"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            A scroll-driven, bilingual (中文 / EN) web story that zooms from a world map to the Titanic wreck 3,840 m below the surface, then follows a passenger’s story.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Interactive storytelling</span><span>Scroll animation</span><span>Bilingual UI</span><span>Web app</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-titanic-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-titanic-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                The experience moves through four stages: zooming in on a map, descending with a diver, exploring the wreck, and following one passenger’s story.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Map zoom with marked locations that leads into the descent.</li><li>Live depth counter that follows the scroll down to the wreck at 3,840 m.</li><li>Passenger-focused narrative layered over the wreck exploration.</li><li>Language toggle between Chinese and English, plus a reset control.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="document-links">
+                                <a href="https://github.com/Sherry1247/Titanic-Time-Travel" target="_blank" rel="noreferrer" class="doc-link">
+                                    <i class="fab fa-github"></i> Source code
+                                </a>
+                                <a href="https://titanic-time-travel.vercel.app" target="_blank" rel="noreferrer" class="doc-link">
+                                    <i class="fas fa-arrow-up-right-from-square"></i> Open Titanic Time Travel
+                                </a>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="800" height="500" src="assets/images/titanic.webp" alt="The Last Crossing: world map zooming toward the Titanic wreck site" loading="lazy">
+                                    <figcaption>The Last Crossing: opening map view</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="proj-medimenu" class="project-row interactive-card collapsible-card" data-card-id="proj-medimenu">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1158" height="1060" src="assets/images/Medimenu.webp" alt="MediMenu meal planning interface" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">CheeseHacks 2026 · Lead Developer</span>
+                                <h3>MediMenu <span class="project-title-detail">(AI Meal Planner)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/samkwak188/MediMenu" target="_blank" rel="noreferrer" class="project-github-link" title="View Source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-utensils"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed and built an AI-assisted meal planner and personalization engine during the CheeseHacks 2026 hackathon, leading a 4-person development team.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>GPT-4o</span>
+                            <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-medimenu-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-medimenu-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Integrated large language models (LLMs) with dietary databases to deliver customized nutritional recommendations based on user health parameters. Built backend using FastAPI and structured responsive frontend in React, creating an interactive portal that auto-generates grocery lists and meal plans.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Integrated GPT-4o API for personalized, context-aware recipe recommendations.</li>
+                                        <li>Developed a FastAPI backend with asynchronous query handling for rapid response times.</li>
+                                        <li>Constructed a React-based frontend dashboard with visual recipe cards and nutritional breakdowns.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1158" height="1060" src="assets/images/Medimenu.webp" alt="MediMenu AI Meal Planner interface" loading="lazy">
+                                    <figcaption>MediMenu AI Meal Personalization &amp; Recipe Portal</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">Siqi Dai</p>
+                <p class="footer-meta">Siqi Dai · Last updated: October 25, 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
+        <div class="pdf-modal-backdrop" data-pdf-modal-close></div>
+        <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+            <div class="pdf-modal-header">
+                <h4 id="pdf-modal-title">Presentation</h4>
+                <div class="pdf-modal-actions">
+                    <a id="pdf-modal-open" href="#" target="_blank" rel="noreferrer" class="pdf-modal-link">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open in new tab
+                    </a>
+                    <button type="button" class="pdf-modal-close" data-pdf-modal-close aria-label="Close presentation">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-modal-frame" title="Presentation viewer" src=""></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js?v=202610252038"></script>
+    <script src="js/nav.js?v=202610252038"></script>
+</body>
+
+</html>

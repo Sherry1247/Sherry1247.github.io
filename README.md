@@ -1,6 +1,6 @@
 # Siqi Dai Personal Website
 
-Personal portfolio site for Siqi Dai, built as a static GitHub Pages website: https://sherry1247.github.io/#home
+Personal portfolio site for Siqi Dai, built as a static GitHub Pages website: [Visit the latest website](https://sherry1247.github.io/)
 
 ## Structure
 

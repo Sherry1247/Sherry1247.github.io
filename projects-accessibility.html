@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility & spatial | Projects | Siqi Dai</title>
+    <meta name="author" content="Siqi Dai">
+    <meta name="description"
+        content="Accessibility & spatial: Translate and guide: ASL-to-speech, AR/VR navigation, and spatial intelligence.">
+    <meta property="og:title" content="Accessibility & spatial | Projects | Siqi Dai">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sherry1247.github.io/assets/images/photo.jpg">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="css/tokens.css?v=202610252038">
+    <link rel="stylesheet" href="css/style.css?v=202610252038">
+    <link rel="stylesheet" href="css/refactor.css?v=202610252038">
+    <link rel="stylesheet" href="css/system.css?v=202610252038">
+    <link rel="stylesheet" href="css/home.css?v=202610252038">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="progress-bar" aria-hidden="true"></div>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">SD</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <div class="nav-menu" id="primary-navigation">
+                <div class="nav-item" data-page="about"><a class="nav-link" href="index.html#about">About</a></div>
+                <div class="nav-item has-dropdown" data-page="education"><a class="nav-link" href="education.html" aria-haspopup="true">Education <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="education.html"><strong>UW–Madison</strong><small>Degree and coursework themes</small></a><a href="courses.html"><strong>Course Guide</strong><small>Connected map of 17 courses</small></a></div></div></div><div class="nav-item has-dropdown" data-page="experience"><a class="nav-link" href="experience.html" aria-haspopup="true">Experience <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="experience-research.html"><strong>Research</strong><small>3 roles</small></a><a href="experience-internships.html"><strong>Internships</strong><small>2 roles</small></a><a href="experience-campus.html"><strong>Campus roles</strong><small>2 roles</small></a><a href="experience-awards.html"><strong>Awards & talks</strong><small>3 roles</small></a></div></div></div><div class="nav-item has-dropdown" data-page="projects"><a class="nav-link" href="projects.html" aria-haspopup="true">Projects <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="projects-research.html"><strong>Research & ML systems</strong><small>5 projects</small></a><a href="projects-accessibility.html"><strong>Accessibility & spatial</strong><small>5 projects</small></a><a href="projects-web.html"><strong>Web apps & tools</strong><small>3 projects</small></a></div></div></div><div class="nav-item has-dropdown" data-page="interests"><a class="nav-link" href="interests.html" aria-haspopup="true">Interests <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a><div class="nav-dropdown"><div class="nav-dropdown-panel"><a href="interests.html?open=reading"><strong>Reading</strong></a><a href="interests.html?open=cinema"><strong>Cinema</strong></a><a href="interests.html?open=music"><strong>Music</strong></a><a href="interests.html?open=museums"><strong>Museums</strong></a></div></div></div>
+                <div class="nav-item" data-page="contact"><a class="nav-link" href="index.html#contact">Contact</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <header class="page-header" data-reveal><p class="page-crumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / Accessibility & spatial</p><h1>Accessibility & spatial</h1><p class="page-lede">Translate and guide: ASL-to-speech, AR/VR navigation, and spatial intelligence.</p></header>
+
+        <nav class="subnav" aria-label="Sections"><a class="chip" href="projects.html">Overview</a><a class="chip" href="projects-research.html">Research & ML systems</a><a class="chip is-active" href="projects-accessibility.html" aria-current="page">Accessibility & spatial</a><a class="chip" href="projects-web.html">Web apps & tools</a></nav>
+        <section class="section flagship-section" data-reveal>
+            <div class="sec-head"><h2 class="sec-title">Featured</h2></div>
+            <article id="case-signbridge" class="flagship-case case-signbridge interactive-card" data-reveal>
+                <div class="case-stage signbridge-console">
+                    <div class="console-bar"><span><i></i><i></i><i></i></span><strong>signbridge / realtime</strong><em>11.59 ms</em></div>
+                    <div class="signbridge-screen" role="img" aria-label="Stylized real-time hand landmark recognition and translation interface">
+                        <div class="vision-label"><span>CAM 01</span><strong>543 landmarks tracked</strong></div>
+                        <svg class="hand-landmarks" viewBox="0 0 620 360" aria-hidden="true">
+                            <path class="landmark-link" d="M286 316L270 263L238 228L193 214L150 234M270 263L260 211L250 145L255 76M270 263L300 204L306 128L317 55M270 263L333 215L356 146L374 84M270 263L359 240L404 194L431 142M260 211L300 204L333 215L359 240M238 228L260 211M193 214L238 228"/>
+                            <g class="landmark-points">
+                                <circle cx="286" cy="316" r="6"/><circle cx="270" cy="263" r="7"/>
+                                <circle cx="238" cy="228" r="5"/><circle cx="193" cy="214" r="5"/><circle cx="150" cy="234" r="6"/>
+                                <circle cx="260" cy="211" r="5"/><circle cx="250" cy="145" r="5"/><circle cx="255" cy="76" r="6"/>
+                                <circle cx="300" cy="204" r="5"/><circle cx="306" cy="128" r="5"/><circle cx="317" cy="55" r="6"/>
+                                <circle cx="333" cy="215" r="5"/><circle cx="356" cy="146" r="5"/><circle cx="374" cy="84" r="6"/>
+                                <circle cx="359" cy="240" r="5"/><circle cx="404" cy="194" r="5"/><circle cx="431" cy="142" r="6"/>
+                            </g>
+                        </svg>
+                        <div class="vision-reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                        <p class="recognition-chip"><i></i> Sign detected · translating</p>
+                        <div class="translation-output"><span>LIVE OUTPUT</span><strong>“How can I help?”</strong><small>Confidence 96.2%</small></div>
+                    </div>
+                    <div class="pipeline-strip" aria-label="SignBridge processing pipeline">
+                        <span><i class="fas fa-hand"></i> Landmarks</span><b></b><span><i class="fas fa-brain"></i> Transformer</span><b></b><span><i class="fas fa-volume-high"></i> Speech</span>
+                    </div>
+                </div>
+                <div class="case-copy">
+                    <p class="case-number">02 / Accessible AI product</p>
+                    <h3>Turning sign language into speech, frame by frame.</h3>
+                    <p class="case-summary">As team lead, I guided four engineers through the design and integration
+                        of a browser-based ASL-to-speech pipeline—from landmark tracking and temporal recognition to
+                        language refinement and spoken output.</p>
+                    <div class="case-metrics" aria-label="Project scale">
+                        <div><strong>543</strong><span>Body and hand landmarks per frame</span></div>
+                        <div><strong>2,044</strong><span>Recognized sign classes</span></div>
+                        <div><strong>11.59 ms</strong><span>Average local processing latency</span></div>
+                    </div>
+                    <div class="case-actions">
+                        <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer" class="resource-btn resource-btn-primary"><i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge</a>
+                        <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer" class="case-text-link">Source code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article id="case-spatial" class="flagship-case case-spatial interactive-card" data-reveal>
+                <div class="case-copy">
+                    <p class="case-number">03 / Spatial HCI research</p>
+                    <h3>Making physical space legible without relying on sight.</h3>
+                    <p class="case-summary">At MadAbility Lab, I explored how depth sensing, semantic segmentation,
+                        and spatial feedback can help low-vision users understand stairs and obstacles in real-world
+                        environments.</p>
+                    <div class="case-principles">
+                        <div><span>Sense</span><strong>RealSense D455 depth capture</strong></div>
+                        <div><span>Interpret</span><strong>Segmentation and spatial grounding</strong></div>
+                        <div><span>Guide</span><strong>Accessible multimodal feedback</strong></div>
+                    </div>
+                    <a href="https://madability.cs.wisc.edu/" target="_blank" rel="noreferrer" class="case-text-link">Visit MadAbility Lab <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="case-stage spatial-console">
+                    <figure class="spatial-main">
+                        <img decoding="async" width="1372" height="764" src="assets/images/AR_VR_point_cloud.webp" alt="Point-cloud representation used for spatial accessibility research" loading="lazy">
+                        <figcaption><span>DEPTH MAP 03</span><strong>Environmental point cloud</strong></figcaption>
+                    </figure>
+                    <figure class="spatial-inset">
+                        <img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="Stair detection research prototype" loading="lazy">
+                        <figcaption>Stair boundary detected</figcaption>
+                    </figure>
+                    <div class="spatial-hud" aria-hidden="true"><span>1.8m</span><i></i><b>PATH CLEAR</b></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="section project-archive" data-reveal>
+            <div class="sec-head"><h2 class="sec-title">More in this area</h2></div>
+            <div class="project-list">
+                <article class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-sail" id="proj-sail">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb archive-thumb-contain"><img decoding="async" width="400" height="400" src="assets/images/SAIL.webp" alt="SignBridge ASL-to-speech interface" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Summer 2026 · Team Lead</span>
+                                <h3>SignBridge <span class="project-title-detail">(SAIL &middot; ASL-to-Speech System)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <a href="https://github.com/AbhiramAmaravadi/signbridge" target="_blank" rel="noreferrer"
+                                    class="project-github-link" title="View SignBridge source on GitHub"
+                                    aria-label="View SignBridge source on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="project-badge"><i class="fas fa-hands-asl-interpreting"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Led a four-member team building SignBridge, a web-based ASL-to-speech system that
+                            tracks 543 hand, face, and pose landmarks per frame across a 2,044-sign-class
+                            recognition pipeline, from live signing to spoken language.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Python</span>
+                            <span>Transformers</span>
+                            <span>MediaPipe</span>
+                            <span>Gemini 2.5</span>
+                            <span>Text-to-Speech</span>
+                            <span>Real-Time Systems</span>
+                        </div>
+                        <div class="project-resource-strip">
+                            <a href="https://signbridge-web-two.vercel.app/#overview" target="_blank" rel="noreferrer"
+                                class="resource-btn resource-btn-primary">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Explore SignBridge
+                            </a>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-sail-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-sail-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                SignBridge tracks a signer through a temporal landmark pipeline, classifies the
+                                sign sequence with a Transformer-based recognition model, refines the output into
+                                natural language with Gemini 2.5, and speaks the result back &mdash; all inside a
+                                single low-latency web application.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Real-time tracking of 543 hand, face, and pose landmarks per frame
+                                            across a 2,044-sign-class recognition pipeline.</li>
+                                        <li>Integrated temporal tracking, Transformer-based recognition, Gemini
+                                            2.5 language refinement, and text-to-speech into one pipeline.</li>
+                                        <li>Achieved 11.59 ms average local processing latency toward a 30 FPS
+                                            real-time target.</li>
+                                        <li>Led a four-member team through system design, delegation, and
+                                            end-to-end integration.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="400" height="400" src="assets/images/SAIL.webp" alt="SignBridge ASL-to-speech interface" loading="lazy">
+                                    <figcaption>SignBridge Real-Time ASL Recognition Interface</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="proj-arvr" class="project-row interactive-card collapsible-card" data-card-id="proj-arvr">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR/VR stair detection" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">Apr 2026 – Sep 2026 · Researcher</span>
+                                <h3>AR/VR Accessibility &amp; Spatial HCI</h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Repository Private / Institutional Research">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-universal-access"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Research project focusing on accessibility in immersive environments, utilizing depth-sensing cameras and spatial computing to assist low-vision users with real-world navigation.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Unity</span>
+                            <span>Meta Quest SDK</span>
+                            <span>C#</span>
+                            <span>Intel RealSense API</span>
+                            <span>Spatial Computing</span>
+                            <span>HCI</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-arvr-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-arvr-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Developed spatial intelligence prototypes that capture 3D environments and translate them into multi-modal cues (audio, haptics) for users. Investigated spatial layout grounding algorithms and user-testing protocols to ensure interfaces degrade gracefully under vision impairments.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Leveraged Intel RealSense D455 depth data to map physical obstacles and estimate distances in real time.</li>
+                                        <li>Formulated 3D spatial audio feedback models to communicate navigation markers and hazard warnings.</li>
+                                        <li>Integrated gesture-based control paths to simplify VR interface navigation for accessibility.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1600" height="593" src="assets/images/AR_VR_stair_detection.webp" alt="AR/VR Staircase and hazard detection" loading="lazy">
+                                    <figcaption>Real-time Obstacle &amp; Stair Detection</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1372" height="764" src="assets/images/AR_VR_point_cloud.webp" alt="AR/VR Point cloud navigation feedback" loading="lazy">
+                                    <figcaption>Spatial Point Cloud Environmental Mapping</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="proj-ideathon" class="project-row project-featured interactive-card collapsible-card" data-card-id="proj-ideathon">
+                    <div class="card-summary-header">
+                        <figure class="archive-thumb"><img decoding="async" width="1400" height="777" src="assets/images/slide_overview.webp" alt="Industrial Asset Intelligence concept" loading="lazy"></figure>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-period">July 18, 2026 · Participant</span>
+                                <h3>Industrial Asset Intelligence <span class="project-title-detail">(Spatial Intelligence Ideathon)</span></h3>
+                            </div>
+                            <div class="project-badge-group">
+                                <span class="project-github-link disabled" title="Ideathon Design Proposal / Non-code">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span class="project-badge"><i class="fas fa-cubes-stacked"></i></span>
+                            </div>
+                        </div>
+                        <p class="project-summary">
+                            Designed a spatial computing solution for industrial manufacturing environments during a one-day interdisciplinary startup ideathon, preserving equipment maintenance knowledge and reducing downtime.
+                        </p>
+                        <div class="tag-row compact-tags">
+                            <span>Spatial Computing</span>
+                            <span>Shared AR</span>
+                            <span>Digital Twins</span>
+                            <span>Indoor Positioning</span>
+                            <span>AI Knowledge Management</span>
+                        </div>
+                        <button class="card-toggle-btn" aria-expanded="false" aria-controls="proj-ideathon-details">
+                            <span class="toggle-label">View Details</span>
+                            <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-details-wrapper" id="proj-ideathon-details" hidden="until-found">
+                        <div class="card-details-inner">
+                            <p>
+                                Collaborated with a multidisciplinary team to commercialize Spatial Grounding and Awareness for Augmented Reality (SGA-AR) in industrial spaces, enabling spatial anchoring of machinery documentation directly onto physical assets.
+                            </p>
+                            <div class="project-detail-grid">
+                                <div>
+                                    <h4>Key Features &amp; Contributions</h4>
+                                    <ul class="project-feature-list">
+                                        <li>Formulated product strategy and technical architecture for shared AR spaces in manufacturing environments.</li>
+                                        <li>Conducted rapid customer discovery and developed sustainable B2B SaaS business models.</li>
+                                        <li>Led pitch deck creation and high-fidelity product dashboard demonstrations.</li>
+                                        <li>Designed spatial anchoring logic to ground equipment documentation to physical machinery.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <figure class="gallery-item gallery-item-wide">
+                                    <img decoding="async" width="1400" height="777" src="assets/images/slide_overview.webp" alt="Industrial Asset Intelligence concept overview slide" loading="lazy">
+                                    <figcaption>Industrial Asset Intelligence System Architecture</figcaption>
+                                </figure>
+                                <figure class="gallery-item">
+                                    <img decoding="async" width="1400" height="1050" src="assets/images/Ideathon_image.webp" alt="Ideathon team collaboration" loading="lazy">
+                                    <figcaption>UW Tech Exploration Lab Team Collaboration</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">Siqi Dai</p>
+                <p class="footer-meta">Siqi Dai · Last updated: October 25, 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sdai66@wisc.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Sherry1247" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/siqi-dai-20b512296" target="_blank" rel="noreferrer"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
+        <div class="pdf-modal-backdrop" data-pdf-modal-close></div>
+        <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+            <div class="pdf-modal-header">
+                <h4 id="pdf-modal-title">Presentation</h4>
+                <div class="pdf-modal-actions">
+                    <a id="pdf-modal-open" href="#" target="_blank" rel="noreferrer" class="pdf-modal-link">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open in new tab
+                    </a>
+                    <button type="button" class="pdf-modal-close" data-pdf-modal-close aria-label="Close presentation">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-modal-frame" title="Presentation viewer" src=""></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js?v=202610252038"></script>
+    <script src="js/nav.js?v=202610252038"></script>
+</body>
+
+</html>
